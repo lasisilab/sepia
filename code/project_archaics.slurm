@@ -1,16 +1,17 @@
 #!/bin/bash
 # =====================================================================================
-# SEPIA — archaic PROJECTION onto the modern PCA (pigmentation + whole genome), the proper
-# plink2 way (supersedes the earlier hand-rolled prcomp, which mis-sided the WG archaics).
+# SEPIA — archaic PROJECTION onto the modern PCA (pigmentation + whole genome), plink2.
 #
-# Recipe (plink2 PCA projection):
-#   modern:  --freq counts  +  --pca allele-wts       -> .acount + .eigenvec + .eigenvec.allele
-#   archaic: --read-freq modern.acount  --score modern.eigenvec.allele 2 5 header-read
-#            no-mean-imputation variance-standardize --score-col-nums 6-15
-# variance-standardize uses the MODERN allele frequencies, no-mean-imputation drops missing
-# archaic genotypes, and the ID+A1 columns make allele coding explicit -> correct side + scale.
-# VALIDATION: we also --score the MODERNS with their own weights and confirm it reproduces
-# their --pca eigenvec (r>0.99); only then are the archaic projections trustworthy.
+# Key robustness choices (learned from two failed attempts):
+#  - build ONE combined plink dataset (moderns + archaics) per analysis, so variant IDs and
+#    allele coding are identical -> --score matches. (Separate modern/archaic files fail:
+#    the archaic WG calls carry ALT='.', so their chr:pos:ref:alt IDs never match the moderns'.)
+#  - read the pigmentation VCF with plink2 directly (bcftools rejects a malformed GQ field).
+#  - detect the A1 and PC columns of .eigenvec.allele by header name (a PROVISIONAL_REF?
+#    column shifts them), instead of hard-coding.
+# Recipe: modern subset --freq counts + --pca allele-wts; archaic subset --read-freq (modern)
+#   --score <allele-wts> <idcol> <a1col> header-read no-mean-imputation variance-standardize.
+# VALIDATION: modern self-projection must reproduce the eigenvec (r>0.99).
 #     cd /nfs/turbo/lsa-tlasisi1/sepia && git pull && sbatch code/project_archaics.slurm
 # =====================================================================================
 #SBATCH --job-name=sepia_project
@@ -29,38 +30,54 @@ SRC=/nfs/turbo/lsa-tlasisi1/lheald_thesis/aDNA_data
 MM="$REPO/scratch/modern_merge"
 WIDER="$REPO/scratch/wider_pca/wider.vcf.gz"
 AWG="$SRC/ancient_wholegenome/ancient_sgdp_wg.vcf.gz"
-P2="$REPO/tools/plink2"                                      # newer plink2 (allele-wts + score)
+P2="$REPO/tools/plink2"
 SCR="$REPO/scratch/project"; OUT="$REPO/output/projections"
 mkdir -p "$SCR" "$OUT"; cd "$SCR"
-echo "===== SEPIA archaic projection (plink2 recipe) ====="; date
+echo "===== SEPIA archaic projection (combined-dataset plink2 recipe) ====="; date
 module load Bioinformatics >/dev/null 2>&1 || true
 module load bcftools/1.21 >/dev/null 2>&1 || module load bcftools >/dev/null 2>&1 || true
-"$P2" --version || { echo "!! newer plink2 not found at $P2"; exit 2; }
+"$P2" --version || { echo "!! plink2 missing"; exit 2; }
 IDARGS=(--set-all-var-ids '@:#:$r:$a' --new-id-max-allele-len 100 missing --max-alleles 2 --snps-only)
 
-# helper: pull PC1/PC2 out of an .eigenvec (modern) or .sscore (archaic) by header name -> TSV
+colnum(){ head -1 "$1" | tr '\t' '\n' | grep -nxF "$2" | cut -d: -f1; }   # 1-based col of header name
 coords_eigenvec(){ awk 'NR==1{for(i=1;i<=NF;i++){if($i=="IID")I=i;if($i=="PC1")A=i;if($i=="PC2")B=i};print "IID\tPC1\tPC2";next}{print $I"\t"$A"\t"$B}' "$1" > "$2"; }
 coords_sscore(){ awk 'NR==1{for(i=1;i<=NF;i++){if($i=="IID")I=i;if($i=="PC1_AVG")A=i;if($i=="PC2_AVG")B=i};print "IID\tPC1\tPC2";next}{print $I"\t"$A"\t"$B}' "$1" > "$2"; }
 
-# ---- 1. PIGMENTATION -----------------------------------------------------------------
-echo "===== 1. pigmentation ====="
-bcftools query -l "$WIDER" > all.samples
-printf '%s\n' Altai Vindija33.19 Denisova3 Denisova25 Chagyrskaya8 Mez1 > arc.want
-grep -xFf arc.want all.samples > pig_arc.samples; grep -vxFf arc.want all.samples > pig_mod.samples
-bcftools view -S pig_mod.samples "$WIDER" -Oz -o pig_mod.vcf.gz && bcftools index -f -t pig_mod.vcf.gz
-bcftools view -S pig_arc.samples "$WIDER" -Oz -o pig_arc.vcf.gz && bcftools index -f -t pig_arc.vcf.gz
-"$P2" --vcf pig_mod.vcf.gz "${IDARGS[@]}" --freq counts --pca 10 allele-wts --out pig_modpca
-"$P2" --vcf pig_arc.vcf.gz "${IDARGS[@]}" --read-freq pig_modpca.acount \
-  --score pig_modpca.eigenvec.allele 2 5 header-read no-mean-imputation variance-standardize \
-  --score-col-nums 6-15 --out pig_arc_proj
-coords_eigenvec pig_modpca.eigenvec "$OUT/pig_after_modern.tsv"
-coords_sscore  pig_arc_proj.sscore  "$OUT/pig_after_archaic.tsv"
-echo "  pig: $(($(wc -l < $OUT/pig_after_modern.tsv)-1)) modern + $(($(wc -l < $OUT/pig_after_archaic.tsv)-1)) archaic"
+# project(): $1=combined bed prefix -> writes $OUT/${2}_after_{modern,archaic}.tsv  ($2 = pig|wg)
+# moderns = IID starts with 'LP' (SGDP library IDs); archaics = everything else.
+project(){
+  local bed="$1" tag="$2"
+  awk '$2 ~ /^LP/{print $1"\t"$2}' "$bed.fam" > "${tag}_mod.keep"
+  awk '$2 !~ /^LP/{print $1"\t"$2}' "$bed.fam" > "${tag}_arc.keep"
+  echo "  $tag: $(wc -l < ${tag}_mod.keep) modern, $(wc -l < ${tag}_arc.keep) archaic"
+  "$P2" --bfile "$bed" --keep "${tag}_mod.keep" --freq counts --pca 10 allele-wts --out "${tag}_modpca"
+  local A1=$(colnum "${tag}_modpca.eigenvec.allele" A1)
+  local P1=$(colnum "${tag}_modpca.eigenvec.allele" PC1); local P10=$(colnum "${tag}_modpca.eigenvec.allele" PC10)
+  echo "  $tag eigenvec.allele: A1 col=$A1, PC cols=${P1}-${P10}"
+  "$P2" --bfile "$bed" --keep "${tag}_arc.keep" --read-freq "${tag}_modpca.acount" \
+    --score "${tag}_modpca.eigenvec.allele" 2 "$A1" header-read no-mean-imputation variance-standardize \
+    --score-col-nums "${P1}-${P10}" --out "${tag}_arc_proj"
+  coords_eigenvec "${tag}_modpca.eigenvec" "$OUT/${tag}_after_modern.tsv"
+  coords_sscore  "${tag}_arc_proj.sscore"  "$OUT/${tag}_after_archaic.tsv"
+  # validation: self-project moderns, correlate with eigenvec PC1
+  "$P2" --bfile "$bed" --keep "${tag}_mod.keep" --read-freq "${tag}_modpca.acount" \
+    --score "${tag}_modpca.eigenvec.allele" 2 "$A1" header-read no-mean-imputation variance-standardize \
+    --score-col-nums "${P1}-${P10}" --out "${tag}_mod_self" 2>/dev/null
+  coords_eigenvec "${tag}_modpca.eigenvec" ev.tmp; coords_sscore "${tag}_mod_self.sscore" sp.tmp
+  join -t$'\t' <(sort ev.tmp) <(sort sp.tmp) 2>/dev/null | awk 'NR>0{print $2,$4}' \
+    | awk '{n++;sx+=$1;sy+=$2;sxx+=$1*$1;syy+=$2*$2;sxy+=$1*$2}
+      END{if(n>2){r=(n*sxy-sx*sy)/sqrt((n*sxx-sx*sx)*(n*syy-sy*sy));printf "  %s VALIDATION: modern self-proj r=%.4f (want |r|>0.99)\n",t,r}}' t="$tag"
+}
 
-# ---- 2. WHOLE GENOME -----------------------------------------------------------------
+# ---- 1. PIGMENTATION: plink2 reads wider.vcf.gz directly (bcftools rejects its GQ) ----
+echo "===== 1. pigmentation ====="
+"$P2" --vcf "$WIDER" "${IDARGS[@]}" --make-bed --out pig_all
+project pig_all pig
+
+# ---- 2. WHOLE GENOME: build combined moderns+archaics bed at the pruned SNPs ----------
 echo "===== 2. whole genome ====="
-"$P2" --bfile "$MM/sgdp166" --extract "$MM/sgdp166_prune.prune.in" --freq counts --pca 10 allele-wts --out wg_modpca
-# archaic WG genotypes at the pruned SNPs: clean names, normalise contigs, extract
+"$P2" --bfile "$MM/sgdp166" --extract "$MM/sgdp166_prune.prune.in" --export vcf bgz --out wg_mod
+bcftools index -f -t wg_mod.vcf.gz
 awk -F: '{print $1"\t"$2}' "$MM/sgdp166_prune.prune.in" | sort -k1,1 -k2,2n -u > prune.pos
 bcftools query -l "$AWG" | awk 'BEGIN{
     m["den11"]="Denisova11";m["den5"]="Denisova5";m["goyet"]="Goyet";m["hst"]="Hohlenstein_Stadel";
@@ -71,25 +88,13 @@ if [ "$CHRPREFIX" = yes ]; then for c in $(seq 1 22) X Y; do echo "chr$c $c"; do
 ( bcftools reheader -s arc_rename.txt "$AWG" | bcftools view -T prune.pos -Ou \
     | { [ "$CHRPREFIX" = yes ] && bcftools annotate --rename-chrs chr2bare.txt -Ou || cat; } \
     | bcftools norm -d none -Oz -o wg_arc.vcf.gz ) 2>wg_arc.err && bcftools index -f -t wg_arc.vcf.gz
-echo "  archaic WG samples: $(bcftools query -l wg_arc.vcf.gz | tr '\n' ' ')"
-"$P2" --vcf wg_arc.vcf.gz "${IDARGS[@]}" --read-freq wg_modpca.acount \
-  --score wg_modpca.eigenvec.allele 2 5 header-read no-mean-imputation variance-standardize \
-  --score-col-nums 6-15 --out wg_arc_proj
-coords_eigenvec wg_modpca.eigenvec "$OUT/wg_after_modern.tsv"
-coords_sscore  wg_arc_proj.sscore  "$OUT/wg_after_archaic.tsv"
-echo "  WG: $(($(wc -l < $OUT/wg_after_modern.tsv)-1)) modern + $(($(wc -l < $OUT/wg_after_archaic.tsv)-1)) archaic"
+echo "  moderns VCF: $(bcftools index -n wg_mod.vcf.gz) sites; archaic VCF: $(bcftools index -n wg_arc.vcf.gz) sites"
+# merge (archaic ALT='.' folds into the modern REF/ALT), then one bed
+bcftools merge wg_mod.vcf.gz wg_arc.vcf.gz -Oz -o wg_comb.vcf.gz 2>wg_merge.err || { echo "!! merge failed"; tail -3 wg_merge.err; exit 4; }
+"$P2" --vcf wg_comb.vcf.gz "${IDARGS[@]}" --make-bed --out wg_all
+project wg_all wg
 
-# ---- 3. VALIDATION: score the moderns with their own weights, must reproduce the PCA -
-echo "===== 3. validation (modern self-projection r vs eigenvec) ====="
-"$P2" --bfile "$MM/sgdp166" --extract "$MM/sgdp166_prune.prune.in" --read-freq wg_modpca.acount \
-  --score wg_modpca.eigenvec.allele 2 5 header-read no-mean-imputation variance-standardize \
-  --score-col-nums 6-15 --out wg_mod_selfproj 2>/dev/null
-paste <(coords_eigenvec wg_modpca.eigenvec /dev/stdout) <(coords_sscore wg_mod_selfproj.sscore /dev/stdout) \
-  | awk 'NR>1{print $2, $5}' | awk '{n++;sx+=$1;sy+=$2;sxx+=$1*$1;syy+=$2*$2;sxy+=$1*$2}
-    END{r=(n*sxy-sx*sy)/sqrt((n*sxx-sx*sx)*(n*syy-sy*sy)); printf "  modern PC1 self-projection r = %.4f (want |r|>0.99)\n", r}'
-echo "  WG archaic PC1 (should lean toward NON-African / Neanderthal-admixture side):"
+echo "  WG archaic PC1 (expect NON-African / Neanderthal-admixture side):"
 awk -F'\t' 'NR>1{print "   "$1": PC1="$2}' "$OUT/wg_after_archaic.tsv" | grep -iE "Chagyr|Denisova3|Denisova5|Denisova25|Vi33"
-
-{ echo "# archaic projection (plink2 recipe), pig + WG"; date;
-  echo "pig SNPs=$(($(wc -l < pig_modpca.eigenvec.allele)-1)); WG pruned SNPs=$(wc -l < $MM/sgdp166_prune.prune.in)"; } > "$OUT/projection_run.txt"
+{ echo "# archaic projection (combined-dataset plink2 recipe)"; date; } > "$OUT/projection_run.txt"
 echo "===== projection done ====="; date
