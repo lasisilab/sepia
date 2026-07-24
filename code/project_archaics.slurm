@@ -46,11 +46,12 @@ coords_sscore(){ awk 'NR==1{for(i=1;i<=NF;i++){if($i=="IID")I=i;if($i=="PC1_AVG"
 # project(): $1=combined bed prefix -> writes $OUT/${2}_after_{modern,archaic}.tsv  ($2 = pig|wg)
 # moderns = IID starts with 'LP' (SGDP library IDs); archaics = everything else.
 project(){
-  local bed="$1" tag="$2"
-  awk '$2 ~ /^LP/{print $1"\t"$2}' "$bed.fam" > "${tag}_mod.keep"
-  awk '$2 !~ /^LP/{print $1"\t"$2}' "$bed.fam" > "${tag}_arc.keep"
+  local bed="$1" tag="$2" arclist="$3"          # arclist = space-separated archaic IIDs (explicit)
+  awk -v L="$arclist" -v T="$tag" 'BEGIN{n=split(L,a," ");for(i=1;i<=n;i++)A[a[i]]=1}
+    ($2 in A){print $1"\t"$2 > (T"_arc.keep")} !($2 in A){print $1"\t"$2 > (T"_mod.keep")}' "$bed.fam"
   echo "  $tag: $(wc -l < ${tag}_mod.keep) modern, $(wc -l < ${tag}_arc.keep) archaic"
-  "$P2" --bfile "$bed" --keep "${tag}_mod.keep" --freq counts --pca 10 allele-wts --out "${tag}_modpca"
+  # --mac 1 drops monomorphic-in-modern variants (else --score variance-standardize divides by 0)
+  "$P2" --bfile "$bed" --keep "${tag}_mod.keep" --mac 1 --freq counts --pca 10 allele-wts --out "${tag}_modpca"
   local A1=$(colnum "${tag}_modpca.eigenvec.allele" A1)
   local P1=$(colnum "${tag}_modpca.eigenvec.allele" PC1); local P10=$(colnum "${tag}_modpca.eigenvec.allele" PC10)
   echo "  $tag eigenvec.allele: A1 col=$A1, PC cols=${P1}-${P10}"
@@ -72,7 +73,7 @@ project(){
 # ---- 1. PIGMENTATION: plink2 reads wider.vcf.gz directly (bcftools rejects its GQ) ----
 echo "===== 1. pigmentation ====="
 "$P2" --vcf "$WIDER" "${IDARGS[@]}" --make-bed --out pig_all
-project pig_all pig
+project pig_all pig "Altai Vindija33.19 Denisova3 Denisova25 Chagyrskaya8 Mez1"
 
 # ---- 2. WHOLE GENOME: build combined moderns+archaics bed at the pruned SNPs ----------
 echo "===== 2. whole genome ====="
@@ -92,7 +93,7 @@ echo "  moderns VCF: $(bcftools index -n wg_mod.vcf.gz) sites; archaic VCF: $(bc
 # merge (archaic ALT='.' folds into the modern REF/ALT), then one bed
 bcftools merge wg_mod.vcf.gz wg_arc.vcf.gz -Oz -o wg_comb.vcf.gz 2>wg_merge.err || { echo "!! merge failed"; tail -3 wg_merge.err; exit 4; }
 "$P2" --vcf wg_comb.vcf.gz "${IDARGS[@]}" --make-bed --out wg_all
-project wg_all wg
+project wg_all wg "Chagyrskaya8 Denisova3 Denisova11 Denisova25 Denisova5 Goyet Hohlenstein_Stadel Les_Cottes L4741 Mezmaiskaya2 SP4903 El_Sidron Spy Vi33.19 Vindija87"
 
 echo "  WG archaic PC1 (expect NON-African / Neanderthal-admixture side):"
 awk -F'\t' 'NR>1{print "   "$1": PC1="$2}' "$OUT/wg_after_archaic.tsv" | grep -iE "Chagyr|Denisova3|Denisova5|Denisova25|Vi33"
