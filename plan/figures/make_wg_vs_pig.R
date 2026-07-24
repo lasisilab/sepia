@@ -10,17 +10,21 @@
 # The "after" files are produced by the cluster projection job; until they exist, only the
 # BEFORE row is drawn. Regions coded by colour AND shape (shared _pca_style.R). Run from repo root.
 # =====================================================================================
-suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages({ library(ggplot2); library(ggrepel) })
 setwd(if (dir.exists("data")) "." else stop("run from repo root"))
 source("plan/figures/_pca_style.R")
 
 meta <- read.delim("data/sgdp_metadata.tsv", stringsAsFactors = FALSE)
 reg  <- setNames(meta$region, meta$IID)
-# high-cov archaics we label (the rest are low-cov and pile at the coverage attractor)
+# high-coverage archaics (reliable); the rest are low-cov/excluded and scatter at the
+# coverage attractor (El Sidron especially — an exome-only sample projected way off).
 HICOV <- c("Chagyrskaya8","Denisova3","Denisova25","Denisova5","Vi33.19",
            "Vindija33.19","Altai","Mez1")
-SHORT <- c(Chagyrskaya8="Chag", Denisova3="Den3", Denisova25="Den25", Denisova5="Den5(Altai)",
-           Vi33.19="Vindija", Vindija33.19="Vindija", Altai="Altai", Mez1="Mez1")
+SHORT <- c(Chagyrskaya8="Chag", Denisova3="Den3", Denisova25="Den25", Denisova5="Den5/Altai",
+           Vi33.19="Vindija", Vindija33.19="Vindija", Altai="Altai", Mez1="Mez1",
+           Denisova11="Den11", Goyet="Goyet", Hohlenstein_Stadel="HST", Les_Cottes="LesC",
+           Mezmaiskaya2="Mez2", El_Sidron="ElSidron", Spy="Spy", Vindija87="Vi87",
+           L4741="L4741", SP4903="SP4903")
 
 # --- readers -------------------------------------------------------------------------
 read_eigenvec <- function(path, iid_col) {   # modern PCA sample scores
@@ -39,9 +43,12 @@ read_tsv_coords <- function(path, type) {     # our after-projection coords
 
 assemble <- function(mod, arc, panel) {
   d <- rbind(mod, arc)
+  d <- d[is.finite(d$PC1) & is.finite(d$PC2), ]          # drop all-missing archaics (NaN, e.g. HST)
   d$region <- ifelse(d$type == "archaic", NA, reg[d$IID])
   d$region[is.na(d$region) & d$type == "modern"] <- "unknown"
-  d$label  <- ifelse(d$type == "archaic" & d$IID %in% HICOV, SHORT[d$IID], NA)
+  d$label  <- ifelse(d$type == "archaic",
+                     ifelse(d$IID %in% names(SHORT), SHORT[d$IID], d$IID), NA)   # label ALL archaics
+  d$hicov  <- d$type == "archaic" & d$IID %in% HICOV
   afr <- d$region == "Africa" & !is.na(d$region)         # orient Africa to the right
   if (sum(afr) && mean(d$PC1[afr]) < 0) d$PC1 <- -d$PC1
   d$panel <- panel
@@ -81,12 +88,15 @@ arc <- subset(all, type == "archaic")
 
 p <- ggplot(mapping = aes(PC1, PC2)) +
   geom_point(data = mod, aes(colour = region, shape = region), size = 2.2, stroke = 0.9, alpha = 0.9) +
-  geom_point(data = arc, shape = 25, size = 2.9, fill = "#212529", colour = "white", stroke = 0.4) +
-  geom_text(data = subset(arc, !is.na(label)), aes(label = label), size = 2.1, vjust = -0.9, colour = "#212529") +
+  geom_point(data = subset(arc, !hicov), shape = 25, size = 2.2, fill = "#adb5bd", colour = "white", stroke = 0.3) +
+  geom_point(data = subset(arc,  hicov), shape = 25, size = 3.1, fill = "#212529", colour = "white", stroke = 0.4) +
+  geom_text_repel(data = arc, aes(label = label), size = 2.2, colour = "#343a40",
+                  max.overlaps = Inf, min.segment.length = 0, segment.size = 0.2,
+                  box.padding = 0.35, seed = 7) +
   facet_wrap(~panel, scales = "free", ncol = ncol) +
   region_scales() +
   labs(title = "Where do samples fall — pigmentation space vs the whole genome?",
-       subtitle = "Modern PCA with archaics (▽) projected on. Regions by colour AND shape. PCA sign flipped so Africa is on the right.") +
+       subtitle = "Modern PCA with archaics projected on (▼ black = high-coverage, ▽ grey = low-cov/excluded). Regions by colour AND shape; Africa oriented right.") +
   theme_minimal(base_size = 12) +
   theme(panel.grid.minor = element_blank(), panel.border = element_rect(colour = "#dee2e6", fill = NA),
         strip.text = element_text(face = "bold", size = 9.5), plot.title = element_text(face = "bold", size = 13),
