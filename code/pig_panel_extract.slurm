@@ -94,6 +94,11 @@ echo "  SGDP per-sample panel files: $(wc -l < sgdp.merge.list)"
 # Each genome is one directory of per-chromosome VCFs with genome-specific filenames.
 # For each genome: for each panel chromosome, glob its chrN file, extract the panel
 # positions, then concat -> one single-sample VCF renamed to a clean archaic label.
+# NB: these per-chr files are ~4 GB all-sites VCFs, so we extract by INDEXED SEEK
+# (`-R`, random access) not `-T` (which streams the whole file). Only ~10 positions per
+# chromosome => seeking is instant; streaming 4 GB per file would take hours. (This is
+# the opposite call from the SGDP step, where -T is right: there we hit 1.4M positions,
+# so -R would mean 1.4M index seeks -- death on NFS. Few positions => seek; many => stream.)
 echo "===== 3. extract high-cov archaics at the panel hg19 positions ====="
 mkdir -p arc
 # dir_name -> clean sample label
@@ -115,7 +120,7 @@ for d in "${!ARC[@]}"; do
     # per-chr targets for this source's style
     grep -P "^(chr)?${c}\t" "$T" > "arc/$label.chr${c}.tgt" 2>/dev/null || awk -v c="$c" -F'\t' '$1==c || $1=="chr"c' "$T" > "arc/$label.chr${c}.tgt"
     [ -s "arc/$label.chr${c}.tgt" ] || continue
-    if bcftools view -T "arc/$label.chr${c}.tgt" "$cf" -Ob -o "arc/$label.chr${c}.bcf" 2>/dev/null; then
+    if bcftools view -R "arc/$label.chr${c}.tgt" "$cf" -Ob -o "arc/$label.chr${c}.bcf" 2>/dev/null; then
       bcftools index -f "arc/$label.chr${c}.bcf" 2>/dev/null
       echo "arc/$label.chr${c}.bcf" >> "arc/$label.parts"
     fi
