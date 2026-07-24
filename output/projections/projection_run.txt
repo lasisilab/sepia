@@ -1,3 +1,2 @@
-# archaic projection (plink2 recipe), pig + WG
-Fri Jul 24 16:08:11 EDT 2026
-pig SNPs=-1; WG pruned SNPs=482999
+# archaic projection (combined-dataset plink2 recipe)
+Fri Jul 24 16:15:49 EDT 2026
