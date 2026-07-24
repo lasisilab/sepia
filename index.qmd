@@ -1,34 +1,70 @@
 ---
 title: "SEPIA"
-subtitle: "Pigmentation genetics in archaic hominins"
+subtitle: "Systematic Evaluation of Pigmentation In Archaic hominins"
 ---
 
-**SEPIA** is an ongoing project on the genetics of pigmentation — skin, hair, and eye color — in Neanderthals and Denisovans, and how it compares to present-day human variation. The recurring public question is *"what did archaic humans look like?"* SEPIA asks how much their ancient DNA can actually answer, and stays honest about where the data runs out.
+**SEPIA** — *Systematic Evaluation of Pigmentation In Archaic hominins* — asks what the
+genetics of pigmentation (skin, hair, and eye colour) can, and cannot, tell us about
+Neanderthals and Denisovans, and how they compare to present-day human variation. The
+recurring public question is *"what did archaic humans look like?"* SEPIA asks how much
+their ancient DNA can actually answer — and stays explicit about where the data runs out.
+
+## The approach
+
+SEPIA is a **QC-first re-analysis**. It continues the honors thesis **PAINT** (Lily Heald,
+2026) but rebuilds the analysis from clearly-traced inputs, because archaic DNA is patchy
+and shallow and pigmentation genes don't behave like ancestry markers. Every figure is
+regenerated from a documented pipeline so its provenance is auditable, and known analysis
+pitfalls — genome-build mismatches, degenerate PCAs, imputation artefacts — are checked
+rather than assumed away.
+
+The work runs as a phased plan: trace inputs → one verified genome build → positive
+controls → sample QC → the pigmentation analyses → reproducible infrastructure → writing.
+
+- **[Project plan &amp; roadmap](plan/sepia-plan.html)** — the single phased plan (bug fixes, analysis redesign, QC checks Q1–Q10, infrastructure, writing).
+- **[Changelog &amp; decision log](plan/changelog.html)** — dated record of what's been done, found, and decided.
+- **[All project documents](plan/docs.html)** — data &amp; pipeline record, per-genome provenance &amp; QC, bug-evidence log, rebuild plan.
 
 ## Status
 
-- **v1 — honors thesis (2026, Lily Heald).** Sets up the feasibility question: how complete and deep is the archaic sequencing at pigmentation loci, and where do archaic samples fall relative to modern humans? The analysis pages below are that work.
-- **In progress — the SEPIA paper and a *Trends in Genetics* review.** Expanding to four complementary pigmentation datasets, standardizing everything on the hg38 genome build, a directionality-based pigmentation score, and redone principal-component analyses. The full roadmap lives in the [project plan](plan/sepia-plan.html).
+- **v1 — honors thesis (PAINT, 2026, Lily Heald).** Framed the feasibility question: how
+  complete and deep is archaic sequencing at pigmentation loci, and where do archaic
+  samples fall relative to modern humans?
+- **In progress — SEPIA.** Rebuilding on clearly-traced data: a completed modern reference
+  panel, a harmonised genome build, genotype-likelihood handling for low-coverage genomes,
+  a directionality-based pigmentation score, and redone principal-component analyses — plus
+  a *Trends in Genetics* review.
 
 ## Analyses
 
-- [Background](introduction.qmd) — ancient-genome availability, the modern reference panel (Simons Genome Diversity Project), and the pigmentation-SNP set, with maps and reference tables.
-- [Sequencing depth &amp; missingness](depth.qmd) — how complete and reliable the archaic sequencing is, with consensus-accuracy simulations and a mixed-effects model of what drives missing data.
-- [Principal component analysis](pca.qmd) — where archaic samples fall relative to modern populations, genome-wide versus pigmentation-only.
+*These pages are being rebuilt from the SEPIA pipeline (see the plan); expect them to change.*
 
-## What the work finds
+- [Modern reference panel PCA (SGDP)](sgdp_reference_pca.qmd) — quality-control check that the modern reference recovers global human structure, before any archaic comparison.
+- [Background](introduction.qmd) — archaic-genome availability, the modern reference (SGDP), and the pigmentation-SNP set.
+- [Sequencing depth &amp; missingness](depth.qmd) — how complete and reliable the archaic sequencing is.
+- [Principal component analysis](pca.qmd) — where archaic samples fall relative to modern populations.
 
-Archaic sequencing is uneven and often shallow; missing data is non-random (older samples have more of it); and pigmentation-associated SNPs on their own don't separate populations the way the whole genome does. So confident, species-wide claims about archaic pigmentation aren't well supported — the contribution is an honest map of what the genetics does and doesn't show.
+## What the work finds (so far)
 
-## Data sources
+Archaic sequencing is uneven and often shallow; missing data is non-random (older samples
+have more of it); and pigmentation-associated SNPs on their own don't separate populations
+the way the whole genome does. Confident, species-wide claims about archaic pigmentation
+aren't well supported — the contribution is an honest map of what the genetics does and
+doesn't show.
+
+## Data &amp; provenance
 
 - **Simons Genome Diversity Project (SGDP)** — modern human reference genomes.
-- **Max Planck Institute for Evolutionary Anthropology (MPI-EVA)** — archaic Neanderthal/Denisovan genomes (`ftp.eva.mpg.de/neandertal`).
-- **NHGRI-EBI GWAS Catalog** — pigmentation-associated variants (EFO trait `OBA_VT0002095`); source of the 222-SNP panel.
-- **NASA Earth Observations** — AURA UV-index climatology.
+- **Max Planck Institute for Evolutionary Anthropology (MPI-EVA)** — archaic Neanderthal/Denisovan genomes.
+- **NHGRI-EBI GWAS Catalog** — pigmentation-associated variants (the 222-SNP panel).
+- **NASA Earth Observations** — UV-index climatology.
+
+Per-file provenance — and where the large / cluster-only data live — is documented in
+[`data/README.md`](https://github.com/lasisilab/sepia/blob/main/data/README.md); per-genome
+sources are in the [provenance tables](plan/papers/REFERENCES.html).
 
 ## Team
 
-Lily Heald · Tina Lasisi (advisor) · Yemko Pryor.
+Tina Lasisi (PI / advisor) · Lily Heald · Yemko Pryor.
 
 *Code is released under the MIT License; written content and figures under CC BY 4.0 — see [License](license.qmd).*

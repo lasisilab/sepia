@@ -22,8 +22,8 @@ website:
         text: Depth
       - href: pca.qmd
         text: PCA
-      - href: sanity_sgdp_pca.qmd
-        text: "Sanity: SGDP"
+      - href: sgdp_reference_pca.qmd
+        text: "Reference PCA"
       - href: about.qmd
         text: About
       - href: license.qmd
