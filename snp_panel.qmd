@@ -1,0 +1,115 @@
+---
+title: "The pigmentation SNP set — sources, provenance & confidence"
+subtitle: "What SNPs SEPIA analyzes, where each came from, and how confident we are in it"
+---
+
+## Why this page exists
+
+Lily's thesis (PAINT) analyzed a fixed **222-SNP pigmentation panel** pulled from the GWAS
+Catalog. SEPIA's bigger question needs more than that: the
+[`pigmentation-gene-network`](https://github.com/tinalasisi/pigmentation-gene-network) project
+assembles the pigmentation literature into a much larger, multi-source SNP set. This page is the
+**auditable record** of exactly which SNPs we carry, where each one came from, how we put them on
+a single coordinate system, and — importantly — **how confident we are in each**, because a raw
+GWAS-Catalog pull mixes strongly-replicated loci with single-study, unreplicated hits.
+
+Everything here is generated from [`data/pigment_snp_map.tsv`](https://github.com/lasisilab/sepia/blob/main/data/pigment_snp_map.tsv),
+which is built by [`code/build_pigment_snp_map.py`](https://github.com/lasisilab/sepia/blob/main/code/build_pigment_snp_map.py)
+(re-resolving every rsID to both genome builds via Ensembl). The 222-panel subset is preserved and
+flagged, so this strictly *extends* Lily's work rather than replacing it.
+
+```{r setup, message=FALSE, warning=FALSE}
+library(ggplot2)
+map_file <- "data/pigment_snp_map.tsv"
+have_map <- file.exists(map_file)
+```
+
+```{r not-ready, eval=!have_map, echo=FALSE, results='asis'}
+cat("> **Not yet built.** Run `python3 code/build_pigment_snp_map.py` (needs internet for Ensembl),",
+    "then re-render this page. It writes `data/pigment_snp_map.tsv`.\n")
+```
+
+```{r load, eval=have_map, message=FALSE}
+m <- read.delim(map_file, stringsAsFactors = FALSE)
+n_total  <- nrow(m)
+n_panel  <- sum(m$in_222_panel == "yes", na.rm = TRUE)
+n_new    <- n_total - n_panel
+n_ok     <- sum(m$status == "ok", na.rm = TRUE)
+```
+
+## How we got them
+
+Each SNP is drawn from one or more **rsID-bearing** pigmentation sources, then re-resolved to
+verified coordinates. Coordinates in the source files are *mixed-build and inconsistent* (GWAS
+Catalog rows are hg38; the case-study extractions are hg19; HIrisPlex-S has no coordinates at all),
+so we do not trust any of them — we re-pull each rsID's **GRCh38 *and* GRCh37** position + alleles
+from Ensembl, keyed by rsID. (This is the same approach that caught the +1 off-by-one in the
+original panel's hg38 coordinates.) We flag **palindromic** SNPs (A/T, C/G — strand-ambiguous),
+**multiallelic** sites, and **merged** rsIDs.
+
+```{r sources, eval=have_map}
+# one SNP can have several sources; count membership per source tag family
+fam <- function(s) {
+  s <- strsplit(s, ";")[[1]]
+  s <- ifelse(grepl("^curated:", s), "curated_paper", s)
+  unique(s)
+}
+src_tab <- sort(table(unlist(lapply(m$sources, fam))), decreasing = TRUE)
+knitr::kable(data.frame(source = names(src_tab), n_SNPs = as.integer(src_tab)),
+             caption = "SNPs contributed by each source (a SNP can appear in more than one).")
+```
+
+**What each source is:**
+
+- **gwas_catalog** — NHGRI-EBI GWAS Catalog pigmentation pull (skin/hair/eye + photo-response); the bulk of the set, carries effect direction + replication counts.
+- **hirisplex_s** — the HIrisPlex-S forensic prediction markers (MC1R red-hair set, HERC2/OCA2 blue-eye, etc.); experimentally validated → treated as high confidence.
+- **martin2017** — KhoeSan (San/Nama) skin-pigmentation GWAS — African-ancestry axis.
+- **kim2024** — East-Asian skin-color GWAS.
+- **curated_paper / discordance** — hand-curated case-study & functional-validation loci from the eye/hair/skin-colour literature.
+
+## How confident we are in each
+
+The user-facing distinction the raw catalog can't make on its own: **replicated vs not.** We assign
+each SNP a confidence tier as the *best* evidence across its sources:
+
+- **high** — a GWAS hit replicated across ≥2 associations (`gwas_replicated`/`gwas_n_assoc ≥ 2`), **or** a HIrisPlex-S validated marker, **or** a genome-wide-significant Martin/Kim lead SNP.
+- **moderate** — curated literature / case-study support, or a genome-wide-significant single association.
+- **low** — a single, unreplicated GWAS-Catalog association (the noise the raw pull inevitably includes).
+
+```{r confidence, eval=have_map, fig.width=7, fig.height=3.2}
+m$confidence <- factor(m$confidence, levels = c("high","moderate","low"))
+tab <- as.data.frame(table(confidence = m$confidence,
+                           set = ifelse(m$in_222_panel == "yes", "in 222-panel", "new to SEPIA")))
+ggplot(tab, aes(confidence, Freq, fill = set)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = Freq), position = position_dodge(0.9), vjust = -0.3, size = 3) +
+  scale_fill_manual(values = c("in 222-panel" = "#4C6EF5", "new to SEPIA" = "#E4572E"), name = NULL) +
+  labs(title = "Pigmentation SNPs by confidence tier",
+       subtitle = "high = replicated / forensically validated · low = single unreplicated GWAS hit",
+       x = NULL, y = "SNPs") +
+  theme_minimal(base_size = 12) + theme(panel.grid.major.x = element_blank())
+```
+
+```{r summary, eval=have_map}
+knitr::kable(data.frame(
+  metric = c("Total SNPs", "In the original 222-panel", "New to SEPIA",
+             "High confidence", "Moderate", "Low (single unreplicated GWAS)",
+             "Palindromic (flagged for Q4)", "Merged rsIDs", "Resolved on both builds"),
+  count  = c(n_total, n_panel, n_new,
+             sum(m$confidence == "high"), sum(m$confidence == "moderate"), sum(m$confidence == "low"),
+             sum(m$palindromic == "yes", na.rm = TRUE), sum(m$merged == "yes", na.rm = TRUE), n_ok)),
+  caption = "SNP-set summary (generated from data/pigment_snp_map.tsv).")
+```
+
+## How this feeds the analysis
+
+- The **wider pigmentation PCA** (item B3) extracts genotypes at every `ok` SNP here (correct hg19 coordinates), replacing the 222-SNP panel — and we can re-run it **high-confidence-only** vs **all** to see how much the unreplicated tail moves the result.
+- The **HIrisPlex-S** subset (with weights pulled separately from Walsh 2017) will drive quantitative skin/hair/eye-colour prediction (item B4).
+- **Palindromic** SNPs are flagged for strand-harmonization (Q4); within a single hs37d5 extraction they are safe, but they matter when merging external allele calls.
+
+## Deliberately excluded (for now)
+
+The gene-network's **gene-level** tables — Bajpai (CRISPR hits), Baxter (curated genes), Raghunath
+(melanogenesis network), D'Arcy (disease genes / PPI) — are **gene-symbol-only, no SNP coordinates**.
+Using them requires a separate gene→coordinate join (items B6/B7) and they never enter the SNP-level
+PCA or scores. They are deferred by decision, not oversight.

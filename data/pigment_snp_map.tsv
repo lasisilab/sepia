@@ -1,0 +1,1156 @@
+rsid	rsid_resolved	chrom	pos_hg38	pos_hg19	ref_hg38	alt_hg38	ref_hg19	alt_hg19	gene	sources	n_sources	confidence	gwas_n_assoc	gwas_replicated	palindromic	multiallelic	merged	in_222_panel	status	notes
+rs683	rs683	9	12709305	12709305	C	A	C	A	TYRP1	hirisplex_s	1	high							ok	
+rs12602	rs12602	19	41383843	41889748	T	A,C	T	A,C	TMEM91	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs13289	rs13289	5	33986304	33986409	C	G,T	C	G,T	AMACR	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs26722	rs26722	5	33963765	33963870	C	T	C	T	SLC45A2	gwas_catalog	1	high	23	True					ok	
+rs28117	rs28117	5	33962665	33962770	G	A	G	A	SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs28777	rs28777	5	33958854	33958959	C	A,G	C	A,G	SLC45A2	gwas_catalog;hirisplex_s	2	high	23	True		yes		yes	ok	
+rs32579	rs32579	5	149831285	149210848	C	T	C	T	PPARGC1B	gwas_catalog	1	high	3	True					ok	
+rs35391	rs35391	5	33955568	33955673	T	C	T	C	SLC45A2	gwas_catalog	1	high	23	True					ok	
+rs35395	rs35395	5	33948484	33948589	T	C	T	C	SLC45A2	gwas_catalog;martin2017	2	high	23	True				yes	ok	
+rs35397	rs35397	5	33951011	33951116	G	C,T	G	C,T	SLC45A2	gwas_catalog	1	high	23	True	yes	yes		yes	ok	
+rs35400	rs35400	5	33940648	33940753	G	A	G	A	RXFP3 - SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs35404	rs35404	5	33944407	33944512	A	G	A	G	RXFP3 - SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs35406	rs35406	5	33946038	33946143	A	C,G,T	A	C,G,T	SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs35407	rs35407	5	33946466	33946571	A	C,G	A	C,G	SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs35409	rs35409	5	33965152	33965257	G	C,T	G	C,T	SLC45A2	gwas_catalog	1	high	23	True	yes	yes			ok	
+rs35412	rs35412	5	33967040	33967145	C	G,T	C	G,T	SLC45A2	gwas_catalog	1	high	23	True	yes	yes		yes	ok	
+rs35414	rs35414	5	33969523	33969628	T	C	T	C	SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs136047	rs136047	22	45868501	46264381	G	A,C,T	G	A,C,T	ATXN10 - WNT7B	gwas_catalog	1	low	1	False		yes			ok	
+rs149359	rs149359	5	34035135	34035240	T	C	T	C	C1QTNF3-AMACR, C1QTNF3	gwas_catalog	1	low	0	False				yes	ok	
+rs154659	rs154659	16	89600929	89667337	T	C	T	C	CPNE7 - DPEP1	gwas_catalog	1	low	1	False					ok	
+rs164745	rs164745	16	89643256	89709664	C	G,T	C	G,T	CHMP1A	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs183671	rs183671	5	33964105	33964210	T	A,G	T	A,G	SLC45A2	gwas_catalog	1	high	23	True	yes	yes			ok	
+rs195720	rs195720	1	24461457	24787947	A	C,G,T	A	C,G,T	NIPAL3	gwas_catalog	1	low	1	False		yes			ok	
+rs210381	rs210381	14	53641073	54107791	G	A,T	G	A,T	DDHD1-DT	gwas_catalog	1	low	0	False		yes			ok	
+rs219493	rs219493	4	108429724	109350880	T	A,C,G	T	A,C,G	EXOC7P1 - RPL34-DT	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs223495	rs223495	4	102735220	103656377	A	G	A	G	EMCN / PPP3CA / SLC39A8 / MANBA / TACR3 (chr4 segment members)	curated:Ang2023	1	moderate							ok	
+rs243946	rs243946	4	110379206	111300362	C	G,T	C	G,T	ENPEP	gwas_catalog	1	high	3	True	yes	yes			ok	
+rs249625	rs249625	12	97791470	98185248	A	G	A	G	PAFAH1B2P2, PAFAH1B2P2	gwas_catalog	1	low	0	False					ok	
+rs251464	rs251464	5	149816671	149196234	G	A,C	G	A,C	PPARGC1B	gwas_catalog	1	high	3	True		yes			ok	
+rs251466	rs251466	5	149816040	149195603	C	G	C	G	PPARGC1B	gwas_catalog	1	high	3	True	yes				ok	
+rs251468	rs251468	5	149814922	149194485	C	G,T	C	G,T	PPARGC1B	gwas_catalog	1	high	3	True	yes	yes			ok	
+rs258322	rs258322	16	89689495	89755903	A	G,T	A	G,T	CDK10	gwas_catalog	1	high	3	True		yes			ok	
+rs259035	rs259035	5	80399551	79695370	T	G	T	G	RNU6-211P - ZFYVE16	gwas_catalog	1	low	1	False					ok	
+rs259960	rs259960	20	59251107	57826162	A	C,G,T	A	C,G,T	ZNF831	gwas_catalog	1	high	2	True		yes			ok	
+rs288139	rs288139	5	108064804	107400505	G	A	G	A	FBXL17	gwas_catalog	1	low	1	False					ok	
+rs291671	rs291671	20	33363039	31950845	G	A,C	G	A,C	CDK5RAP1	gwas_catalog	1	low	0	False		yes			ok	
+rs314349	rs314349	7	100804203	100401825	T	C,G	T	C,G	EPHB4	gwas_catalog	1	low	1	False		yes			ok	
+rs325712	rs325712	3	152182884	151900673	C	A,G,T	C	A,G,T	LINC02917	gwas_catalog	1	low	0	False		yes			ok	
+rs330203	rs330203	5	119680719	119016414	C	A,G	C	A,G	TUBAP15 - RNU6-718P	gwas_catalog	1	low	0	False		yes			ok	
+rs341147	rs341147	6	158420693	158841725	A	G	A	G	TULP4	gwas_catalog	1	low	0	False					ok	
+rs357925	rs357925	11	44475002	44496552	A	C,G,T	A	C,G,T	ALX4 - RPL7AP79	gwas_catalog	1	low	0	False		yes			ok	
+rs359899	rs359899	2	184583504	185448231	A	C	A	C	MIR548AE1 - ZNF804A	gwas_catalog	1	low	0	False					ok	
+rs369230	rs369230	16	89579029	89645437	G	A,T	G	A,T	CPNE7	gwas_catalog	1	low	0	False		yes			ok	
+rs376397	rs376397	10	8061335	8103298	A	G	A	G	GATA3	martin2017	1	moderate							ok	
+rs377057	rs377057	8	108130079	109142307	C	A,G,T	C	A,G,T	RSPO2 - AURKBP1	gwas_catalog	1	high	2	True		yes			ok	
+rs380286	rs380286	5	1320132	1320247	G	A	G	A	CLPTM1L	gwas_catalog	1	low	1	False					ok	
+rs431616	rs431616	5	22567147	22567256	T	A	T	A	CDH12	gwas_catalog	1	low	0	False	yes				ok	
+rs433004	rs433004	15	28212394	28457540	G	A,C	G	A,C	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs474240	rs474240	13	75777150	76351286	A	C,G,T	A	C,G,T	LMO7	gwas_catalog	1	low	1	False		yes			ok	
+rs481767	rs481767	21	43373320	44793200	G	A,C,T	G	A,C,T	LINC01679 - SIK1	gwas_catalog	1	high	2	True		yes			ok	
+rs511515	rs511515	6	33573730	33541507	A	G,T	A	G,T	BAK1	gwas_catalog	1	low	0	False		yes			ok	
+rs520015	rs520015	9	211762	211762	C	A,G,T	C	A,G,T	ZNG1A - DOCK8-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs535930	rs535930	1	110181866	110724488	G	A,T	G	A,T	SLC6A17	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs548304	rs548304	6	11637250	11637483	G	A	G	A	TMEM170B - Metazoa_SRP	gwas_catalog	1	low	0	False					ok	
+rs562926	rs562926	20	3644789	3625436	C	G,T	C	G,T	ATRN (intronic/downstream)	curated:Ang2023;discordance	2	moderate			yes	yes			ok	
+rs573246	rs573246	9	204014	204014	A	G,T	A	G,T	ZNG1A - DOCK8-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs592278	rs592278	18	42651868	40231833	G	A	G	A	LINC00907	gwas_catalog	1	low	1	False					ok	
+rs594771	rs594771	18	7763365	7763363	G	A	G	A	PTPRM	gwas_catalog	1	low	1	False					ok	
+rs610106	rs610106	11	129065133	128935028	T	C,G	T	C,G	ARHGAP32	gwas_catalog	1	low	1	False		yes			ok	
+rs619865	rs619865	20	35279894	33867697	A	C,G,T	A	C,G,T	EIF6	gwas_catalog	1	low	0	False		yes			ok	
+rs622330	rs622330	21	43363407	44783287	A	C,G,T	A	C,G,T	LINC01679	gwas_catalog	1	low	0	False		yes			ok	
+rs638640	rs638640	11	69572687	69387455	C	G,T	C	G,T	LINC01488 - PNCRNA-D;ORAOV1	curated:Morgan2018;discordance;gwas_catalog	3	moderate	0	False	yes	yes			ok	
+rs643319	rs643319	9	22017837	22017836	C	A,G	C	A,G	CDKN2B-AS1	gwas_catalog	1	low	1	False		yes			ok	
+rs672948	rs672948	21	43373568	44793448	A	C,G,T	A	C,G,T	LINC01679 - SIK1;SIK1	curated:Morgan2018;discordance;gwas_catalog	3	high	2	True		yes			ok	
+rs676091	rs676091	3	124624409	124343256	T	G	T	G	KALRN;KALRN (intronic)	curated:Ang2023;discordance;gwas_catalog	3	moderate	0	False				yes	ok	
+rs686802	rs686802	2	233857467	234766113	A	G,T	A	G,T	HJURP - MSL3B	gwas_catalog	1	low	0	False		yes			ok	
+rs699322	rs699322	3	189361929	189079718	A	G,T	A	G,T	TPRG1 - TP63	gwas_catalog	1	low	0	False		yes			ok	
+rs702488	rs702488	1	53738651	54204324	T	C,G	T	C,G	GLIS1	kim2024	1	high				yes			ok	
+rs703764	rs703764	20	26200596	26181232	A	C,G,T	A	C,G,T	MIR663AHG	gwas_catalog	1	low	0	False		yes			ok	
+rs703978	rs703978	10	79184390	80944147	C	G,T	C	G,T	ZMIZ1	gwas_catalog	1	high	2	True	yes	yes			ok	
+rs728404	rs728404	15	27954896	28200042	C	A,G,T	C	A,G,T	OCA2	kim2024	1	high				yes			ok	
+rs746861	rs746861	15	28021089	28266235	T	A,C	T	A,C	OCA2	gwas_catalog	1	high	58	True	yes	yes			ok	
+rs750192	rs750192	13	77816608	78390743	A	G,T	A	G,T	EDNRB-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs752429	rs752429	8	127968117	128980363	T	C	T	C	PVT1	gwas_catalog	1	low	0	False					ok	
+rs765377	rs765377	13	77803699	78377834	T	A,C	T	A,C	EDNRB-AS1	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs789923	rs789923	10	29342623	29631552	G	A,C,T	G	A,C,T	LYZL1 - SVIL-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs800884	rs800884	8	115490401	116502628	A	C	A	C	TRPS1	kim2024	1	high							ok	
+rs835151	rs835151	5	14877672	14877781	C	A,T	C	A,T	HNRNPKP5	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs849138	rs849138	7	28137719	28177338	G	A	G	A	JAZF1	gwas_catalog	1	low	1	False					ok	
+rs849142	rs849142	7	28146272	28185891	T	A,C	T	A,C	JAZF1	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs860877	rs860877	12	25071152	25224086	C	A,G,T	C	A,G,T	IRAG2	gwas_catalog	1	low	0	False		yes			ok	
+rs864745	rs864745	7	28140937	28180556	T	C	T	C	JAZF1	gwas_catalog	1	low	1	False					ok	
+rs885479	rs885479	16	89919746	89986154	G	A,C	G	A,C	MC1R	gwas_catalog;hirisplex_s	2	high	48	True		yes		yes	ok	
+rs892837	rs892837	4	183859179	184780332	A	C,G	A	C,G	STOX2	gwas_catalog	1	low	1	False		yes			ok	
+rs895267	rs895267	8	80993298	81905533	G	A,C	G	A,C	PAG1	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs895828	rs895828	15	28052887	28298033	G	A,C,T	G	A,C,T	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs895829	rs895829	15	28052911	28298057	T	A,C	T	A,C	OCA2	gwas_catalog	1	high	58	True	yes	yes		yes	ok	
+rs916977	rs916977	15	28268218	28513364	T	C,G	T	C,G	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs917783	rs917783	9	124028328	126790607	A	C	A	C	LHX2	gwas_catalog	1	high	3	True					ok	
+rs922168	rs922168	4	108136248	109057404	C	T	C	T	LEF1	gwas_catalog	1	high	2	True					ok	
+rs923198	rs923198	6	158825685	159246717	C	T	C	T	EZR-AS1 - OSTCP1	gwas_catalog	1	low	0	False					ok	
+rs924318	rs924318	15	27848288	28093434	A	G	A	G	OCA2	gwas_catalog	1	high	58	True					ok	
+rs928618	rs928618	9	95600210	98362492	T	G	T	G	PTCH1 - ERCC6L2-AS1	gwas_catalog	1	low	0	False				yes	ok	
+rs941799	rs941799	14	92310481	92776825	C	T	C	T	RNU6-366P - SLC24A4	gwas_catalog	1	high	17	True					ok	
+rs974455	rs974455	6	485078	485078	G	A,C	G	A,C	IRF4 - EXOC2	gwas_catalog	1	high	36	True		yes			ok	
+rs975739	rs975739	13	77807011	78381146	G	C,T	G	C,T	EDNRB;EDNRB-AS1	gwas_catalog;martin2017	2	moderate	0	False	yes	yes			ok	
+rs1001949	rs1001949	11	11159318	11180865	G	A,C,T	G	A,C,T	LINC02752	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs1003719	rs1003719	21	37118795	38491095	A	C,G,T	A	C,G,T	TTC3	gwas_catalog	1	low	1	False		yes			ok	
+rs1003759	rs1003759	15	91134327	91677557	T	C	T	C	SV2B	gwas_catalog	1	high	2	True					ok	
+rs1006548	rs1006548	16	89777635	89844043	T	A,C,G	T	A,C,G	FANCA	gwas_catalog	1	high	4	True	yes	yes			ok	
+rs1015362	rs1015362	20	34150806	32738612	C	T	C	T	ASIP	martin2017	1	moderate							ok	
+rs1026872	rs1026872	4	85680478	86601631	A	T	A	T	ARHGAP24	gwas_catalog	1	low	1	False	yes				ok	
+rs1036464	rs1036464	20	59266631	57841686	G	A,T	G	A,T	ZNF831 - EDN3	gwas_catalog	1	high	2	True		yes			ok	
+rs1042602	rs1042602	11	89178528	88911696	C	A	C	A	TYR	curated:Ang2023;gwas_catalog;hirisplex_s;martin2017	4	high	17	True				yes	ok	
+rs1060435	rs1060435	11	69088127	68855595	A	C,G	A	C,G	TPCN2	gwas_catalog	1	high	8	True		yes			ok	
+rs1110400	rs1110400	16	89919722	89986130	T	C	T	C	MC1R	curated:Morgan2018;gwas_catalog;hirisplex_s	3	high	48	True					ok	
+rs1126809	rs1126809	11	89284793	89017961	G	A	G	A	TYR	curated:Abbatangelo2026;curated:Meyer et al. 2020,;discordance;gwas_catalog;hirisplex_s;martin2017	6	high	17	True			yes	yes	ok	merged_from=rs1393350
+rs1129038	rs1129038	15	28111713	28356859	C	T	C	T	HERC2;HERC2 (nearest-gene label; functional target = OCA2)	curated:Morgan2018;discordance;gwas_catalog;hirisplex_s	4	high	40	True					ok	
+rs1204552	rs1204552	20	36050981	34638903	T	A,C,G	T	A,C,G	NORAD	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs1224653	rs1224653	15	47702908	47995105	T	A,C	T	A,C	SEMA6D	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs1267037	rs1267037	2	161241644	162098155	A	C,G,T	A	C,G,T	PSMD14-DT	gwas_catalog	1	low	0	False		yes			ok	
+rs1268789	rs1268789	4	78359539	79280693	T	C,G	T	C,G	FRAS1	gwas_catalog	1	low	1	False		yes			ok	
+rs1278766	rs1278766	13	112880068	113534382	T	C,G	T	C,G	ATP11A	gwas_catalog	1	low	0	False		yes			ok	
+rs1289469	rs1289469	5	179144534	178571535	A	C	A	C	SLC24A4	curated:Meyer et al. 2020,	1	moderate							ok	
+rs1290177	rs1290177	13	112881818	113536132	T	C	T	C	ATP11A	gwas_catalog	1	low	0	False				yes	ok	
+rs1308048	rs1308048	1	66422859	66888542	T	C	T	C	PDE4B - SGIP1	gwas_catalog	1	low	0	False					ok	
+rs1326797	rs1326797	9	12716763	12716762	T	G	T	G	LURAP1L-AS1	gwas_catalog	1	low	0	False					ok	
+rs1338356	rs1338356	1	211179283	211352625	T	C	T	C	KCNH1 - PRELID1P5	gwas_catalog	1	low	1	False					ok	
+rs1338549	rs1338549	6	97864267	98312143	T	A,G	T	A,G	MMS22L - MIR2113	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs1379496	rs1379496	12	102579439	102973217	G	A,C,T	G	A,C,T	IGF1 - LINC00485	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs1391659	rs1391659	6	155663265	155984399	G	C	G	C	RNU7-152P - MIR1202	gwas_catalog	1	low	0	False	yes				ok	
+rs1393350	rs1393350	11	89277878	89011046	G	A	G	A	TYR	curated:Kastelic2013;curated:Pospiech2016;discordance;gwas_catalog;hirisplex_s;martin2017	6	high	17	True					ok	
+rs1408799	rs1408799	9	12672097	12672097	T	C	T	C	LURAP1L-AS1;TYRP1	curated:Meyer et al. 2020,;discordance;gwas_catalog;martin2017	4	moderate	0	False					ok	
+rs1416288	rs1416288	6	139992581	140313718	A	G,T	A	G,T	LINC02941	gwas_catalog	1	low	0	False		yes			ok	
+rs1423300	rs1423300	5	33832328	33832433	G	A,C	G	A,C	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs1426654	rs1426654	15	48134287	48426484	A	G,T	A	G,T	SLC24A5;SLC24A5 (region/passenger genes CTXN2, LINC01491 tagged by rs2413887/rs1834640/rs2675345)	curated:Ang2023;curated:Crawford2017;curated:Yang2016;discordance;gwas_catalog;hirisplex_s;martin2017	7	high	14	True		yes		yes	ok	
+rs1432262	rs1432262	2	221202727	222067447	A	G,T	A	G,T	MIR4268 - EPHA4	gwas_catalog	1	high	6	True		yes			ok	
+rs1433830	rs1433830	9	18868649	18868647	T	C	T	C	ADAMTSL1, SAXO1	gwas_catalog	1	low	1	False					ok	
+rs1448484	rs1448484	15	28038295	28283441	A	G	A	G	OCA2	gwas_catalog	1	high	58	True				yes	ok	
+rs1448489	rs1448489	15	27934733	28179879	T	C	T	C	OCA2	gwas_catalog	1	high	58	True					ok	
+rs1452000	rs1452000	8	81855163	82767398	T	A,G	T	A,G	LINC02235	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs1453858	rs1453858	15	48011913	48304110	T	A,G	T	A,G	LINC01491 - SLC24A5	gwas_catalog	1	high	14	True	yes	yes		yes	ok	
+rs1458046	rs1458046	4	80278812	81199966	G	A	G	A	FGF5	gwas_catalog	1	low	1	False					ok	
+rs1470608	rs1470608	15	28042975	28288121	G	A,C,T	G	A,C,T	OCA2	hirisplex_s	1	high				yes			ok	
+rs1484372	rs1484372	9	106248518	109010799	G	T	G	T	LINC01505	gwas_catalog	1	low	0	False					ok	
+rs1531903	rs1531903	11	15647280	15668826	C	G,T	C	G,T	LINC02751	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs1540771	rs1540771	6	466033	466033	C	A,T	C	A,T	6p25.3;IRF4 - EXOC2;near IRF4	curated:Ang2023;gwas_catalog;martin2017	3	high	36	True		yes			ok	
+rs1542371	rs1542371	4	186011847	186933001	T	A	T	A	SORBS2 - RNU4-64P	gwas_catalog	1	low	0	False	yes				ok	
+rs1545397	rs1545397	15	27942626	28187772	A	T	A	T	OCA2	hirisplex_s	1	high			yes				ok	
+rs1548714	rs1548714	17	27953178	26280204	A	C,G,T	A	C,G,T	LINC01992	gwas_catalog	1	low	0	False		yes			ok	
+rs1549283	rs1549283	5	33909738	33909843	T	C	T	C	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False					ok	
+rs1550117	rs1550117	2	25343038	25565907	A	C,G,T	A	C,G,T	DNMT3A - ARNILA	gwas_catalog	1	low	0	False		yes			ok	
+rs1626067	rs1626067	11	67425084	67192555	G	A,T	G	A,T	CARNS1	gwas_catalog	1	low	0	False		yes			ok	
+rs1629168	rs1629168	1	28179554	28506065	G	A,C	G	A,C	PTAFR	gwas_catalog	1	low	1	False		yes			ok	
+rs1667392	rs1667392	15	28288419	28533565	G	A,C,T	G	A,C,T	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs1667393	rs1667393	15	28287493	28532639	T	A,C	T	A,C	OCA2 (region includes HERC2; rs4932620/rs1667393 intron HERC2)	curated:Crawford2017	1	moderate			yes	yes	yes		ok	merged_from=rs1800404
+rs1667394	rs1667394	15	28285036	28530182	C	A,T	C	A,T	HERC2;OCA2	gwas_catalog;hirisplex_s;martin2017	3	high	40	True		yes			ok	
+rs1667395	rs1667395	15	28282892	28528038	C	A,G,T	C	A,G,T	HERC2	hirisplex_s	1	high				yes			ok	
+rs1740397	rs1740397	1	63566612	64032283	A	G	A	G	EFCAB7, ITGB3BP	gwas_catalog	1	low	0	False					ok	
+rs1742982	rs1742982	20	32463002	31050805	T	A,G	T	A,G	NOL4L	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs1774936	rs1774936	10	29340037	29628966	G	A,C,T	G	A,C,T	LYZL1 - SVIL-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs1799802	rs1799802	16	13934224	14028081	C	T	C	T	ERCC4	gwas_catalog	1	low	0	False					ok	
+rs1800347	rs1800347	16	89748641	89815049	T	C	T	C	FANCA	gwas_catalog	1	high	4	True					ok	
+rs1800401	rs1800401	15	28014907	28260053	G	A	G	A	OCA2	curated:Ang2023;discordance	2	moderate							ok	
+rs1800404	rs1800404	15	27990627	28235773	C	A,T	C	A,T	OCA2;OCA2 (region includes HERC2; rs4932620/rs1667393 intron HERC2)	curated:Ang2023;discordance;gwas_catalog;martin2017	4	high	58	True		yes		yes	ok	
+rs1800407	rs1800407	15	27985172	28230318	C	T	C	T	OCA2	curated:Abbatangelo2026;curated:Kastelic2013;curated:Pospiech2016;discordance;gwas_catalog;hirisplex_s	6	high	58	True				yes	ok	
+rs1800414	rs1800414	15	27951891	28197037	T	A,C	T	A,C	OCA2	curated:Yang2016;discordance;gwas_catalog;hirisplex_s;martin2017	5	high	58	True	yes	yes		yes	ok	
+rs1800417	rs1800417	15	27871233	28116379	A	G	A	G	OCA2	martin2017	1	moderate							ok	
+rs1800419	rs1800419	15	27851392	28096538	A	C,G	A	C,G	OCA2 (non-coding/synonymous tag SNPs on albino haplotype)	curated:Ang2023	1	moderate				yes			ok	
+rs1800440	rs1800440	2	38070996	38298139	T	C,G	T	C,G	CYP1B1	gwas_catalog	1	low	0	False		yes			ok	
+rs1805005	rs1805005	16	89919436	89985844	G	T	G	T	MC1R	gwas_catalog	1	high	48	True				yes	ok	
+rs1805006	rs1805006	16	89919510	89985918	C	A,G	C	A,G	MC1R	gwas_catalog;hirisplex_s	2	high	48	True		yes		yes	ok	
+rs1805007	rs1805007	16	89919709	89986117	C	A,G,T	C	A,G,T	MC1R	curated:Ang2023;gwas_catalog;hirisplex_s;martin2017	4	high	48	True		yes		yes	ok	
+rs1805008	rs1805008	16	89919736	89986144	C	T	C	T	MC1R	gwas_catalog;hirisplex_s;martin2017	3	high	48	True				yes	ok	
+rs1805009	rs1805009	16	89920138	89986546	G	A,C	G	A,C	MC1R	gwas_catalog	1	high	48	True		yes		yes	ok	
+rs1833923	rs1833923	5	33903329	33903434	C	A	C	A	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False					ok	
+rs1847134	rs1847134	11	89272085	89005253	A	C	A	C	TYR	gwas_catalog	1	high	17	True					ok	
+rs1874202	rs1874202	4	74462762	75328479	C	A,G,T	C	A,G,T	AREG - BTC	gwas_catalog	1	low	1	False		yes			ok	
+rs1885120	rs1885120	20	34989186	33576989	C	G,T	C	G,T	MYH7B	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs1885194	rs1885194	14	92311118	92777462	T	C	T	C	RNU6-366P - SLC24A4	gwas_catalog	1	high	17	True					ok	
+rs1887103	rs1887103	14	60276501	60743219	A	G,T	A	G,T	PPM1A	gwas_catalog	1	low	1	False		yes			ok	
+rs1907703	rs1907703	12	88561865	88955642	C	A,T	C	A,T	KITLG	gwas_catalog	1	high	12	True		yes			ok	
+rs1912459	rs1912459	15	36052589	36344790	C	G,T	C	G,T	LINC02853	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs1919361	rs1919361	15	32751321	33043522	T	C,G	T	C,G	GREM1 - FMN1	gwas_catalog	1	low	0	False		yes			ok	
+rs1944068	rs1944068	11	90475715	90208883	G	A,C	G	A,C	DISC1FP1	gwas_catalog	1	low	0	False		yes			ok	
+rs1946267	rs1946267	5	33921705	33921810	A	G,T	A	G,T	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False		yes			ok	
+rs1996603	rs1996603	4	110457206	111378362	G	A	G	A	ENPEP	gwas_catalog	1	high	3	True					ok	
+rs1998948	rs1998948	1	9110878	9170937	T	C,G	T	C,G	GPR157	gwas_catalog	1	low	0	False		yes			ok	
+rs2049865	rs2049865	8	115576319	116588546	C	A	C	A	TRPS1	gwas_catalog	1	low	0	False				yes	ok	
+rs2063714	rs2063714	6	156874846	157195980	C	A,G,T	C	A,G,T	ARID1B	gwas_catalog	1	low	1	False		yes			ok	
+rs2067350	rs2067350	5	33968648	33968753	AA	AAA	AA	AAA	SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs2093657	rs2093657	9	5783498	5783498	T	A,C	T	A,C	ERMP1	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs2093835	rs2093835	9	2229335	2229335	T	A,C,G	T	A,C,G	SMARCA2/VLDLR	martin2017	1	moderate			yes	yes			ok	
+rs2110015	rs2110015	7	17773115	17812739	C	A,G,T	C	A,G,T	SNX13	martin2017	1	moderate				yes			ok	
+rs2122005	rs2122005	15	28021881	28267027	G	A	G	A	OCA2	gwas_catalog	1	high	58	True					ok	
+rs2153271	rs2153271	9	16864523	16864521	C	G,T	C	G,T	BNC2;BNC2 (intronic)	curated:Ang2023;discordance;gwas_catalog	3	high	10	True	yes	yes			ok	
+rs2187128	rs2187128	11	89146747	88879915	T	A,C,G	T	A,C,G	GRM5 - TYR	gwas_catalog	1	high	17	True	yes	yes		yes	ok	
+rs2210426	rs2210426	9	39083501	39083498	C	A,T	C	A,T	CNTNAP3	gwas_catalog	1	low	1	False		yes			ok	
+rs2216153	rs2216153	12	88288200	88681977	G	A,C,T	G	A,C,T	TMTC3 - Y_RNA	gwas_catalog	1	high	4	True		yes			ok	
+rs2228479	rs2228479	16	89919532	89985940	G	A,C	G	A,C	MC1R	gwas_catalog;hirisplex_s	2	high	48	True		yes			ok	
+rs2235874	rs2235874	6	226284	226284	C	G,T	C	G,T	LINC03066 - DUSP22	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs2238289	rs2238289	15	28208069	28453215	A	G	A	G	HERC2	hirisplex_s	1	high							ok	
+rs2238529	rs2238529	16	89786709	89853117	G	A,C	G	A,C	FANCA	gwas_catalog	1	high	4	True		yes			ok	
+rs2240751	rs2240751	19	3548233	3548231	A	G	A	G	MFSD12;MFSD12, MFSD12-AS1	curated:Ang2023;discordance;gwas_catalog;kim2024	4	high	5	True				yes	ok	
+rs2272756	rs2272756	1	946653	882033	G	A,C	G	A,C	NOC2L	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs2273699	rs2273699	14	103457138	103923475	A	G	A	G	MARK3	gwas_catalog	1	high	2	True					ok	
+rs2278007	rs2278007	5	33951446	33951551	A	C,G	A	C,G	SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs2278745	rs2278745	10	69392335	71152091	T	A,C,G	T	A,C,G	HK1	gwas_catalog	1	high	2	True	yes	yes			ok	
+rs2292572	rs2292572	11	78341818	78052864	G	A,T	G	A,T	GAB2	gwas_catalog	1	high	2	True		yes			ok	
+rs2294196	rs2294196	22	45234781	45630662	C	T	C	T	KIAA0930	gwas_catalog	1	high	2	True					ok	
+rs2294664	rs2294664	6	599042	599042	T	A,G	T	A,G	EXOC2	gwas_catalog	1	high	5	True	yes	yes			ok	
+rs2302898	rs2302898	16	89932386	89998794	G	A	G	A	TUBB3	gwas_catalog	1	high	2	True					ok	
+rs2305252	rs2305252	15	28022192	28267338	C	T	C	T	OCA2	gwas_catalog	1	high	58	True					ok	
+rs2331343	rs2331343	5	33921589	33921694	T	C,G	T	C,G	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs2333857	rs2333857	6	154342434	154663568	A	G,T	A	G,T	IPCEF1 / CNKSR3 (near OPRM1)	curated:Ang2023	1	moderate				yes			ok	
+rs2346098	rs2346098	15	28236282	28481428	G	A,C	G	A,C	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs2351061	rs2351061	11	15679072	15700618	T	A,C	T	A,C	LINC02751	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs2369633	rs2369633	1	205211934	205181062	T	A,C,G	T	A,C,G	DSTYK - TMCC2	gwas_catalog	1	high	4	True	yes	yes			ok	
+rs2378249	rs2378249	20	34630286	33218090	G	A,C	G	A,C	PIGU	hirisplex_s	1	high				yes			ok	
+rs2402130	rs2402130	14	92334859	92801203	G	A,C,T	G	A,C,T	SLC24A4	hirisplex_s	1	high				yes			ok	
+rs2424995	rs2424995	20	34576711	33164515	T	A	T	A	PIGU	gwas_catalog	1	high	2	True	yes				ok	
+rs2425025	rs2425025	20	35259351	33847154	G	A	G	A	MMP24OS, MMP24	gwas_catalog	1	low	0	False					ok	
+rs2425048	rs2425048	20	35284920	33872723	C	A,G,T	C	A,G,T	FAM83C-AS1, EIF6	gwas_catalog	1	low	0	False		yes			ok	
+rs2425192	rs2425192	20	36242663	34830585	A	C,G,T	A	C,G,T	AAR2	gwas_catalog	1	low	0	False		yes			ok	
+rs2425224	rs2425224	20	36374446	35002849	A	C,G,T	A	C,G,T	DLGAP4	gwas_catalog	1	low	0	False		yes			ok	
+rs2443723	rs2443723	3	11620818	11662292	G	A,C,T	G	A,C,T	VGLL4	gwas_catalog	1	low	1	False		yes			ok	
+rs2458713	rs2458713	10	2488391	2530583	G	A,C	G	A,C	LINC02645	gwas_catalog	1	low	0	False		yes			ok	
+rs2470102	rs2470102	15	48141297	48433494	A	C,G	A	C,G	MYEF2, SLC24A5;SLC24A5	gwas_catalog;martin2017	2	high	14	True		yes		yes	ok	
+rs2516084	rs2516084	22	27003613	27399576	T	A,C,G	T	A,C,G	MIATNB	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs2522490	rs2522490	4	104857173	105778330	C	A	C	A	CXXC4-AS1 - RPL6P14	gwas_catalog	1	low	0	False					ok	
+rs2524069	rs2524069	6	31277012	31244789	A	T	A	T	USP8P1	gwas_catalog	1	low	1	False	yes			yes	ok	
+rs2525919	rs2525919	15	28210654	28455800	A	G,T	A	G,T	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs2529369	rs2529369	7	105776114	105416560	C	A,G,T	C	A,G,T	ATXN7L1	gwas_catalog	1	low	1	False		yes			ok	
+rs2529687	rs2529687	17	12321905	12225222	G	C	G	C	MAP2K4 - LINC00670	gwas_catalog	1	low	0	False	yes				ok	
+rs2555364	rs2555364	15	48127189	48419386	C	G	C	G	SLC24A5	martin2017	1	high			yes				ok	
+rs2588926	rs2588926	10	61867180	63626939	T	C	T	C	LINC02625	gwas_catalog	1	low	0	False					ok	
+rs2591719	rs2591719	5	33835538	33835643	G	A,C,T	G	A,C,T	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs2591723	rs2591723	5	33832853	33832958	T	C	T	C	ADAMTS12	gwas_catalog	1	low	1	False				yes	ok	
+rs2591736	rs2591736	5	33848028	33848133	C	A,G	C	A,G	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs2594903	rs2594903	15	27903503	28148649	G	A,C,T	G	A,C,T	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs2596389	rs2596389	5	16422835	16422944	G	A	G	A	LINC02150	gwas_catalog	1	low	0	False					ok	
+rs2599144	rs2599144	2	91579868	91767925	T	C	C	T	IGKV1OR2-118 - LSP1P5	gwas_catalog	1	low	0	False					ok	
+rs2600605	rs2600605	8	81808525	82720760	G	A	G	A	SNX16, HNRNPA1P36	gwas_catalog	1	high	2	True					ok	
+rs2606433	rs2606433	16	18767203	18778525	A	T	A	T	ABCC6P1 - RPS15A	gwas_catalog	1	low	0	False	yes				ok	
+rs2607796	rs2607796	3	138637575	138356417	G	A	G	A	FAIM - PPIAP72	gwas_catalog	1	low	0	False					ok	
+rs2636060	rs2636060	15	29133733	29425936	G	A,C,T	G	A,C,T	ENTREP2	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs2639099	rs2639099	12	88614587	89008364	C	T	C	T	RNU1-117P - LINC02458	gwas_catalog	1	low	0	False					ok	
+rs2658084	rs2658084	5	10136023	10136135	C	A,T	C	A,T	LINC02112 - ATPSCKMT	gwas_catalog	1	low	0	False		yes			ok	
+rs2671427	rs2671427	6	385735	385735	T	C	T	C	DUSP22 - IRF4	gwas_catalog	1	high	36	True					ok	
+rs2675345	rs2675345	15	48108002	48400199	A	G,T	A	G,T	LINC01491 - SLC24A5	gwas_catalog	1	high	14	True		yes		yes	ok	
+rs2710956	rs2710956	7	91561109	91190424	G	A,T	G	A,T	LINC02932 - MTERF1	gwas_catalog	1	low	1	False		yes			ok	
+rs2733831	rs2733831	9	12703484	12703484	A	G	A	G	TYRP1	martin2017	1	moderate							ok	
+rs2733836	rs2733836	9	12692252	12692252	T	G	T	G	TYRP1	curated:Abbatangelo2026	1	moderate							ok	
+rs2737212	rs2737212	8	115608987	116621214	C	T	C	T	TRPS1	gwas_catalog	1	low	0	False					ok	
+rs2737217	rs2737217	8	115618084	116630311	A	C,G,T	A	C,G,T	TRPS1	gwas_catalog	1	low	0	False		yes			ok	
+rs2761430	rs2761430	1	207739063	207912408	G	A,C	G	A,C	CR1L - CD46	gwas_catalog	1	high	2	True		yes			ok	
+rs2762461	rs2762461	9	12696499	12696499	G	A,T	G	A,T	LURAP1L-AS1, TYRP1	gwas_catalog	1	high	11	True		yes		yes	ok	
+rs2765493	rs2765493	1	157828210	157798000	G	A,C,T	G	A,C,T	FCRL1 - CD5L	gwas_catalog	1	low	0	False		yes			ok	
+rs2772233	rs2772233	1	204662937	204632065	A	G	A	G	LRRN2	gwas_catalog	1	low	0	False					ok	
+rs2788223	rs2788223	6	720465	720465	G	A,T	G	A,T	EXOC2 - LINC01622	gwas_catalog	1	high	5	True		yes			ok	
+rs2793827	rs2793827	1	119906182	120448805	A	T	A	T	ADAM30 - NOTCH2	gwas_catalog	1	low	0	False	yes				ok	
+rs2829786	rs2829786	21	25506330	26878642	A	C,G	A	C,G	LINC00158 - MIR155HG	gwas_catalog	1	low	0	False		yes			ok	
+rs2855655	rs2855655	2	38077346	38304488	T	A,C,G	T	A,C,G	CYP1B1-AS1, CYP1B1	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs2856344	rs2856344	12	11737837	11890771	G	A,C	G	A,C	ETV6	gwas_catalog	1	low	0	False		yes			ok	
+rs2882325	rs2882325	2	201974151	202838874	T	A,C	T	A,C	RNU6-440P - FZD7	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs2953060	rs2953060	11	16065201	16086747	A	G,T	A	G,T	SOX6	gwas_catalog	1	high	3	True		yes			ok	
+rs2957668	rs2957668	11	10382835	10404382	T	A,C,G	T	A,C,G	CAND1.11, CTR9*	kim2024	1	high			yes	yes			ok	
+rs2961906	rs2961906	5	33858671	33858776	G	A,C,T	G	A,C,T	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs2964049	rs2964049	5	174403619	173830622	A	C,G	A	C,G	LINC01411	gwas_catalog	1	low	0	False		yes			ok	
+rs2971755	rs2971755	7	131744295	131429054	T	C,G	T	C,G	EEF1B2P6 - NDUFB9P2	gwas_catalog	1	low	0	False		yes			ok	
+rs3002288	rs3002288	1	212953223	213126565	G	A	G	A	VASH2	gwas_catalog;martin2017	2	moderate	1	False					ok	
+rs3071601	rs3071601	15	28041322	28286468	AAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA	AAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs3098576	rs3098576	15	27613262	27858408	C	T	C	T	GABRG3 - OCA2	gwas_catalog	1	high	58	True				yes	ok	
+rs3114908	rs3114908	16	89317317	89383725	T	A,C,G	T	A,C,G	ANKRD11	gwas_catalog;hirisplex_s	2	high	0	False	yes	yes			ok	
+rs3114910	rs3114910	16	89313019	89379427	C	G	C	G	ANKRD11	gwas_catalog	1	low	0	False	yes				ok	
+rs3180279	rs3180279	16	88644425	88710833	C	G,T	C	G,T	CYBA	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs3212308	rs3212308	6	158770756	159191788	C	T	C	T	EZR	gwas_catalog	1	high	3	True					ok	
+rs3212350	rs3212350	16	89917146	89983554	G	A,C	G	A,C	MC1R	gwas_catalog	1	high	48	True		yes			ok	
+rs3212355	rs3212355	16	89917970	89984378	C	T	C	T	MC1R	hirisplex_s	1	high							ok	
+rs3213661	rs3213661	7	13986732	14026357	A	C,G,T	A	C,G,T	ETV1	gwas_catalog	1	low	1	False		yes			ok	
+rs3213737	rs3213737	12	95986028	96379806	G	A	G	A	HAL	gwas_catalog	1	low	0	False					ok	
+rs3740027	rs3740027	10	89309379	91069136	G	C,T	G	C,T	LIPA	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs3740342	rs3740342	10	86668961	88428718	C	G,T	C	G,T	LDB3*, OPN4*	kim2024	1	high			yes	yes			ok	
+rs3742233	rs3742233	13	112883134	113537448	G	A,C	G	A,C	ATP11A	gwas_catalog	1	low	0	False		yes			ok	
+rs3743861	rs3743861	16	89751932	89818340	G	A,C,T	G	A,C,T	FANCA	gwas_catalog	1	high	4	True		yes			ok	
+rs3750965	rs3750965	11	69072692	68840160	A	C,G	A	C,G	TPCN2	gwas_catalog	1	high	8	True		yes			ok	
+rs3758430	rs3758430	10	122558603	124318119	G	A	G	A	HTRA1 - DMBT1	gwas_catalog	1	high	3	True					ok	
+rs3764032	rs3764032	12	4208397	4317563	T	A,C	T	A,C	HSPA8P5 - CCND2-AS1	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs3773364	rs3773364	3	12148468	12189968	A	C,G	A	C,G	SYN2	kim2024	1	high				yes			ok	
+rs3776546	rs3776546	5	33975982	33976087	T	A,C	T	A,C	SLC45A2	gwas_catalog	1	high	23	True	yes	yes		yes	ok	
+rs3778607	rs3778607	6	403799	403799	A	G,T	A	G,T	IRF4	gwas_catalog	1	high	36	True		yes			ok	
+rs3785011	rs3785011	16	84057293	84090898	G	A	G	A	MBTPS1	gwas_catalog	1	low	1	False					ok	
+rs3795556	rs3795556	1	205143783	205112911	T	A,C,G	T	A,C,G	DSTYK	gwas_catalog	1	high	4	True	yes	yes			ok	
+rs3797201	rs3797201	5	33968040	33968145	G	C,T	G	C,T	SLC45A2	gwas_catalog	1	high	23	True	yes	yes			ok	
+rs3803686	rs3803686	16	89953938	90020346	A	C	A	C	DEF8	gwas_catalog	1	high	4	True					ok	
+rs3804772	rs3804772	3	141915214	141634056	G	A,T	G	A,T	ATP1B3	gwas_catalog	1	low	1	False		yes			ok	
+rs3809761	rs3809761	17	69501226	67497367	G	A	G	A	MAP2K6	gwas_catalog	1	low	0	False					ok	
+rs3829241	rs3829241	11	69087895	68855363	G	A	G	A	TPCN2	gwas_catalog;martin2017	2	high	8	True					ok	
+rs3851294	rs3851294	1	205161285	205130413	A	C,G,T	A	C,G,T	DSTYK	gwas_catalog	1	high	4	True		yes			ok	
+rs3886769	rs3886769	18	46012347	43592313	G	A	G	A	PSTPIP2	gwas_catalog	1	low	1	False					ok	
+rs3940272	rs3940272	15	28223577	28468723	T	G	T	G	HERC2	gwas_catalog	1	high	40	True					ok	
+rs4074658	rs4074658	15	28082760	28327906	C	A,G,T	C	A,G,T	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs4078279	rs4078279	11	7520280	7541511	C	T	C	T	PPFIBP2	gwas_catalog	1	high	3	True					ok	
+rs4121827	rs4121827	11	88936881	88670049	T	C	T	C	GRM5	gwas_catalog	1	high	6	True					ok	
+rs4130120	rs4130120	8	127632710	128644955	T	C	T	C	CASC8 - CASC11	gwas_catalog	1	low	0	False				yes	ok	
+rs4238492	rs4238492	15	27796758	28041904	A	G,T	A	G,T	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs4238497	rs4238497	15	28035689	28280835	A	C,G,T	A	C,G,T	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs4242182	rs4242182	5	174729165	174156168	T	A,C,G	T	A,C,G	MSX2	gwas_catalog	1	high	2	True	yes	yes			ok	
+rs4246064	rs4246064	6	421196	421196	C	A,G	C	A,G	IRF4 - EXOC2	gwas_catalog	1	high	36	True		yes			ok	
+rs4248913	rs4248913	16	89626691	89693099	C	A,G,T	C	A,G,T	DPEP1	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs4259415	rs4259415	8	23044055	22901568	A	C,G,T	A	C,G,T	TNFRSF10B	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs4355331	rs4355331	4	6021527	6023254	C	G	C	G	C4orf50	gwas_catalog	1	low	0	False	yes			yes	ok	
+rs4370538	rs4370538	8	69745595	70657830	A	G	A	G	SLCO5A1	gwas_catalog	1	low	0	False				yes	ok	
+rs4407483	rs4407483	4	148935689	149856841	T	C	T	C	ATP5MGP4 - RNU7-197P	gwas_catalog	1	low	0	False					ok	
+rs4424881	rs4424881	15	28969513	29261716	C	A,G,T	C	A,G,T	APBA2	gwas_catalog;martin2017	2	high	2	True		yes		yes	ok	
+rs4425211	rs4425211	3	36910407	36951898	A	G	A	G	TRANK1	gwas_catalog	1	low	1	False					ok	
+rs4434606	rs4434606	8	40805553	40663072	A	C,G,T	A	C,G,T	ZMAT4	gwas_catalog	1	low	1	False		yes			ok	
+rs4444073	rs4444073	11	10310117	10331664	A	C	A	C	AMPD3	gwas_catalog	1	low	1	False					ok	
+rs4463718	rs4463718	1	55440394	55906067	T	A,G	T	A,G	LINC01755	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs4577100	rs4577100	16	32044223	32055544	T	A,C	T	A,C	IGHV1OR16-1 - IGHV1OR16-3	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs4578351	rs4578351	11	16566033	16587580	T	C	T	C	SOX6	gwas_catalog	1	high	3	True					ok	
+rs4586434	rs4586434	16	89928508	89994916	G	A	G	A	TUBB3	gwas_catalog	1	high	2	True					ok	
+rs4596632	rs4596632	8	131341488	132353735	G	A,C,T	G	A,C,T	IADEN - SNORA72	gwas_catalog	1	low	0	False		yes			ok	
+rs4644350	rs4644350	9	16882918	16882916	C	G	C	G	BNC2 - RN7SL720P	gwas_catalog	1	high	10	True	yes			yes	ok	
+rs4665412	rs4665412	2	28362941	28585808	C	A,T	C	A,T	BABAM2 - FOSL2-AS1	gwas_catalog	1	low	1	False		yes			ok	
+rs4683605	rs4683605	3	141375927	141094769	C	A,T	C	A,T	ZBTB38	gwas_catalog	1	high	2	True		yes			ok	
+rs4721735	rs4721735	7	18991407	19031030	G	A	G	A	HDAC9	gwas_catalog	1	low	1	False					ok	
+rs4752116	rs4752116	10	117823291	119582802	T	C	T	C	LINC02674 - RAB11FIP2	gwas_catalog	1	high	3	True					ok	
+rs4768698	rs4768698	12	46355305	46749088	A	G	A	G	SLC38A1 - SLC38A2	gwas_catalog	1	low	1	False					ok	
+rs4778137	rs4778137	15	28082689	28327835	C	A,G	C	A,G	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs4778138	rs4778138	15	28090674	28335820	A	C,G,T	A	C,G,T	OCA2	curated:Abbatangelo2026;gwas_catalog	2	high	58	True		yes		yes	ok	
+rs4778218	rs4778218	15	27966612	28211758	A	C,G,T	A	C,G,T	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs4778219	rs4778219	15	27968704	28213850	C	T	C	T	OCA2	gwas_catalog	1	high	58	True				yes	ok	
+rs4778224	rs4778224	15	27995874	28241020	A	G,T	A	G,T	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs4778241	rs4778241	15	28093567	28338713	A	C	A	C	OCA2	gwas_catalog	1	high	58	True				yes	ok	
+rs4778249	rs4778249	15	28135372	28380518	T	A,C,G	T	A,C,G	HERC2	gwas_catalog	1	high	40	True	yes	yes		yes	ok	
+rs4782318	rs4782318	16	88702992	88769400	A	C,G,T	A	C,G,T	RNF166	gwas_catalog	1	low	0	False		yes			ok	
+rs4785699	rs4785699	16	89649814	89716222	G	C,T	G	C,T	CHMP1A	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs4785736	rs4785736	16	89903185	89969593	T	C,G	T	C,G	TCF25	gwas_catalog	1	high	9	True		yes			ok	
+rs4785751	rs4785751	16	89963009	90029417	G	A	G	A	DEF8	gwas_catalog	1	high	4	True					ok	
+rs4785752	rs4785752	16	89968733	90035141	A	G	A	G	DEF8 - CENPBD1P	gwas_catalog	1	high	4	True					ok	
+rs4842464	rs4842464	12	87476312	87870089	T	A,C	T	A,C	RPL23AP68 - CYCSP30	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs4842610	rs4842610	12	88417912	88811689	C	G,T	C	G,T	TMTC3 - Y_RNA	gwas_catalog	1	high	4	True	yes	yes		yes	ok	
+rs4869723	rs4869723	6	151258297	151579432	C	T	C	T	AKAP12	gwas_catalog	1	high	3	True					ok	
+rs4884060	rs4884060	13	77243655	77817790	T	C	T	C	MYCBP2	gwas_catalog	1	low	1	False					ok	
+rs4896038	rs4896038	6	134288153	134609291	A	C	A	C	SGK1	gwas_catalog	1	low	1	False					ok	
+rs4904871	rs4904871	14	92329568	92795912	A	G	A	G	SLC24A4	gwas_catalog	1	high	17	True					ok	
+rs4904886	rs4904886	14	92378026	92844370	G	A,T	G	A,T	SLC24A4	gwas_catalog	1	high	17	True		yes			ok	
+rs4911414	rs4911414	20	34141638	32729444	T	A,G	T	A,G	ASIP;RPS2P1 - ASIP	gwas_catalog;martin2017	2	high	8	True	yes	yes			ok	
+rs4911466	rs4911466	20	35102207	33690010	C	A,G,T	C	A,G,T	TRPC4AP - EDEM2	gwas_catalog	1	low	0	False		yes			ok	
+rs4935969	rs4935969	11	126426694	126296589	C	T	C	T	ST3GAL4, KIRREL3	gwas_catalog	1	low	0	False					ok	
+rs4968049	rs4968049	16	89618253	89684661	G	A	G	A	DPEP1	gwas_catalog	1	low	1	False					ok	
+rs5756492	rs5756492	22	37028950	37424991	G	A	G	A	MPST	gwas_catalog	1	low	1	False					ok	
+rs5765229	rs5765229	22	45242915	45638796	C	T	C	T	KIAA0930 - UPK3A	gwas_catalog	1	high	2	True					ok	
+rs5767203	rs5767203	22	46425412	46821309	C	A,T	C	A,T	CELSR1	gwas_catalog	1	low	1	False		yes			ok	
+rs5771001	rs5771001	22	50456591	50895020	C	A,G,T	C	A,G,T	SBF1	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs5777535	rs5777535	1		145099903			AA	AAA		gwas_catalog	1	low	0	False					hg19_only	
+rs5811535	rs5811535	15	28101669	28346815	T	-	T	-	OCA2 - HERC2	gwas_catalog	1	high	58	True					ok	
+rs6007506	rs6007506	22	45226133	45622014	C	A,T	C	A,T	KIAA0930	gwas_catalog	1	high	2	True		yes			ok	
+rs6048544	rs6048544	20	23090394	23071031	G	A	G	A	CD93 - LINC00656	gwas_catalog	1	low	0	False					ok	
+rs6058017	rs6058017	20	34269192	32856998	A	G	A	G	ASIP;ASIP/AHCY (3'UTR/intron)	curated:Ang2023;discordance;martin2017	3	moderate							ok	
+rs6059655	rs6059655	20	34077942	32665748	A	G	A	G	RALY;RALY (intron; functional target = ASIP)	curated:Morgan2018;discordance;gwas_catalog;hirisplex_s	4	high	4	True				yes	ok	
+rs6088347	rs6088347	20	33920304	32508110	G	A	G	A	TPM3P2 - PIGPP3	gwas_catalog	1	low	0	False					ok	
+rs6119471	rs6119471	20	34197406	32785212	C	A,G	C	A,G	ASIP	hirisplex_s	1	high				yes			ok	
+rs6127868	rs6127868	20	56834037	55409093	G	A,T	G	A,T	RNU6-929P - BMP7	gwas_catalog	1	low	0	False		yes			ok	
+rs6142422	rs6142422	20	35628136	34216058	C	A,G,T	C	A,G,T	CPNE1	gwas_catalog	1	low	0	False		yes			ok	
+rs6414861	rs6414861	5	33960110	33960215	A	C,G,T	A	C,G,T	SLC45A2	gwas_catalog	1	high	23	True		yes			ok	
+rs6420484	rs6420484	17	81645371	79612397	A	C,G,T	A	C,G,T	TSPAN10;TSPAN10, NPLOC4	curated:Morgan2018;gwas_catalog	2	high	2	True		yes			ok	
+rs6429197	rs6429197	1	235611717	235775017	G	C	G	C	GNG4	gwas_catalog	1	low	0	False	yes			yes	ok	
+rs6451047	rs6451047	5	33956911	33957016	T	A,C,G	T	A,C,G	SLC45A2	gwas_catalog	1	high	23	True	yes	yes		yes	ok	
+rs6451050	rs6451050	5	33968217	33968322	T	A,C,G	T	A,C,G	SLC45A2	gwas_catalog	1	high	23	True	yes	yes		yes	ok	
+rs6492711	rs6492711	13	94544305	95196559	C	T	C	T	DCT - TGDS	gwas_catalog	1	low	1	False					ok	
+rs6497233	rs6497233	15	27798244	28043390	T	A,C,G	T	A,C,G	OCA2	gwas_catalog	1	high	58	True	yes	yes			ok	
+rs6497257	rs6497257	15	28065416	28310562	T	A,C,G	T	A,C,G	OCA2	gwas_catalog	1	high	58	True	yes	yes			ok	
+rs6497263	rs6497263	15	28075515	28320661	T	A	T	A	OCA2	gwas_catalog	1	high	58	True	yes			yes	ok	
+rs6497271	rs6497271	15	28120285	28365431	A	C,G,T	A	C,G,T	HERC2 (intronic; in SOX2 consensus motif)	discordance	1	moderate				yes			ok	
+rs6497292	rs6497292	15	28251049	28496195	A	G	A	G	HERC2	hirisplex_s	1	high							ok	
+rs6519897	rs6519897	22	44342526	44738406	A	G,T	A	G,T	SHISAL1 - SKP1P4	gwas_catalog	1	low	0	False		yes			ok	
+rs6543678	rs6543678	2	32837214	33062281	C	A,T	C	A,T	LINC00486	gwas_catalog	1	low	1	False		yes			ok	
+rs6597061	rs6597061	6	495636	495636	G	A	G	A	EXOC2	gwas_catalog	1	high	5	True					ok	
+rs6664080	rs6664080	1	226609725	226797426	T	C	T	C	STUM - ITPKB	gwas_catalog	1	low	0	False					ok	
+rs6679773	rs6679773	1	216460132	216633474	C	T	C	T	USH2A - ESRRG	gwas_catalog	1	low	0	False					ok	
+rs6687430	rs6687430	1	10573188	10633245	G	A,T	G	A,T	PEX14	gwas_catalog	1	low	1	False		yes			ok	
+rs6689641	rs6689641	1	110177778	110720400	A	C,G	A	C,G	SLC6A17*	kim2024	1	high				yes			ok	
+rs6690162	rs6690162	1	162294228	162264018	A	G	A	G	NOS1AP	gwas_catalog	1	low	1	False					ok	
+rs6696511	rs6696511	1	41645217	42110888	T	A,C,G	T	A,C,G	HIVEP3	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs6704925	rs6704925	2	185323105	186187832	A	G,T	A	G,T	ZNF804A - ELF2P4	gwas_catalog	1	low	0	False		yes			ok	
+rs6707137	rs6707137	2	88254832	88554351	G	A	G	A	THNSL2 - MRPL45P1	gwas_catalog	1	low	1	False					ok	
+rs6739706	rs6739706	2	134649839	135407409	A	C,G,T	A	C,G,T	TMEM163	gwas_catalog	1	high	2	True		yes			ok	
+rs6742078	rs6742078	2	233763993	234672639	G	T	G	T	UGT1A	martin2017	1	moderate							ok	
+rs6743428	rs6743428	2	15692975	15833099	G	A	G	A	LINC01804	gwas_catalog	1	low	0	False				yes	ok	
+rs6745983	rs6745983	2	134673139	135430709	G	A	G	A	TMEM163	gwas_catalog	1	high	2	True					ok	
+rs6782181	rs6782181	3	138386212	138105054	G	A,C,T	G	A,C,T	MRAS	gwas_catalog	1	low	1	False		yes			ok	
+rs6789157	rs6789157	3	140360027	140078869	C	G,T	C	G,T	CLSTN2	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs6792049	rs6792049	3	156635372	156353161	T	A,C,G	T	A,C,G	TIPARP-AS1	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs6816819	rs6816819	4	64902991	65768709	T	G	T	G	LINC02232;LOC107986284 (intronic)	curated:Ang2023;discordance;gwas_catalog	3	moderate	0	False				yes	ok	
+rs6860111	rs6860111	5	90967764	90263581	T	C,G	T	C,G	ADGRV1	gwas_catalog	1	low	1	False		yes			ok	
+rs6868805	rs6868805	5	58134412	57430239	G	C	G	C	LINC02101	gwas_catalog	1	low	0	False	yes				ok	
+rs6875907	rs6875907	5	53816794	53112624	C	T	C	T	LINC02105	gwas_catalog	1	low	1	False					ok	
+rs6876712	rs6876712	5	174549112	173976115	T	A,G	T	A,G	LINC01411 - SUMO2P6;MSX2 (MSX2/LTO1 candidate)	curated:Morgan2018;discordance;gwas_catalog	3	moderate	0	False	yes	yes			ok	
+rs6879563	rs6879563	5	90968046	90263863	C	G,T	C	G,T	ADGRV1	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs6882046	rs6882046	5	88673046	87968864	A	G	A	G	MIR9-2HG	gwas_catalog	1	low	0	False					ok	
+rs6917661	rs6917661	6	154400423	154721557	C	G,T	C	G,T	OPRM1	martin2017	1	moderate			yes	yes			ok	
+rs6918152	rs6918152	6	542159	542159	A	G	A	G	EXOC2	gwas_catalog	1	high	5	True					ok	
+rs6924266	rs6924266	6	25505389	25505617	C	T	C	T	CARMIL1	gwas_catalog	1	low	0	False					ok	
+rs6938671	rs6938671	6	530476	530476	G	C,T	G	C,T	EXOC2	gwas_catalog	1	high	5	True	yes	yes			ok	
+rs6938966	rs6938966	6	41793252	41760990	T	G	T	G	USP49	gwas_catalog	1	low	0	False					ok	
+rs6946516	rs6946516	7	67634233	67099220	A	T	A	T	MTCO3P41 - MTCO1P57	gwas_catalog	1	low	0	False	yes				ok	
+rs6972456	rs6972456	7	150747295	150444383	T	A,G	T	A,G	GIMAP3P, GIMAP5	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs6977057	rs6977057	7	96770182	96399494	C	A,G,T	C	A,G,T	SEM1, LOC105375414, DLX6*	kim2024	1	high				yes			ok	
+rs6977845	rs6977845	7	67751383	67216370	T	A	T	A	MTCO3P41 - MTCO1P57	gwas_catalog	1	low	0	False	yes				ok	
+rs7003565	rs7003565	8	107510196	108522424	C	A,T	C	A,T	ANGPT1 - PGAM1P13	gwas_catalog	1	low	0	False		yes			ok	
+rs7025678	rs7025678	9	12760789	12760788	A	C,G,T	A	C,G,T	LURAP1L-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs7034354	rs7034354	9	12732576	12732575	A	C,G,T	A	C,G,T	LURAP1L-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs7075993	rs7075993	10	72294832	74054590	C	G	C	G	DDIT4-AS1	gwas_catalog	1	low	0	False	yes				ok	
+rs7087356	rs7087356	10	80441547	82201303	T	A,C,G	T	A,C,G	PRXL2A - TSPAN14	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs7109376	rs7109376	11	16350885	16372431	T	A	T	A	SOX6	gwas_catalog	1	high	3	True	yes				ok	
+rs7116973	rs7116973	11	89213898	88947066	T	A,G	T	A,G	TYR	gwas_catalog	1	high	17	True	yes	yes		yes	ok	
+rs7118677	rs7118677	11	88778356	88511524	G	T	G	T	GRM5;GRM5 (near TYR)	curated:Ang2023;discordance;gwas_catalog	3	high	6	True				yes	ok	
+rs7125001	rs7125001	11	129445284	129315179	T	A,C,G	T	A,C,G	BARX2	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs7127419	rs7127419	11	90315731	90048899	G	A	G	A	DISC1FP1	gwas_catalog	1	low	0	False				yes	ok	
+rs7161974	rs7161974	15	28092900	28338046	C	T	C	T	OCA2	gwas_catalog	1	high	58	True					ok	
+rs7169225	rs7169225	15	27943858	28189004	G	A	G	A	OCA2	gwas_catalog	1	high	58	True					ok	
+rs7170989	rs7170989	15	27955262	28200408	T	C	T	C	OCA2	gwas_catalog	1	high	58	True					ok	
+rs7173419	rs7173419	15	27951675	28196821	T	C	T	C	OCA2	gwas_catalog;martin2017	2	high	58	True					ok	
+rs7174027	rs7174027	15	28083619	28328765	G	A,C,T	G	A,C,T	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs7182377	rs7182377	15	28074560	28319706	T	G	T	G	OCA2	gwas_catalog	1	high	58	True					ok	
+rs7198386	rs7198386	16	89831488	89897896	A	C,G,T	A	C,G,T	SPIRE2	gwas_catalog	1	high	2	True		yes		yes	ok	
+rs7279297	rs7279297	21	41807559	43227915	A	G,T	A	G,T	PRDM15	gwas_catalog	1	low	0	False		yes			ok	
+rs7306001	rs7306001	12	88342824	88736601	A	C,G,T	A	C,G,T	TMTC3 - Y_RNA	gwas_catalog	1	high	4	True		yes			ok	
+rs7380538	rs7380538	5	33946450	33946555	A	G	A	G	SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs7403279	rs7403279	15	28138419	28383565	T	C	T	C	HERC2	gwas_catalog	1	high	40	True				yes	ok	
+rs7406690	rs7406690	17	65522407	63518525	A	G	A	G	LINC02563 - AXIN2	gwas_catalog	1	low	1	False					ok	
+rs7428430	rs7428430	3	50136751	50174184	C	G,T	C	G,T	SEMA3F-AS1	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs7487365	rs7487365	12	88280846	88674623	T	C	T	C	TMTC3 - Y_RNA	gwas_catalog	1	high	4	True					ok	
+rs7494925	rs7494925	15	28844663	29089809	G	C,T	G	C,T	GOLGA6L7	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs7494942	rs7494942	15	28118913	28364059	A	C,G,T	A	C,G,T	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs7495174	rs7495174	15	28099092	28344238	A	G,T	A	G,T	OCA2	gwas_catalog;martin2017	2	high	58	True		yes			ok	
+rs7520584	rs7520584	1	53535053	54000726	A	G,T	A	G,T	GLIS1	kim2024	1	high				yes			ok	
+rs7529037	rs7529037	1	205668373	205637501	G	A,C	G	A,C	SLC45A3*, RAB29*, NUCKS1*, PM20D1*	kim2024	1	high				yes			ok	
+rs7533482	rs7533482	1	214499928	214673271	T	C	T	C	PTPN14	gwas_catalog	1	low	0	False					ok	
+rs7538231	rs7538231	1	17875687	18202181	G	A,T	G	A,T	ACTL8 - LINC01654	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs7550088	rs7550088	1	240239353	240402653	T	A,C	T	A,C	FMN2	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs7603664	rs7603664	2	221176346	222041066	T	A,C	T	A,C	MIR4268 - EPHA4	gwas_catalog	1	high	6	True	yes	yes			ok	
+rs7611259	rs7611259	3	195849462	195576333	G	A,C,T	G	A,C,T	LINC01983	gwas_catalog	1	low	0	False		yes			ok	
+rs7665234	rs7665234	4	121396276	122317431	A	G	A	G	QRFPR - TUBB4BP5	gwas_catalog	1	low	0	False					ok	
+rs7667134	rs7667134	4	165722457	166643609	A	G,T	A	G,T	LINC01179, KLHL2*	kim2024	1	high				yes			ok	
+rs7679967	rs7679967	4	186014346	186935500	T	C	T	C	SORBS2 - RNU4-64P	gwas_catalog	1	low	0	False					ok	
+rs7691308	rs7691308	4	37292968	37294590	C	A,T	C	A,T	NWD2	gwas_catalog	1	low	0	False		yes			ok	
+rs7702361	rs7702361	5	33935838	33935943	A	C,G,T	A	C,G,T	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs7705127	rs7705127	5	123305008	122640702	T	C,G	T	C,G	PRDM6 - CEP120	gwas_catalog	1	low	0	False		yes			ok	
+rs7713279	rs7713279	5	33928797	33928902	T	A,G	T	A,G	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False	yes	yes		yes	ok	
+rs7714232	rs7714232	5	56715530	56011357	A	T	A	T	C5orf67 - MAP3K1	gwas_catalog	1	high	2	True	yes				ok	
+rs7721230	rs7721230	5	33992424	33992529	A	G,T	A	G,T	C1QTNF3-AMACR, AMACR	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs7729545	rs7729545	5	33933902	33934007	A	G	A	G	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False					ok	
+rs7744878	rs7744878	6	132580381	132901520	G	A,T	G	A,T	TAAR6 - TAAR5	gwas_catalog	1	low	0	False		yes			ok	
+rs7765892	rs7765892	6	686110	686110	C	A,T	C	A,T	EXOC2	gwas_catalog	1	high	5	True		yes			ok	
+rs7794036	rs7794036	7	105230001	104870448	T	C	T	C	SRPK2	gwas_catalog	1	low	0	False					ok	
+rs7803075	rs7803075	7	131057307	130742066	A	G	A	G	LINC-PINT	gwas_catalog	1	high	2	True					ok	
+rs7845221	rs7845221	8	22741908	22599421	C	T	C	T	EGR3-AS1, PEBP4	gwas_catalog	1	low	1	False					ok	
+rs7865762	rs7865762	9	16805334	16805332	G	A,C,T	G	A,C,T	BNC2	gwas_catalog	1	high	10	True		yes			ok	
+rs7866411	rs7866411	9	2475084	2475084	A	C,G	A	C,G	SMARCA2/VLDLR	martin2017	1	moderate				yes			ok	
+rs7873389	rs7873389	9	97846948	100609230	C	G,T	C	G,T	PTCSC2	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs7911113	rs7911113	10	75694955	77454713	A	G,T	A	G,T	LRMDA	curated:Ang2023;discordance	2	moderate				yes			ok	
+rs7913440	rs7913440	10	9598581	9640544	T	C,G	T	C,G	LINC00709 - HSP90AB7P	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs7914735	rs7914735	10	108681391	110441149	C	A,G,T	C	A,G,T	LINC01435 - LINC02661	gwas_catalog	1	low	0	False		yes			ok	
+rs7937452	rs7937452	11	88493228	88226396	C	T	C	T	GAPDHP70 - GRM5-AS1	gwas_catalog	1	low	0	False					ok	
+rs7943712	rs7943712	11	16522316	16543863	G	A,C	G	A,C	SOX6	gwas_catalog	1	high	3	True		yes			ok	
+rs7948623	rs7948623	11	61369675	61137147	T	A,C,G	T	A,C,G	TMEM138 (region/passenger genes DDB1, TMEM138, TMEM216/TMEM025, TKFC; function ascribed to DDB1 UV-response)	discordance	1	moderate			yes	yes			ok	
+rs7969151	rs7969151	12	53765493	54159277	G	A	G	A	CISTR - RN7SKP289	gwas_catalog	1	low	0	False					ok	
+rs7977437	rs7977437	12	88314712	88708489	A	C,G,T	A	C,G,T	TMTC3 - Y_RNA	gwas_catalog	1	high	4	True		yes			ok	
+rs8014907	rs8014907	14	92333660	92800004	A	G,T	A	G,T	SLC24A4	gwas_catalog	1	high	17	True		yes			ok	
+rs8015138	rs8015138	14	51843386	52310104	A	C,T	A	C,T	GNG2	martin2017	1	moderate				yes			ok	
+rs8033165	rs8033165	15	28760947	29006093	C	T	C	T	WHAMMP2 - PDCD6IPP2	gwas_catalog	1	low	0	False					ok	
+rs8033380	rs8033380	15	83288465	83957217	T	C	T	C	BNC1 - SH3GL3	gwas_catalog	1	low	1	False					ok	
+rs8033755	rs8033755	15	28136400	28381546	C	A,T	C	A,T	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs8045560	rs8045560	16	89913086	89979494	T	A,C,G	T	A,C,G	TCF25, MC1R	gwas_catalog	1	high	48	True	yes	yes			ok	
+rs8046299	rs8046299	16	68638443	68672346	G	A,C,T	G	A,C,T	CDH3	gwas_catalog	1	low	1	False		yes			ok	
+rs8049897	rs8049897	16	89957794	90024202	G	A	G	A	DEF8	gwas_catalog	1	high	4	True				yes	ok	
+rs8051733	rs8051733	16	89957798	90024206	A	G	A	G	DEF8	hirisplex_s	1	high							ok	
+rs8063160	rs8063160	16	89988301	90054709	T	C,G	T	C,G	AFG3L1P, AFG3L1P	gwas_catalog	1	high	2	True		yes			ok	
+rs8084144	rs8084144	18	75375515	73087470	G	A,C,T	G	A,C,T	TSHZ1 - SMIM21	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs8131065	rs8131065	21	36639378	38011676	C	T	C	T	LNCTSI - SIM2	gwas_catalog	1	low	0	False					ok	
+rs9287636	rs9287636	2	238772351	239680992	G	A,C,T	G	A,C,T	LINC01937 - TWIST2	gwas_catalog	1	low	1	False		yes			ok	
+rs9292519	rs9292519	5	33938342	33938447	G	A,T	G	A,T	RXFP3	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs9303554	rs9303554	17	49931319	48008683	C	T	C	T	TAC4-AS1 - RNU6-1313P	gwas_catalog	1	low	0	False					ok	
+rs9318502	rs9318502	13	77933016	78507151	C	A,G,T	C	A,G,T	EDNRB, OBI1-AS1	gwas_catalog	1	low	1	False		yes			ok	
+rs9345521	rs9345521	6	64801388	65511281	C	A,G,T	C	A,G,T	EYS	gwas_catalog	1	low	1	False		yes			ok	
+rs9349337	rs9349337	6	45934179	45901916	G	A	G	A	CLIC5	gwas_catalog	1	low	1	False					ok	
+rs9350204	rs9350204	6	19996577	19996808	A	C	A	C	ID4 - RPL29P17	gwas_catalog	1	low	0	False				yes	ok	
+rs9354421	rs9354421	6	66387014	67096907	G	C	G	C	NUFIP1P1 - RNU7-66P	gwas_catalog	1	low	0	False	yes				ok	
+rs9361843	rs9361843	6	81577768	82287485	A	T	A	T	BCKDHB, TENT5A*	kim2024	1	high			yes				ok	
+rs9373973	rs9373973	6	107758391	108079595	T	A,C,G	T	A,C,G	SCML4	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs9392026	rs9392026	6	453415	453415	G	A	G	A	IRF4 - EXOC2	gwas_catalog	1	high	36	True					ok	
+rs9392504	rs9392504	6	412802	412802	G	A	G	A	IRF4 - EXOC2	gwas_catalog	1	high	36	True					ok	
+rs9397040	rs9397040	6	151259630	151580765	G	A,C,T	G	A,C,T	AKAP12	gwas_catalog	1	high	3	True		yes			ok	
+rs9409609	rs9409609	9	91577228	94339510	G	A	G	A	ROR2	gwas_catalog	1	low	1	False					ok	
+rs9460028	rs9460028	6	170064062	170379286	G	A	G	A	LINC00574 - RPL12P23	gwas_catalog	1	low	0	False				yes	ok	
+rs9463733	rs9463733	6	51857895	51722693	A	G	A	G	PKHD1	curated:Morgan2018;discordance;gwas_catalog	3	moderate	1	False					ok	
+rs9508664	rs9508664	13	30170830	30744967	G	A,C	G	A,C	LINC00385 - KATNAL1	gwas_catalog	1	low	0	False		yes			ok	
+rs9561570	rs9561570	13	94503944	95156198	G	C,T	G	C,T	DCT - TGDS	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs9603422	rs9603422	13	38769685	39343822	C	A,T	C	A,T	FREM2	gwas_catalog	1	low	1	False		yes			ok	
+rs9608102	rs9608102	22	23302607	23644794	C	T	C	T	BCR	gwas_catalog	1	low	0	False					ok	
+rs9609597	rs9609597	22	32567060	32963046	G	A	G	A	SYN3	gwas_catalog	1	low	0	False				yes	ok	
+rs9611155	rs9611155	22	39343182	39739187	C	G,T	C	G,T	RPL3 - SYNGR1	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs9747347	rs9747347	17	81639794	79606820	T	A,C,G	T	A,C,G	NPLOC4, TSPAN10	gwas_catalog	1	high	2	True	yes	yes			ok	
+rs9809528	rs9809528	3	209075	250758	A	C,G,T	A	C,G,T	CHL1	gwas_catalog	1	low	1	False		yes			ok	
+rs9818780	rs9818780	3	156774969	156492758	T	A,C,G	T	A,C,G	TIPARP-AS1	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs9819158	rs9819158	3	167762873	167480661	G	A,C	G	A,C	SERPINI1	gwas_catalog	1	high	3	True		yes		yes	ok	
+rs9825958	rs9825958	3	69781523	69830674	C	T	C	T	MITF	gwas_catalog	1	low	1	False					ok	
+rs9839947	rs9839947	3	192537529	192255318	G	A	G	A	FGF12	gwas_catalog	1	low	0	False					ok	
+rs9847240	rs9847240	3	122807969	122526816	G	A	G	A	SLC49A4	gwas_catalog	1	low	0	False					ok	
+rs9853827	rs9853827	3	139283351	139002193	A	C,G,T	A	C,G,T	PISRT1, MRPS22	kim2024	1	high				yes			ok	
+rs9858244	rs9858244	3	85738249	85787399	G	A,C	G	A,C	CADM2	gwas_catalog	1	low	0	False		yes			ok	
+rs9894429	rs9894429	17	81629785	79596811	C	A,G,T	C	A,G,T	NPLOC4	gwas_catalog	1	low	1	False		yes			ok	
+rs9904468	rs9904468	17	17669873	17573187	C	A,G,T	C	A,G,T	PEMT - SMCR2	gwas_catalog	1	low	0	False		yes			ok	
+rs9922277	rs9922277	16	90092430	90158838	T	C,G	T	C,G	PRDM7 - TUBB8P7	gwas_catalog	1	low	0	False		yes			ok	
+rs9924126	rs9924126	16	81249993	81283598	A	G,T	A	G,T	BCO1	kim2024	1	high				yes			ok	
+rs9926609	rs9926609	16	3490962	3540962	A	C,T	A	C,T	NAA60 - C16orf90	gwas_catalog	1	low	0	False		yes			ok	
+rs9930276	rs9930276	16	88227277	88260883	G	A	G	A	LINC02182	gwas_catalog	1	low	0	False					ok	
+rs9939914	rs9939914	16	89873521	89939929	T	A,C,G	T	A,C,G	SPIRE2 - TCF25	gwas_catalog	1	high	9	True	yes	yes			ok	
+rs9971729	rs9971729	12	23826857	23979791	A	C	A	C	SOX5	gwas_catalog	1	low	0	False					ok	
+rs10054129	rs10054129	5	33933670	33933775	A	G	A	G	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False				yes	ok	
+rs10080040	rs10080040	5	33950346	33950451	T	A	T	A	SLC45A2	gwas_catalog	1	high	23	True	yes			yes	ok	
+rs10114314	rs10114314	9	124046509	126808788	C	T	C	T	LHX2 - NEK6	gwas_catalog	1	high	3	True					ok	
+rs10116013	rs10116013	9	12677979	12677979	A	C,G,T	A	C,G,T	LURAP1L-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs10122939	rs10122939	9	20300845	20300843	A	C,G	A	C,G	SLC24A2 - MLLT3	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs10160510	rs10160510	11	88881156	88614324	A	T	A	T	GRM5	gwas_catalog	1	high	6	True	yes			yes	ok	
+rs10168349	rs10168349	2	46133768	46360907	G	C	G	C	PRKCE	gwas_catalog	1	low	0	False	yes				ok	
+rs10169459	rs10169459	2	221186699	222051419	T	A,C	T	A,C	MIR4268 - EPHA4	gwas_catalog	1	high	6	True	yes	yes			ok	
+rs10171577	rs10171577	2	185205313	186070040	T	C	T	C	ZNF804A - ELF2P4	gwas_catalog	1	low	0	False					ok	
+rs10173066	rs10173066	2	32832238	33057305	C	G,T	C	G,T	LINC00486, LTBP1*	kim2024	1	high			yes	yes			ok	
+rs10414812	rs10414812	19	3547957	3547955	C	A,T	C	A,T	MFSD12 (upstream regulatory SNPs rs112332856/rs6510760 intergenic MFSD12/HMG20B)	curated:Crawford2017	1	moderate				yes	yes		ok	merged_from=rs10424065
+rs10416746	rs10416746	19	3563984	3563982	G	A,C	G	A,C	MFSD12	gwas_catalog	1	high	5	True		yes		yes	ok	
+rs10424065	rs10424065	19	3545024	3545022	C	G,T	C	G,T	MFSD12 (upstream regulatory SNPs rs112332856/rs6510760 intergenic MFSD12/HMG20B)	discordance	1	moderate			yes	yes			ok	
+rs10434895	rs10434895	6	151256604	151577739	A	C,T	A	C,T	AKAP12	gwas_catalog	1	high	3	True		yes			ok	
+rs10444039	rs10444039	10	117806027	119565538	C	A,T	C	A,T	LINC02674 - RAB11FIP2	gwas_catalog	1	high	3	True		yes			ok	
+rs10461708	rs10461708	5	33940314	33940419	G	A,C	G	A,C	RXFP3 - SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs10491745	rs10491745	9	12679607	12679607	T	A,C	T	A,C	LURAP1L-AS1	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs10510227	rs10510227	3	2116033	2157717	A	G	A	G	CNTN4-AS2, CNTN4	gwas_catalog	1	low	0	False					ok	
+rs10512144	rs10512144	9	84136877	86751792	T	C	T	C	RMI1 - SLC28A3	gwas_catalog	1	low	0	False					ok	
+rs10526381	rs10526381	15	28039162	28284308	C	CAAACAC,CAAACTC	C	CAAACAC,CAAACTC	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs10565330	rs10565330	5	33960279	33960384	ATATATATATATATATATAT	ATATATATATATAT,ATATATATATATATAT,ATATATATATATATATAT,ATATATATATATATATATATAT,ATATATATATATATATATATATAT,ATATATATATATATATATATATATAT,ATATATATATATATATATATATATATAT	ATATATATATATATATATAT	ATATATATATATAT,ATATATATATATATAT,ATATATATATATATATAT,ATATATATATATATATATATAT,ATATATATATATATATATATATAT,ATATATATATATATATATATATATAT,ATATATATATATATATATATATATATAT	SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs10594259	rs10594259	14	92450386	92916730	TCTCTC	TCTC	TCTCTC	TCTC	SLC24A4	curated:Meyer et al. 2020,	1	moderate							ok	
+rs10636696	rs10636696	5	33832942	33833047	TTTAA	TTTAAATTTAA,TTTAAATTTTAA	TTTAA	TTTAAATTTAA,TTTAAATTTTAA	ADAMTS12	gwas_catalog	1	low	1	False		yes			ok	
+rs10737883	rs10737883	1	242645039	242808341	T	A,C,G	T	A,C,G	PLD5 - RSL24D1P4	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs10739220	rs10739220	9	106292136	109054417	C	G,T	C	G,T	LINC01505	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs10756819	rs10756819	9	16858086	16858084	G	A,C,T	G	A,C,T	BNC2	hirisplex_s;martin2017	2	high				yes			ok	
+rs10809826	rs10809826	9	12682663	12682663	C	G,T	C	G,T	LURAP1L-AS1;TYRP1 (upstream)	curated:Ang2023;discordance;gwas_catalog	3	moderate	0	False	yes	yes			ok	
+rs10810635	rs10810635	9	16795243	16795241	T	C,G	T	C,G	BNC2	gwas_catalog	1	high	10	True		yes			ok	
+rs10810650	rs10810650	9	16873553	16873551	C	A,T	C	A,T	BNC2 - RN7SL720P	gwas_catalog	1	high	10	True		yes			ok	
+rs10811650	rs10811650	9	22067594	22067593	A	G,T	A	G,T	CDKN2B-AS1	gwas_catalog	1	low	1	False		yes			ok	
+rs10815302	rs10815302	9	5887074	5887074	A	C,G,T	A	C,G,T	BRD10	gwas_catalog	1	low	0	False		yes			ok	
+rs10818930	rs10818930	9	124228906	126991185	T	C,G	T	C,G	LHX2 - NEK6	gwas_catalog	1	high	3	True		yes			ok	
+rs10831496	rs10831496	11	88824823	88557991	A	C,G,T	A	C,G,T	GRM5;GRM5, TYR	gwas_catalog;martin2017	2	high	6	True		yes		yes	ok	
+rs10846744	rs10846744	12	124827879	125312425	G	C	G	C	SCARB1	gwas_catalog;kim2024	2	high	1	False	yes				ok	
+rs10848158	rs10848158	12	130607421	131091966	T	C,G	T	C,G	RIMBP2	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs10873172	rs10873172	14	63923312	64390030	G	C	G	C	SYNE2	gwas_catalog	1	high	2	True	yes				ok	
+rs10886142	rs10886142	10	117801913	119561424	T	A,C	T	A,C	LINC02674 - RAB11FIP2	gwas_catalog	1	high	3	True	yes	yes			ok	
+rs10897275	rs10897275	11	62436393	62203865	G	A,C	G	A,C	AHNAK	gwas_catalog	1	high	2	True		yes			ok	
+rs10899491	rs10899491	11	78395259	78106305	T	A,C,G	T	A,C,G	GAB2, USP35*	kim2024	1	high			yes	yes			ok	
+rs10929285	rs10929285	2	233705031	234613677	G	A,C,T	G	A,C,T	UGT1A6, SNORC*	kim2024	1	high				yes			ok	
+rs10954300	rs10954300	7	131076476	130761235	G	A	G	A	LINC-PINT	gwas_catalog	1	high	2	True					ok	
+rs10960723	rs10960723	9	12622878	12622878	C	A	C	A	TYRP1	curated:Abbatangelo2026	1	moderate							ok	
+rs10960749	rs10960749	9	12671566	12671566	G	A	G	A	LURAP1L-AS1	gwas_catalog	1	low	0	False					ok	
+rs10962599	rs10962599	9	16795288	16795286	C	A,T	C	A,T	BNC2	gwas_catalog	1	high	10	True		yes			ok	
+rs10962612	rs10962612	9	16804169	16804167	T	A,C,G	T	A,C,G	BNC2	gwas_catalog	1	high	10	True	yes	yes			ok	
+rs10987872	rs10987872	9	98827361	101589643	T	C,G	T	C,G	GALNT12	gwas_catalog	1	low	0	False		yes			ok	
+rs11018623	rs11018623	11	89464544	89197712	G	A,C,T	G	A,C,T	NOX4	gwas_catalog	1	low	0	False		yes			ok	
+rs11023926	rs11023926	11	16352168	16373714	C	A	C	A	SOX6	gwas_catalog	1	high	3	True					ok	
+rs11041426	rs11041426	11	7522288	7543519	G	A	G	A	PPFIBP2	gwas_catalog	1	high	3	True					ok	
+rs11055339	rs11055339	12	13290536	13443470	T	A,C	T	A,C	EMP1 - LINC01559	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs11066284	rs11066284	12	112404471	112842275	T	A,C,G	T	A,C,G	HECTD4 - RPL6	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs11066860	rs11066860	12	113979299	114417104	G	A	G	A	RBM19 - HAUS8P1	gwas_catalog	1	low	0	False					ok	
+rs11068059	rs11068059	12	116529865	116967670	A	C,G,T	A	C,G,T	LINC02457 - LINC00173	gwas_catalog	1	low	0	False		yes			ok	
+rs11070811	rs11070811	15	31101879	31394082	C	A,T	C	A,T	TRPM1	gwas_catalog	1	low	0	False		yes			ok	
+rs11104733	rs11104733	12	88096342	88490119	C	A,T	C	A,T	CEP290	gwas_catalog	1	low	0	False		yes			ok	
+rs11155321	rs11155321	6	143740640	144061777	C	A,G,T	C	A,G,T	PHACTR2	gwas_catalog	1	low	0	False		yes			ok	
+rs11157836	rs11157836	14	22809964	23279173	G	A,C	G	A,C	SLC7A7	gwas_catalog	1	low	1	False		yes			ok	
+rs11158717	rs11158717	14	68047559	68514276	A	G,T	A	G,T	RAD51B	gwas_catalog	1	low	1	False		yes			ok	
+rs11194997	rs11194997	10	110130021	111889779	G	A,T	G	A,T	ADD3	gwas_catalog	1	low	1	False		yes			ok	
+rs11198112	rs11198112	10	117804632	119564143	C	T	C	T	LINC02674 - RAB11FIP2;near EMX2 (intergenic)	curated:Ang2023;discordance;gwas_catalog	3	high	3	True				yes	ok	
+rs11203346	rs11203346	1	17274327	17600822	A	G	A	G	PADI3	gwas_catalog	1	high	2	True					ok	
+rs11210187	rs11210187	1	73249550	73715233	T	C	T	C	RN7SKP19 - LINC01360	gwas_catalog	1	low	0	False					ok	
+rs11230664	rs11230664	11	61308900	61076372	T	C	T	C	TMEM138 (region/passenger genes DDB1, TMEM138, TMEM216/TMEM025, TKFC; function ascribed to DDB1 UV-response)	curated:Crawford2017	1	moderate					yes		ok	merged_from=rs7948623
+rs11238349	rs11238349	7	55088378	55156071	G	A,T	G	A,T	EGFR / LANCL2 (near EGFR)	curated:Ang2023	1	moderate				yes			ok	
+rs11264244	rs11264244	1	154696591	154669067	C	T	C	T	ADAR - KCNN3	gwas_catalog	1	low	0	False					ok	
+rs11283428	rs11283428	15	28022388	28267534	TGG	TGGGTGAGAATGG,TGGGTGAGATGG	TGG	TGGGTGAGAATGG,TGGGTGAGATGG		gwas_catalog	1	low	0	False		yes			ok	
+rs11300391	rs11300391	4	55706027	56572194	AAAAAAAAAAAAAAA	AAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAA	AAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA		gwas_catalog	1	low	0	False		yes			ok	
+rs11324616	rs11324616	15	28314864	28560010	AAAAAAAAAAAAAAAA	AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAA	AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs11365574	rs11365574	15	28116223	28361369	TTTTTTTTTTTTTTTTT	TTTTTTT,TTTTTTTT,TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTTTTT	TTTTTTT,TTTTTTTT,TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTT	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs11396433	rs11396433	15	28316060	28561206	AAAAAAAAAAAAAA	AAAAAAAAA,AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA	AAAAAAAAAAAAAA	AAAAAAAAA,AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs11409750	rs11409750	16	19053308	19064630	TTTTTTTTTT	TTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTT	TTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	TMC7	gwas_catalog	1	low	1	False		yes			ok	
+rs11429237	rs11429237	5	34000505	34000610	TTTTTTTTTTT	TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT	TTTTTTTTTTT	TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT	AMACR, C1QTNF3-AMACR	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs11442532	rs11442532	5	33881565	33881670	TTTTTTTTTTTTT	TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT	TTTTTTTTTTTTT	TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs11547464	rs11547464	16	89919683	89986091	G	A	G	A	MC1R	gwas_catalog;hirisplex_s	2	high	48	True				yes	ok	
+rs11582820	rs11582820	1	7890788	7950848	C	T	C	T	UTS2 - TNFRSF9	gwas_catalog	1	low	1	False					ok	
+rs11625064	rs11625064	14	68760214	69226931	T	A,C	T	A,C	RNU6-921P - ZFP36L1	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs11636073	rs11636073	15	48246829	48539026	A	T	A	T	SLC12A1	gwas_catalog	1	low	0	False	yes			yes	ok	
+rs11636232	rs11636232	15	28141480	28386626	C	T	C	T	HERC2	gwas_catalog	1	high	40	True				yes	ok	
+rs11646910	rs11646910	16	89751857	89818265	G	A	G	A	FANCA	gwas_catalog	1	high	4	True					ok	
+rs11648089	rs11648089	16	89647530	89713938	T	C,G	T	C,G	CHMP1A	gwas_catalog	1	low	1	False		yes			ok	
+rs11648785	rs11648785	16	90018153	90084561	C	A,T	C	A,T	DBNDD1	gwas_catalog	1	low	1	False		yes			ok	
+rs11649196	rs11649196	16	89735544	89801952	G	A,T	G	A,T	FANCA, ZNF276	gwas_catalog	1	high	4	True		yes		yes	ok	
+rs11649211	rs11649211	16	89973042	90039450	G	A,C,T	G	A,C,T	AFG3L1P, AFG3L1P	gwas_catalog	1	high	2	True		yes			ok	
+rs11667379	rs11667379	19	9015792	9126468	G	C,T	G	C,T	MUC16 - BOLA3P2	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs11680860	rs11680860	2	28391437	28614304	G	A	G	A	FOSL2-AS1	gwas_catalog	1	low	0	False					ok	
+rs11696169	rs11696169	20	36923214	35551617	T	C	T	C	SAMHD1	gwas_catalog	1	low	0	False					ok	
+rs11697428	rs11697428	20	37337505	35965908	T	C	T	C	MANBAL - SRC	gwas_catalog	1	low	0	False					ok	
+rs11723622	rs11723622	4	185708693	186629847	T	C	T	C	SORBS2	gwas_catalog	1	low	0	False					ok	
+rs11731416	rs11731416	4	108556952	109478108	C	G,T	C	G,T	RPL34-DT	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs11739906	rs11739906	5	59723533	59019359	A	C	A	C	PDE4D	gwas_catalog	1	low	0	False					ok	
+rs11742467	rs11742467	5	33899585	33899690	G	A	G	A	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False				yes	ok	
+rs11765303	rs11765303	7	44381155	44420754	C	A,G,T	C	A,G,T	NUDCD3	gwas_catalog	1	low	1	False		yes			ok	
+rs11806180	rs11806180	1	227315768	227503469	A	C	A	C	CDC42BPA	gwas_catalog	1	low	1	False					ok	
+rs11812960	rs11812960	10	23876027	24164956	A	G	A	G	KIAA1217	gwas_catalog	1	low	0	False					ok	
+rs11862382	rs11862382	16	89906124	89972532	A	C,T	A	C,T	TCF25	gwas_catalog	1	high	9	True		yes			ok	
+rs11955798	rs11955798	5	33915708	33915813	A	C,G,T	A	C,G,T	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False		yes			ok	
+rs12034421	rs12034421	1	85062323	85528006	C	A	C	A	DNAI3	gwas_catalog	1	low	0	False					ok	
+rs12051519	rs12051519	16	89846600	89913008	G	A,C,T	G	A,C,T	SPIRE2	gwas_catalog	1	high	2	True		yes			ok	
+rs12113831	rs12113831	7	15027099	15066724	C	T	C	T	GTF3AP5 - AGMO	gwas_catalog	1	low	0	False					ok	
+rs12147172	rs12147172	14	27883925	28353131	G	A	G	A	MIR3171HG - BNIP3P1	gwas_catalog	1	low	0	False				yes	ok	
+rs12161672	rs12161672	10	111127713	112887471	C	G,T	C	G,T	ADRA2A - BTBD7P2	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs12185725	rs12185725	2	239028127	239949823	A	G	A	G	LINC01940 - HDAC4	gwas_catalog	1	low	1	False					ok	
+rs12202284	rs12202284	6	471136	471136	C	A,T	C	A,T	IRF4;IRF4 - EXOC2	gwas_catalog;martin2017	2	high	36	True		yes			ok	
+rs12203592	rs12203592	6	396321	396321	C	G,T	C	G,T	IRF4	curated:Abbatangelo2026;curated:Kastelic2013;curated:Meyer et al. 2020,;curated:Pospiech2016;discordance;gwas_catalog;hirisplex_s;martin2017	8	high	36	True	yes	yes		yes	ok	
+rs12210050	rs12210050	6	475489	475489	C	T	C	T	IRF4 - EXOC2	gwas_catalog	1	high	36	True					ok	
+rs12211228	rs12211228	6	408833	408833	G	C,T	G	C,T	IRF4	curated:Meyer et al. 2020,;gwas_catalog	2	high	36	True	yes	yes			ok	
+rs12225068	rs12225068	11	91883525	91616691	A	C,G,T	A	C,G,T	LINC02756 - TUBB4BP4	gwas_catalog	1	low	1	False		yes			ok	
+rs12233134	rs12233134	2	25106147	25329016	C	G,T	C	G,T	EFR3B (near POMC)	curated:Ang2023;discordance	2	moderate			yes	yes			ok	
+rs12256016	rs12256016	10	129677743	131476007	A	C,G,T	A	C,G,T	MGMT	gwas_catalog	1	high	2	True		yes			ok	
+rs12259842	rs12259842	10	116695732	118455243	C	G,T	C	G,T	HSPA12A	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs12298351	rs12298351	12	88946335	89340112	C	T	C	T	RNU1-117P - LINC02458	gwas_catalog	1	low	0	False					ok	
+rs12325725	rs12325725	17	13192259	13095576	G	A,C	G	A,C	ELAC2 - LINC02093	gwas_catalog	1	low	0	False		yes			ok	
+rs12344562	rs12344562	9	124049017	126811296	T	C	T	C	LHX2 - NEK6	gwas_catalog	1	high	3	True					ok	
+rs12350739	rs12350739	9	16885019	16885017	G	A,C,T	G	A,C,T	BNC2;BNC2 - RN7SL720P	gwas_catalog;martin2017	2	high	10	True		yes		yes	ok	
+rs12421680	rs12421680	11	131481074	131350968	G	A,C	G	A,C	NTM;NTM/HNT	gwas_catalog;martin2017	2	moderate	0	False		yes			ok	
+rs12440942	rs12440942	15	27963588	28208734	A	C,G,T	A	C,G,T	OCA2	curated:Yang2016;discordance	2	moderate				yes			ok	
+rs12441727	rs12441727	15	28026629	28271775	G	A,C	G	A,C	OCA2	hirisplex_s	1	high				yes			ok	
+rs12448464	rs12448464	16	89530306	89596714	A	C,G,T	A	C,G,T	SPG7	gwas_catalog	1	low	0	False		yes			ok	
+rs12478516	rs12478516	2	5576303	5716435	T	A,G	T	A,G	RNU6-649P - LINC01248	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs12501370	rs12501370	4	41041853	41043870	G	A,C	G	A,C	APBB2	gwas_catalog	1	low	1	False		yes			ok	
+rs12510870	rs12510870	4	73492560	74358277	T	C	T	C	AFM	gwas_catalog	1	low	1	False					ok	
+rs12520016	rs12520016	5	6767199	6767312	T	A,G	T	A,G	LINC02236;PAPD7/POLS	gwas_catalog;martin2017	2	moderate	0	False	yes	yes			ok	
+rs12524852	rs12524852	6	61973218	62683123	T	G	T	G	KHDRBS2	gwas_catalog	1	low	0	False					ok	
+rs12535629	rs12535629	7	100854110	100451732	C	G,T	C	G,T	SLC12A9	gwas_catalog	1	high	2	True	yes	yes			ok	
+rs12598316	rs12598316	16	89850192	89916600	C	A,G,T	C	A,G,T	SPIRE2*, DEF8*, CPNE7*	kim2024	1	high				yes			ok	
+rs12614848	rs12614848	2	191231993	192096719	A	C,G,T	A	C,G,T	MYO1B-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs12618431	rs12618431	2	222245793	223110512	A	C,G,T	A	C,G,T	PAX3	gwas_catalog	1	high	3	True		yes			ok	
+rs12618491	rs12618491	2	222268789	223133508	C	A,G,T	C	A,G,T	PAX3	gwas_catalog	1	high	3	True		yes			ok	
+rs12660153	rs12660153	6	60381335	57353170	T	G	T	G	PRIM2BP	gwas_catalog	1	low	0	False					ok	
+rs12667582	rs12667582	7	91218903	90848218	G	A,T	G	A,T	CDK14 - FZD1	gwas_catalog	1	low	1	False		yes			ok	
+rs12668421	rs12668421	7	55041484	55109177	A	T	A	T	EGFR	martin2017	1	moderate			yes				ok	
+rs12693099	rs12693099	2	176738991	177603719	A	C	A	C	LINC01117	gwas_catalog	1	low	0	False					ok	
+rs12693889	rs12693889	2	199608935	200473658	T	A,C,G	T	A,C,G	LINC01877	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs12738340	rs12738340	1	15806901	16133396	C	A,T	C	A,T	SPEN-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs12792431	rs12792431	11	88687669	88420837	G	A,C,T	G	A,C,T	GRM5	gwas_catalog	1	high	6	True		yes			ok	
+rs12806763	rs12806763	11	69544049	69358817	C	A,G,T	C	A,G,T	LINC01488 - PNCRNA-D	gwas_catalog	1	low	0	False		yes			ok	
+rs12821256	rs12821256	12	88934558	89328335	T	A,C,G	T	A,C,G	KITLG;KITLG (upstream);RNU1-117P - LINC02458	curated:Ang2023;gwas_catalog;hirisplex_s;martin2017	4	high	0	False	yes	yes			ok	
+rs12883151	rs12883151	14	92323733	92790077	A	G	A	G	SLC24A4	curated:Abbatangelo2026;gwas_catalog	2	high	17	True					ok	
+rs12896399	rs12896399	14	92307319	92773663	G	A,T	G	A,T	RNU6-366P - SLC24A4;SLC24A4;near SLC24A4 (intronic)	curated:Ang2023;curated:Kastelic2013;curated:Meyer et al. 2020,;curated:Pospiech2016;discordance;gwas_catalog;martin2017	7	high	17	True		yes			ok	
+rs12896471	rs12896471	14	92307559	92773903	C	A,G,T	C	A,G,T	RNU6-366P - SLC24A4	gwas_catalog	1	high	17	True		yes			ok	
+rs12898729	rs12898729	15	28147115	28392261	G	A,C	G	A,C	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs12899937	rs12899937	15	48832207	49124404	G	A	G	A	SHC4	gwas_catalog	1	low	1	False					ok	
+rs12906552	rs12906552	15	25861110	26106257	T	A,G	T	A,G	ATP10A	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs12912427	rs12912427	15	28250810	28495956	A	G,T	A	G,T	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs12913832	rs12913832	15	28120472	28365618	A	C,G	A	C,G	HERC2;HERC2 (enhancer regulating OCA2);HERC2 (intronic; in SOX2 consensus motif);HERC2 (near OCA2);OCA2/HERC2	curated:Abbatangelo2026;curated:Ang2023;curated:Crawford2017;curated:Kastelic2013;curated:Meyer et al. 2020,;curated:Pospiech2016;discordance;gwas_catalog;hirisplex_s;martin2017	10	high	40	True		yes	yes	yes	ok	merged_from=rs6497271
+rs12916300	rs12916300	15	28165345	28410491	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs12921177	rs12921177	16	89641629	89708037	G	A,C	G	A,C	CHMP1A	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs12931267	rs12931267	16	89752324	89818732	C	G	C	G	FANCA	gwas_catalog	1	high	4	True	yes				ok	
+rs12932219	rs12932219	16	89849983	89916391	G	A,T	G	A,T	SPIRE2	gwas_catalog	1	high	2	True		yes			ok	
+rs12933774	rs12933774	16	89601887	89668295	G	A,C	G	A,C	CPNE7 - DPEP1	gwas_catalog	1	low	1	False		yes			ok	
+rs13017777	rs13017777	2	222204906	223069625	T	C	T	C	PAX3	gwas_catalog	1	high	3	True					ok	
+rs13035328	rs13035328	2	118798400	119555976	T	C,G	T	C,G	LINC01956	gwas_catalog	1	low	0	False		yes			ok	
+rs13064599	rs13064599	3	167381185	167098973	T	A	T	A	ZBBX	gwas_catalog	1	low	1	False	yes				ok	
+rs13115763	rs13115763	4	88828954	89750105	C	T	C	T	FAM13A	gwas_catalog	1	low	0	False					ok	
+rs13177787	rs13177787	5	33926949	33927054	T	A,C	T	A,C	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False	yes	yes		yes	ok	
+rs13192740	rs13192740	6	514991	514991	C	T	C	T	EXOC2	gwas_catalog	1	high	5	True					ok	
+rs13198547	rs13198547	6	167304908	167718396	G	A,C,T	G	A,C,T	UNC93A	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs13236147	rs13236147	7	44510263	44549862	G	A,T	G	A,T	RNU6-1097P - RPL36AP27	gwas_catalog	1	low	0	False		yes			ok	
+rs13238329	rs13238329	7	57254662	57322369	A	C,G	A	C,G	RNU7-157P - MIR3147HG	gwas_catalog	1	low	0	False		yes			ok	
+rs13263959	rs13263959	8	141622215	142632315	T	A,C	T	A,C	C8orf90 - MIR1302-7	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs13278114	rs13278114	8	102712670	103724898	A	C,G	A	C,G	ADI1P2 - GASAL1	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs13288130	rs13288130	9	12712578	12712578	T	A,C	T	A,C	LURAP1L-AS1	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs13289810	rs13289810	9	12396731	12396731	A	G	A	G	RNU2-47P - LURAP1L-AS1;TYRP1	curated:Kenny2012;discordance;gwas_catalog;martin2017	4	moderate	1	False					ok	
+rs13297008	rs13297008	9	12677471	12677471	G	A	G	A	LURAP1L-AS1	gwas_catalog	1	low	0	False					ok	
+rs13419021	rs13419021	2	41940183	42167323	G	C,T	G	C,T	LINC02898	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs13432025	rs13432025	2	240081084	241020501	G	A	G	A	OR9S24P - OR5S1P	gwas_catalog	1	low	1	False					ok	
+rs16849932	rs16849932	2	213201156	214065880	G	A	G	A	LINC01953 - SPAG16-DT	gwas_catalog	1	low	0	False					ok	
+rs16862425	rs16862425	2	221276324	222141044	G	A,T	G	A,T	MIR4268 - EPHA4	gwas_catalog	1	high	6	True		yes			ok	
+rs16887871	rs16887871	4	12932209	12933833	C	T	C	T	ECM1P2 - U6	gwas_catalog	1	low	0	False				yes	ok	
+rs16891958	rs16891958	5	33933857	33933962	C	T	C	T	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False				yes	ok	
+rs16891982	rs16891982	5	33951588	33951693	C	A,G	C	A,G	SLC45A2	curated:Abbatangelo2026;curated:Ang2023;curated:Kastelic2013;curated:Meyer et al. 2020,;curated:Pospiech2016;discordance;gwas_catalog;hirisplex_s;martin2017	9	high	23	True		yes		yes	ok	
+rs16904127	rs16904127	8	129616360	130628606	G	A,T	G	A,T	CCDC26	gwas_catalog	1	low	1	False		yes			ok	
+rs16909902	rs16909902	9	95473920	98236202	A	G	A	G	PTCH1	gwas_catalog	1	low	0	False					ok	
+rs16935073	rs16935073	9	16795792	16795790	A	C,G	A	C,G	BNC2	gwas_catalog;kim2024	2	high	10	True		yes			ok	
+rs16949418	rs16949418	17	47913874	45991240	C	A,G,T	C	A,G,T	SP2-AS1, SP2	gwas_catalog	1	low	1	False		yes			ok	
+rs16953002	rs16953002	16	54080912	54114824	G	A,C	G	A,C	FTO	gwas_catalog	1	low	1	False		yes			ok	
+rs16960981	rs16960981	15	48472745	48764942	A	G	A	G	FBN1	gwas_catalog	1	low	0	False				yes	ok	
+rs17025239	rs17025239	1	215724880	215898222	G	A	G	A	USH2A	gwas_catalog	1	low	0	False				yes	ok	
+rs17093831	rs17093831	20	32111119	30698922	T	C	T	C	TM9SF4	gwas_catalog	1	low	0	False					ok	
+rs17094273	rs17094273	14	96637470	97103807	G	A	G	A	PAPOLA - RN7SKP108	gwas_catalog	1	low	0	False					ok	
+rs17110447	rs17110447	5	149813283	149192846	A	G	A	G	PPARGC1B	gwas_catalog	1	high	3	True				yes	ok	
+rs17123518	rs17123518	20	32660463	31248265	C	T	C	T	C20orf203	gwas_catalog	1	low	0	False					ok	
+rs17128291	rs17128291	14	92416482	92882826	A	G	A	G	SLC24A4	hirisplex_s	1	high							ok	
+rs17171519	rs17171519	7	39020712	39060312	T	C,G	T	C,G	POU6F2	gwas_catalog	1	low	0	False		yes			ok	
+rs17184180	rs17184180	14	92314043	92780387	T	A,C	T	A,C	RNU6-366P - SLC24A4	gwas_catalog	1	high	17	True	yes	yes			ok	
+rs17184781	rs17184781	11	88829863	88563031	G	A	G	A	TYR	curated:Meyer et al. 2020,	1	moderate							ok	
+rs17207524	rs17207524	6	31759073	31726850	G	T	G	T	MSH5, MSH5-SAPCD1	gwas_catalog	1	low	1	False					ok	
+rs17208853	rs17208853	6	32408583	32376360	T	C	T	C	TSBP1-AS1 - HLA-DRA	gwas_catalog	1	low	0	False				yes	ok	
+rs17221124	rs17221124	11	89714207	89447375	C	A,T	C	A,T	TRIM77	gwas_catalog	1	low	0	False		yes			ok	
+rs17232812	rs17232812	16	89776728	89843136	G	A	G	A	FANCA	gwas_catalog	1	high	4	True					ok	
+rs17248377	rs17248377	5	53820293	53116123	G	A	G	A	LINC02105 - ASS1P9	gwas_catalog	1	low	1	False					ok	
+rs17305573	rs17305573	20	34592348	33180152	T	A,C	T	A,C	PIGU	gwas_catalog	1	high	2	True	yes	yes			ok	
+rs17349283	rs17349283	2	221225077	222089797	A	G,T	A	G,T	MIR4268 - EPHA4	gwas_catalog	1	high	6	True		yes			ok	
+rs17377218	rs17377218	1	61234587	61700259	T	C,G	T	C,G	NFIA	gwas_catalog	1	low	1	False		yes			ok	
+rs17401449	rs17401449	20	33480139	32067945	A	G	A	G	SNTA1 - CBFA2T2	gwas_catalog	1	low	0	False					ok	
+rs17422688	rs17422688	20	45110478	43739119	G	A	G	A	WFDC5	gwas_catalog	1	low	1	False					ok	
+rs17430375	rs17430375	15	48369245	48661442	T	C	T	C	DUT - FBN1	gwas_catalog	1	low	0	False				yes	ok	
+rs17652091	rs17652091	15	28026565	28271711	C	A	C	A	OCA2	gwas_catalog	1	high	58	True				yes	ok	
+rs17783630	rs17783630	14	92489041	92955385	A	C,G	A	C,G	SLC24A4	gwas_catalog	1	high	17	True		yes			ok	
+rs17833789	rs17833789	17	57153267	55230628	C	A	C	A	AKAP1 - MSI2	gwas_catalog	1	high	2	True					ok	
+rs28431356	rs28431356	16	89400032	89466440	C	A,G,T	C	A,G,T	ANKRD11	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs28531809	rs28531809	7	28764294	28803911	T	A,C	T	A,C	CREB5	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs28587058	rs28587058	15	28173838	28418984	A	C	A	C	HERC2	gwas_catalog	1	high	40	True					ok	
+rs28634972	rs28634972	10	124880660	126569229	C	A,G,T	C	A,G,T	NPM1P31 - ZRANB1	gwas_catalog	1	low	0	False		yes			ok	
+rs28648707	rs28648707	15	81241693	81534034	G	A,T	G	A,T	IL16	gwas_catalog	1	low	1	False		yes			ok	
+rs28714227	rs28714227	22	47845112	48240861	C	T	C	T	EPIC1	gwas_catalog	1	low	0	False				yes	ok	
+rs28784029	rs28784029	15	28156194	28401340	C	A,G,T	C	A,G,T	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs33932559	rs33932559	16	89919617	89986025	T	C	T	C	MC1R	kim2024	1	high							ok	
+rs34022588	rs34022588	15	28041261	28286407	C	A,T	C	A,T	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs34133162	rs34133162	16	89714264	89780672	G	A	G	A	VPS9D1-AS1, VPS9D1	gwas_catalog	1	low	0	False					ok	
+rs34142556	rs34142556	12	113376164	113813969	TTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT	PLBD2	gwas_catalog	1	low	0	False		yes			ok	
+rs34153565	rs34153565	5	33932226	33932331	C	T	C	T	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False				yes	ok	
+rs34280294	rs34280294	5	33932510	33932615	G	T	G	T	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False				yes	ok	
+rs34357723	rs34357723	16	89820111	89886519	C	T	C	T	FANCA/SPIRE2 (nearest-gene label; functional target = MC1R regulation);SPIRE2	curated:Morgan2018;discordance;gwas_catalog	3	high	2	True					ok	
+rs34369918	rs34369918	15	28032793	28277939	AAAAAAAAAAAAAAAAA	AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAA	AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs34370146	rs34370146	2	184515045	185379772	T	C	T	C	MIR548AE1 - ZNF804A	gwas_catalog	1	low	0	False					ok	
+rs34411126	rs34411126	19	57357511	57868879	T	A,C,G	T	A,C,G	ZNF304	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs34421542	rs34421542	12	53938950	54332734	TTAT	TTATTAT	TTAT	TTATTAT	HOXC13-AS, HOXC13	gwas_catalog	1	low	1	False					ok	
+rs34510004	rs34510004	11	69081448	68848916	G	A	G	A	TPCN2	gwas_catalog	1	high	8	True					ok	
+rs34517439	rs34517439	1	77984833	78450517	C	A	C	A	GIPC2, DNAJB4	gwas_catalog	1	low	1	False					ok	
+rs34592614	rs34592614	16	89349862	89416270	ACACACACACACACACACACACACACACACACACACACACACACACACACA	ACACACACACACACA,ACACACACACACACACA,ACACACACACACACACACA,ACACACACACACACACACACACA,ACACACACACACACACACACACACA,ACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA	ACACACACACACACACACACACACACACACACACACACACACACACACACA	ACACACACACACACA,ACACACACACACACACA,ACACACACACACACACACA,ACACACACACACACACACACACA,ACACACACACACACACACACACACA,ACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACACA	ANKRD11	gwas_catalog	1	low	0	False		yes			ok	
+rs34632582	rs34632582	15	28293493	28538639	AAAAAAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs34635363	rs34635363	17	81582224	79549250	G	A,C	G	A,C	TSPAN10 (NPLOC4 is a passenger/member gene in the same credible-set region)	curated:Abbatangelo2026	1	moderate				yes			ok	
+rs34749698	rs34749698	11	89066563	88799731	T	A,C	T	A,C	GRM5 - TYR	gwas_catalog	1	high	17	True	yes	yes			ok	
+rs34803545	rs34803545	9	12070975	12070975	A	G	A	G	TYRP1	martin2017	1	moderate							ok	
+rs34823980	rs34823980	15	28264021	28509167	AAAAAAAAAAAAAAAAAA	AAAAAAA,AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAAA	AAAAAAA,AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs34872037	rs34872037									gwas_catalog	1	low	0	False					unresolved	
+rs34911443	rs34911443	7	93968999	93598311	C	T	C	T	BET1	gwas_catalog	1	low	0	False					ok	
+rs35063026	rs35063026	16	89669749	89736157	C	T	C	T	SPATA33	gwas_catalog	1	high	2	True					ok	
+rs35096708	rs35096708	16	89820841	89887249	G	A,C	G	A,C	SPIRE2	gwas_catalog	1	high	2	True		yes		yes	ok	
+rs35176381	rs35176381	16	89996071	90062479	G	A,C	G	A,C	AFG3L1P, AFG3L1P	gwas_catalog	1	high	2	True		yes			ok	
+rs35225290	rs35225290	3	141411993	141130835	C	A,T	C	A,T	ZBTB38	gwas_catalog	1	high	2	True		yes			ok	
+rs35264875	rs35264875	11	69078931	68846399	A	C,G,T	A	C,G,T	TPCN2	gwas_catalog;martin2017	2	high	8	True		yes			ok	
+rs35360258	rs35360258	16	89867443	89933851	G	A,C	G	A,C	SPIRE2	gwas_catalog	1	high	2	True		yes			ok	
+rs35391917	rs35391917	11	110687139	110557862	A	G	A	G	ARHGAP20	gwas_catalog	1	low	1	False					ok	
+rs35399673	rs35399673	5	105193606	104529307	T	A,C	T	A,C	RAB9BP1 - RNA5SP189	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs35406919	rs35406919	17	81950690	79908566	G	A	G	A	MYADML2 - NOTUM	gwas_catalog	1	low	1	False					ok	
+rs35432452	rs35432452	16	89698638	89765046	C	G,T	C	G,T	SPATA2L	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs35463120	rs35463120	9	109408422	112170702	AAACAAACAAACAAACAAA	AAACAAACAAACAAA,AAACAAACAAACAAACAAACAAA,AAACAAACAAACAAACAAACAAACAAA,AAACAAACAAACAAACAAACAAACAAACAAA	AAACAAACAAACAAACAAA	AAACAAACAAACAAA,AAACAAACAAACAAACAAACAAA,AAACAAACAAACAAACAAACAAACAAA,AAACAAACAAACAAACAAACAAACAAACAAA	PTPN3	gwas_catalog	1	high	2	True		yes			ok	
+rs35496646	rs35496646	16	89678469	89744877	TTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT		gwas_catalog	1	low	0	False		yes			ok	
+rs35561531	rs35561531	16	89118767	89185175	C	T	C	T	ACSF3	gwas_catalog	1	low	0	False					ok	
+rs35563099	rs35563099	10	117812892	119572403	C	T	C	T	LINC02674 - RAB11FIP2	gwas_catalog	1	high	3	True				yes	ok	
+rs35591409	rs35591409	1	234665431	234801177	TTT	TT,TTTT	TTT	TT,TTTT	LINC00184 - LINC01132	gwas_catalog	1	low	0	False		yes			ok	
+rs35618688	rs35618688	12	88546380	88940157	G	A	G	A	KITLG	gwas_catalog	1	high	12	True					ok	
+rs35629645	rs35629645	15	28225697	28470843	AAAAAAAAAAAAAAAAAAA	AAAAAA,AAAAAAA,AAAAAAAA,AAAAAAAAA,AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAAAA	AAAAAA,AAAAAAA,AAAAAAAA,AAAAAAAAA,AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs35749174	rs35749174	16	89650085	89716493	G	A	G	A	CHMP1A	gwas_catalog	1	low	1	False					ok	
+rs35763415	rs35763415	17	81655340	79622370	T	A,C,G	T	A,C,G	PDE6G	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs35772196	rs35772196	1	30831778	31304625	A	C,G	A	C,G	LINC01778	gwas_catalog	1	low	0	False		yes			ok	
+rs35795965	rs35795965	15	28091804	28336950	AAA	AA	AAA	AA	OCA2	gwas_catalog	1	high	58	True				yes	ok	
+rs35805265	rs35805265	2	118874405	119631981	C	T	C	T	EN1 - MARCO	gwas_catalog	1	low	1	False				yes	ok	
+rs35813688	rs35813688	15	28071189	28316335	AA	AATGAA	AA	AATGAA	OCA2	gwas_catalog	1	high	58	True					ok	
+rs35866166	rs35866166	9	12698471	12698471	T	C	T	C	TYRP1	curated:Meyer et al. 2020,;discordance	2	moderate							ok	
+rs35934407	rs35934407	15	27825678	28070824	G	A	G	A	OCA2	gwas_catalog	1	high	58	True					ok	
+rs35960920	rs35960920	5	33980160	33980265	AA	-	AA	-	SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs35995546	rs35995546	15	28259970	28505116	AAAAAAAAAAAAAAAAAAAAA	AAAAAAAAA,AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAAAAAA	AAAAAAAAA,AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs36089417	rs36089417	5	33994939	33995044	T	C	T	C	AMACR, C1QTNF3-AMACR	gwas_catalog	1	low	0	False				yes	ok	
+rs36179052	rs36179052	15	28898326	29143472	G	T	G	T	APBA2	gwas_catalog	1	high	2	True					ok	
+rs36194177	rs36194177	15	28873638	29118784	G	A,T	G	A,T	GOLGA6L7 - APBA2	gwas_catalog	1	high	2	True		yes		yes	ok	
+rs36233537	rs36233537	16	89817719	89884127	A	G,T	A	G,T	FANCA - SPIRE2	gwas_catalog	1	high	4	True		yes			ok	
+rs55637757	rs55637757	16	89469480	89535888	C	T	C	T	ANKRD11	gwas_catalog	1	low	0	False				yes	ok	
+rs55711543	rs55711543	20	33879752	32467558	TATTTGTA	TA,TATTTGTATTTGTA	TATTTGTA	TA,TATTTGTATTTGTA		gwas_catalog	1	low	0	False		yes			ok	
+rs55768819	rs55768819	20	32775561	31363367	C	A,G,T	C	A,G,T	DNMT3B	gwas_catalog	1	low	0	False		yes			ok	
+rs55783125	rs55783125	13	91332148	91984402	G	A,C,T	G	A,C,T	PPIAP23 - MIR17HG	gwas_catalog	1	low	0	False		yes			ok	
+rs55788912	rs55788912	17	49944654	48022018	G	A	G	A	TAC4-AS1 - RNU6-1313P	gwas_catalog	1	low	0	False					ok	
+rs55804368	rs55804368	20	36630339	35258742	C	T	C	T	SLA2	gwas_catalog	1	low	0	False					ok	
+rs55821297	rs55821297	4	110478442	111399598	A	G	A	G	ENPEP	gwas_catalog	1	high	3	True					ok	
+rs55839877	rs55839877	16	89641085	89707493	T	C	T	C	CHMP1A	gwas_catalog	1	low	1	False					ok	
+rs55859054	rs55859054	14	103487329	103953666	T	A,G	T	A,G	MARK3	gwas_catalog	1	high	2	True	yes	yes			ok	
+rs55901013	rs55901013	20	54026254	52642793	C	G,T	C	G,T	BCAS1	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs55950592	rs55950592	16	89632352	89698760	C	T	C	T	DPEP1	gwas_catalog	1	low	1	False				yes	ok	
+rs56019505	rs56019505	11	65794334	65561805	T	G	T	G	OVOL1	gwas_catalog	1	low	1	False					ok	
+rs56211720	rs56211720	9	85733443	88348358	C	A,T	C	A,T	AGTPBP1	gwas_catalog	1	low	0	False		yes			ok	
+rs56238684	rs56238684	20	34648892	33236696	G	C	G	C	PIGU	gwas_catalog	1	high	2	True	yes				ok	
+rs56360320	rs56360320	3	189491857	189209646	A	C,T	A	C,T	TPRG1 - TP63	gwas_catalog	1	low	0	False		yes			ok	
+rs56405824	rs56405824	15	88977935	89521166	T	A	T	A	KRT18P47 - CARMAL	gwas_catalog	1	low	0	False	yes				ok	
+rs56659330	rs56659330	16	89761421	89827829	AAAAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	FANCA	gwas_catalog	1	high	4	True		yes			ok	
+rs56743903	rs56743903	15	28173939	28419085	G	A,C	G	A,C	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs56795768	rs56795768	3	36294583	36336075	T	A,C	T	A,C	RFC3P1 - STAC	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs57119673	rs57119673	16	89718584	89784992	A	G	A	G	VPS9D1	gwas_catalog	1	low	0	False					ok	
+rs57128498	rs57128498	8	38710697	38568215	C	A,G	C	A,G	RNF5P1 - TACC1	gwas_catalog	1	low	1	False		yes			ok	
+rs57461245	rs57461245	14	88749001	89215345	AAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA	AAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA	EML5	gwas_catalog	1	low	0	False		yes			ok	
+rs57525174	rs57525174	5	33940712	33940817	G	A	G	A	RXFP3 - SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs57687654	rs57687654	7	151421400	151118486	C	A,G,T	C	A,G,T	WDR86-AS1 - CRYGN	gwas_catalog	1	low	0	False		yes			ok	
+rs57856222	rs57856222	16	89615782	89682190	C	T	C	T	DPEP1	gwas_catalog	1	low	1	False					ok	
+rs58102863	rs58102863	4	173896364	174817515	TTTTTTTTTTTTTTTT	TTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTTTT	TTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	LINC02269	gwas_catalog	1	low	0	False		yes			ok	
+rs58270997	rs58270997	7	131044635	130729394	C	T	C	T	LINC-PINT	gwas_catalog	1	high	2	True					ok	
+rs58604758	rs58604758	11	27398598	27420145	G	A	G	A	LGR4	gwas_catalog	1	low	1	False					ok	
+rs58656588	rs58656588	2	77699676	77926802	TGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	TGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	TGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	TGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG		gwas_catalog	1	low	0	False		yes			ok	
+rs58836608	rs58836608	15	28079300	28324446	TTTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT	TTTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs58843292	rs58843292	15	28100785	28345931	G	A,C,T	G	A,C,T	OCA2 - HERC2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs59334502	rs59334502	9	12668996	12668996	G	A,T	G	A,T	TYRP1	curated:Meyer et al. 2020,	1	moderate				yes			ok	
+rs60909664	rs60909664	16	89628253	89694661	TTT	TT,TTTT,TTTTT,TTTTTT,TTTTTTT,TTTTTTTT,TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT	TTT	TT,TTTT,TTTTT,TTTTTT,TTTTTTT,TTTTTTTT,TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT	DPEP1	gwas_catalog	1	low	1	False		yes			ok	
+rs61055995	rs61055995	5	56723237	56019064	A	C,G,T	A	C,G,T	C5orf67 - MAP3K1	gwas_catalog	1	high	2	True		yes			ok	
+rs61741441	rs61741441	2	110968164	111725741	A	G	A	G	RPL5P9, ACOXL	gwas_catalog	1	low	0	False				yes	ok	
+rs61816761	rs61816761	1	152313385	152285861	G	A,C,T	G	A,C,T	FLG, CCDST	gwas_catalog	1	low	0	False		yes			ok	
+rs61896141	rs61896141	11	61788567	61556039	A	C	A	C	TMEM258	gwas_catalog	1	low	0	False					ok	
+rs61901730	rs61901730	11	88377080	88110248	T	C	T	C	CTSC - GAPDHP70	gwas_catalog	1	low	0	False					ok	
+rs61937364	rs61937364	12	116245783	116683588	C	A,G,T	C	A,G,T	MED13L	gwas_catalog	1	low	1	False		yes			ok	
+rs61939692	rs61939692	12	116098171	116535976	G	A	G	A	MED13L	gwas_catalog	1	low	1	False					ok	
+rs62007489	rs62007489	15	28075818	28320964	C	G,T	C	G,T	OCA2	gwas_catalog	1	high	58	True	yes	yes		yes	ok	
+rs62007494	rs62007494	15	28106271	28351417	T	A,G	T	A,G	OCA2 - HERC2	gwas_catalog	1	high	58	True	yes	yes			ok	
+rs62009212	rs62009212	15	28334401	28579547	G	A,C,T	G	A,C,T	HERC2P1	gwas_catalog	1	low	0	False		yes			ok	
+rs62034139	rs62034139	16	54098027	54131939	G	A,T	G	A,T	FTO	gwas_catalog	1	low	1	False		yes			ok	
+rs62052172	rs62052172	16	89883822	89950230	G	C	G	C	TCF25	gwas_catalog	1	high	9	True	yes			yes	ok	
+rs62052663	rs62052663	16	90086938	90153346	G	A	G	A	PRDM7	gwas_catalog	1	low	0	False					ok	
+rs62065255	rs62065255	17	40252829	38409081	T	A,C	T	A,C	WIPF2	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs62075722	rs62075722	17	81644245	79611271	A	G	A	G	TSPAN10, NPLOC4	gwas_catalog	1	high	2	True					ok	
+rs62095805	rs62095805	18	60451610	58118843	G	A	G	A	MC4R - MRPS5P4	gwas_catalog	1	low	0	False					ok	
+rs62103272	rs62103272	18	48797495	46323866	G	A,C,T	G	A,C,T	CTIF	gwas_catalog	1	low	1	False		yes			ok	
+rs62139588	rs62139588	2	28436667	28659534	G	A	G	A	FOSL2 - PLB1	gwas_catalog	1	high	2	True					ok	
+rs62210588	rs62210588	20	35400311	33988114	A	G	A	G	UQCC1	gwas_catalog	1	low	0	False					ok	
+rs62211613	rs62211613	20	34801857	33389660	T	A,C	T	A,C	NCOA6	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs62302224	rs62302224	4	80931452	81852606	A	G,T	A	G,T	CFAP299	gwas_catalog	1	low	0	False		yes			ok	
+rs62330021	rs62330021	5	311787	311902	G	A	G	A	PDCD6, PDCD6-AHRR	gwas_catalog	1	low	0	False					ok	
+rs62370277	rs62370277	5	53771490	53067320	G	A,T	G	A,T	LINC02105	gwas_catalog	1	low	1	False		yes			ok	
+rs62370541	rs62370541	5	59791460	59087286	A	G	A	G	PDE4D	gwas_catalog	1	low	0	False					ok	
+rs62389423	rs62389423	6	421281	421281	G	A,T	G	A,T	IRF4 - EXOC2	gwas_catalog	1	high	36	True		yes			ok	
+rs62389424	rs62389424	6	422631	422631	C	A	C	A	IRF4 - EXOC2	gwas_catalog	1	high	36	True					ok	
+rs62479525	rs62479525	7	135646855	135331603	T	C	T	C	NUP205	gwas_catalog	1	low	0	False					ok	
+rs62533293	rs62533293	9	25502384	25502382	A	G	A	G	RN7SKP120 - TUSC1	gwas_catalog	1	low	0	False					ok	
+rs62538956	rs62538956	9	12679244	12679244	T	C	T	C	TYRP1	curated:Meyer et al. 2020,;discordance	2	moderate							ok	
+rs62543565	rs62543565	9	16901069	16901067	C	A,G	C	A,G	BNC2 - RN7SL720P	gwas_catalog	1	high	10	True		yes			ok	
+rs66527028	rs66527028	1	189811365	189780495	-	GTT	-	GTT	LINC01701	gwas_catalog	1	low	0	False					ok	
+rs67093094	rs67093094	15	81238507	81530848	C	T	C	T	IL16	gwas_catalog	1	low	1	False					ok	
+rs67467610	rs67467610	5	157085760	156512771	C	T	C	T	HAVCR2	gwas_catalog	1	low	1	False					ok	
+rs67689854	rs67689854	16	89558819	89625227	C	A,T	C	A,T	SPG7 - RPL13	gwas_catalog	1	low	0	False		yes			ok	
+rs68047527	rs68047527	13	30160361	30734498	ATA	A,ATATA	ATA	A,ATATA	LINC00385	gwas_catalog	1	low	0	False		yes			ok	
+rs70964426	rs70964426	5	33935021	33935126	TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT	TTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT	TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT	TTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT,TTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTTCTTT	ADAMTS12 - RXFP3	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs71134240	rs71134240	16	89567131	89633539	AAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA	RPL13	gwas_catalog	1	low	0	False		yes			ok	
+rs71375284	rs71375284	9	115315096	118077375	TTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT	TTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT	DELEC1	gwas_catalog	1	low	0	False		yes			ok	
+rs71469216	rs71469216	11	88803283	88536451	G	C,T	G	C,T	GRM5	gwas_catalog	1	high	6	True	yes	yes			ok	
+rs71550013	rs71550013	6	553489	553489	T	C	T	C	EXOC2	gwas_catalog	1	high	5	True					ok	
+rs71590709	rs71590709	1	78100942	78566626	ACACACACACACACACACACACACACACACACACACACACA	ACACACACACACACACACACACACA,ACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACA	ACACACACACACACACACACACACACACACACACACACACA	ACACACACACACACACACACACACA,ACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACA,ACACACACACACACACACACACACACACACACACACACACACACACACACACACA	GIPC2	gwas_catalog	1	low	0	False		yes			ok	
+rs72477006	rs72477006	16	89883891	89950299	G	C	G	C	TCF25	gwas_catalog	1	high	9	True	yes				ok	
+rs72620727	rs72620727	12	88716633	89110410	A	C,T	A	C,T	KITLG, LINC02458, TMTC3*;RNU1-117P - LINC02458	gwas_catalog;kim2024	2	high	0	False		yes			ok	
+rs72625132	rs72625132	15	27968778	28213924	T	C	T	C	OCA2	gwas_catalog	1	high	58	True					ok	
+rs72714109	rs72714109	15	28079662	28324808	T	C	T	C	OCA2	gwas_catalog	1	high	58	True				yes	ok	
+rs72714114	rs72714114	15	28082673	28327819	A	G	A	G	OCA2	gwas_catalog	1	high	58	True					ok	
+rs72714116	rs72714116	15	28083061	28328207	C	T	C	T	OCA2;OCA2/HERC2 intronic	curated:Abbatangelo2026;curated:Salvo2023;discordance	3	moderate							ok	
+rs72731537	rs72731537	14	68771208	69237925	C	T	C	T	RNU6-921P - ZFP36L1	gwas_catalog	1	low	1	False					ok	
+rs72759273	rs72759273	9	124211594	126973873	A	G	A	G	LHX2 - NEK6	gwas_catalog	1	high	3	True					ok	
+rs72763726	rs72763726	5	82749027	82044846	C	T	C	T	ATP6AP1L - RPL5P16	gwas_catalog	1	low	0	False					ok	
+rs72776813	rs72776813	2	2788303	2792075	G	A,T	G	A,T	MYT1L - LINC01250	gwas_catalog	1	low	0	False		yes			ok	
+rs72833466	rs72833466	17	47871586	45948952	C	A	C	A	SP6 - SP2-AS1	gwas_catalog	1	high	2	True					ok	
+rs72833470	rs72833470	17	47873355	45950721	A	G	A	G	SP6 - SP2-AS1	gwas_catalog	1	high	2	True					ok	
+rs72840707	rs72840707	10	119520671	121280183	T	C	T	C	RGS10	gwas_catalog	1	low	0	False					ok	
+rs72917317	rs72917317	11	69049973	68817441	T	G	T	G	TPCN2	gwas_catalog	1	high	8	True					ok	
+rs72928978	rs72928978	11	69063896	68831364	G	A	G	A	TPCN2	gwas_catalog	1	high	8	True					ok	
+rs72930659	rs72930659	11	69105375	68872843	C	T	C	T	TPCN2	gwas_catalog	1	high	8	True					ok	
+rs72932523	rs72932523	11	69138652	68906120	G	A	G	A	TPCN2 - SMIM38	gwas_catalog	1	high	8	True					ok	
+rs72932540	rs72932540	11	69154575	68922043	A	G	A	G	TPCN2 - SMIM38	gwas_catalog	1	high	8	True					ok	
+rs72948686	rs72948686	2	113827055	114584632	A	G	A	G	ACTR3-AS1	gwas_catalog	1	low	0	False					ok	
+rs73013664	rs73013664	6	158839955	159260987	C	T	C	T	EZR-AS1 - OSTCP1	gwas_catalog	1	low	0	False					ok	
+rs73077127	rs73077127	5	33960343	33960448	G	C	G	C	SLC45A2	gwas_catalog	1	high	23	True	yes			yes	ok	
+rs73094911	rs73094911	20	37164857	35793260	T	C	T	C	MROH8	gwas_catalog	1	low	0	False					ok	
+rs73109224	rs73109224	20	36816725	35445128	A	G	A	G	MTCL2	gwas_catalog	1	low	0	False					ok	
+rs73220980	rs73220980	21	43332888	44752768	G	A	G	A	LINC00322 - LINC01679	gwas_catalog	1	low	1	False					ok	
+rs73252814	rs73252814	16	88830941	88897349	A	C,G,T	A	C,G,T	GALNS	gwas_catalog	1	low	0	False		yes			ok	
+rs73278043	rs73278043	14	65317086	65783804	C	G,T	C	G,T	PTBP1P - MIR4708	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs73311026	rs73311026	7	4461165	4500796	G	A,C	G	A,C	SDK1 - CYP3A54P	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs73494721	rs73494721	15	80552517	80844858	G	A	G	A	ARNT2	gwas_catalog	1	low	0	False					ok	
+rs73717307	rs73717307	6	4371835	4372069	C	T	C	T	ECI2-DT - RNA5SP202	gwas_catalog	1	low	0	False					ok	
+rs74371164	rs74371164	6	106478001	106925876	C	T	C	T	CRYBG1	gwas_catalog	1	low	0	False					ok	
+rs74409036	rs74409036	15	27818606	28063752	G	A	G	A	OCA2/HERC2 intronic	curated:Salvo2023;discordance	2	moderate							ok	
+rs74445037	rs74445037	6	615736	615736	A	G	A	G	EXOC2	gwas_catalog	1	high	5	True					ok	
+rs74535542	rs74535542	2	365786	365786	A	G	A	G	LINC01865	gwas_catalog	1	low	0	False				yes	ok	
+rs74606487	rs74606487	16	89728897	89795305	A	G	A	G	FANCA, ZNF276	gwas_catalog	1	high	4	True					ok	
+rs74653330	rs74653330	15	27983407	28228553	C	T	C	T	OCA2	curated:Salvo2023;discordance;gwas_catalog;kim2024;martin2017	5	high	58	True					ok	
+rs74654257	rs74654257	4	13947352	13948976	A	G	A	G	LINC01182	gwas_catalog	1	low	0	False					ok	
+rs74758148	rs74758148	6	386933	386933	G	A	G	A	DUSP22 - IRF4	gwas_catalog	1	high	36	True					ok	
+rs74791047	rs74791047	18	11451677	11451676	T	A,C	T	A,C	PIEZO2 - LINC01928	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs74800773	rs74800773	16	89958562	90024970	C	A,G,T	C	A,G,T	DEF8	gwas_catalog	1	high	4	True		yes			ok	
+rs74836292	rs74836292	22	21696072	22050361	G	A	G	A	PPIL2	gwas_catalog	1	low	0	False					ok	
+rs74836424	rs74836424	16	89440922	89507330	C	A,T	C	A,T	ANKRD11	gwas_catalog	1	low	0	False		yes			ok	
+rs74879286	rs74879286	9	96130316	98892598	A	G	A	G	ERCC6L2 - EIF4BP3	gwas_catalog	1	low	0	False					ok	
+rs74944665	rs74944665	1	211782255	211955597	T	A	T	A	LPGAT1	gwas_catalog	1	low	0	False	yes				ok	
+rs74952737	rs74952737	6	156950105	157271239	T	A	T	A	ARID1B	gwas_catalog	1	low	1	False	yes				ok	
+rs75161997	rs75161997	20	57126635	55701691	C	T	C	T	RNU6-929P - BMP7	gwas_catalog	1	low	0	False					ok	
+rs75165924	rs75165924	15	28135112	28380258	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs75410747	rs75410747	16	88703350	88769758	G	A	G	A	RNF166	gwas_catalog	1	low	0	False					ok	
+rs75414584	rs75414584	13	113975135	114744546	C	A,T	C	A,T	C13orf46 - RASA3	gwas_catalog	1	low	1	False		yes			ok	
+rs75433889	rs75433889	14	92259950	92726294	C	T	C	T	CPSF2 - RNU6-366P	gwas_catalog	1	low	0	False					ok	
+rs75499699	rs75499699	1	81355115	81820800	C	T	C	T	ADGRL2	gwas_catalog	1	low	0	False				yes	ok	
+rs75570604	rs75570604	16	89780269	89846677	G	C	G	C	FANCA	gwas_catalog	1	high	4	True	yes				ok	
+rs75588262	rs75588262	5	155970436	155397446	T	C	T	C	SGCD	gwas_catalog	1	low	0	False					ok	
+rs75746799	rs75746799	16	89506324	89572732	G	A	G	A	SPG7	gwas_catalog	1	low	0	False					ok	
+rs75749315	rs75749315	6	2187322	2187556	C	T	C	T	GMDS	gwas_catalog	1	low	1	False					ok	
+rs75754256	rs75754256	3	111151943	110870790	G	A	G	A	NECTIN3	gwas_catalog	1	low	0	False					ok	
+rs75818295	rs75818295	6	7189334	7189567	C	T	C	T	RREB1	gwas_catalog	1	low	0	False					ok	
+rs75972122	rs75972122	1	1216593	1151973	G	A,C,T	G	A,C,T	TNFRSF4 - SDF4	gwas_catalog	1	low	1	False		yes			ok	
+rs75998173	rs75998173	1	218937185	219110527	A	G	A	G	MIR548F3	kim2024	1	high							ok	
+rs76137547	rs76137547	13	54971314	55545449	A	T	A	T	RPL13AP25 - LINC02335	gwas_catalog	1	low	0	False	yes				ok	
+rs76277998	rs76277998	12	82092118	82485897	T	C	T	C	LINC02426 - CCDC59	gwas_catalog	1	low	0	False					ok	
+rs76413115	rs76413115	9	12088112	12088112	C	T	C	T	TYRP1	martin2017	1	moderate							ok	
+rs76586863	rs76586863	5	160448978	159875985	C	G,T	C	G,T	MIR3142HG	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs76632889	rs76632889	6	617474	617474	A	C	A	C	EXOC2	gwas_catalog	1	high	5	True					ok	
+rs76645364	rs76645364	2	25170519	25393388	A	C,G	A	C,G	POMC;POMC - LINC01381	curated:Morgan2018;discordance;gwas_catalog	3	moderate	1	False		yes			ok	
+rs76648881	rs76648881	1	7947535	8007595	T	C	T	C	TNFRSF9 - PARK7	gwas_catalog	1	low	1	False					ok	
+rs76930569	rs76930569	15	27950999	28196145	C	T	C	T	OCA2	gwas_catalog	1	high	58	True					ok	
+rs77310623	rs77310623	6	146550683	146871819	G	A	G	A	RAB32	kim2024	1	high							ok	
+rs77381714	rs77381714	16	90011614	90078022	T	C	T	C	DBNDD1	gwas_catalog	1	low	1	False					ok	
+rs77476644	rs77476644	20	32268334	30856137	A	G	A	G	POFUT1 - KIF3B	gwas_catalog	1	low	0	False					ok	
+rs77572354	rs77572354	15	28315576	28560722	C	G,T	C	G,T	HERC2	gwas_catalog	1	high	40	True	yes	yes			ok	
+rs77733403	rs77733403	16	90014315	90080723	T	C	T	C	DBNDD1	gwas_catalog	1	low	1	False					ok	
+rs77871962	rs77871962	13	29595384	30169521	T	A	T	A	SLC7A1	gwas_catalog	1	low	0	False	yes				ok	
+rs77905678	rs77905678	1	8203048	8263108	C	T	C	T	LINC01714	gwas_catalog	1	low	0	False					ok	
+rs77996260	rs77996260	11	126160311	126030206	A	C	A	C	NAP1L1P1 - RPUSD4	gwas_catalog	1	low	0	False					ok	
+rs78001527	rs78001527	6	119847094	120168240	G	A,C	G	A,C	MAN1A1 - MIR3144	gwas_catalog	1	low	0	False		yes			ok	
+rs78036593	rs78036593	18	41848645	39428610	G	T	G	T	NPM1P1 - PIK3C3	gwas_catalog	1	low	0	False					ok	
+rs78115302	rs78115302	17	52969120	51046480	TA	-	TA	-	LINC02089	gwas_catalog	1	low	0	False					ok	
+rs78186662	rs78186662	7	114774843	114414898	T	C	T	C	FOXP2 - MDFIC	gwas_catalog	1	low	0	False					ok	
+rs78211086	rs78211086	5	33881892	33881997	A	C,G	A	C,G	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs78258966	rs78258966	16	89893480	89959888	G	A	G	A	TCF25	gwas_catalog	1	high	9	True					ok	
+rs78287738	rs78287738	6	20549835	20550066	C	G,T	C	G,T	CDKAL1	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs78382342	rs78382342	20	33772305	32360111	C	A	C	A	ZNF341	gwas_catalog	1	low	0	False					ok	
+rs78515650	rs78515650	6	33832563	33800340	T	A,C,G	T	A,C,G	MLN - LINC01016	gwas_catalog	1	low	0	False	yes	yes		yes	ok	
+rs78539082	rs78539082	11	90236011	89969179	A	C,G	A	C,G	CHORDC1 - DISC1FP1	gwas_catalog	1	low	0	False		yes			ok	
+rs78544415	rs78544415	15	27842634	28087780	C	T	C	T	OCA2/HERC2 intronic	curated:Salvo2023;discordance	2	moderate							ok	
+rs78773669	rs78773669	5	33099206	33099312	G	A,T	G	A,T	LINC02120 - LINC02160	gwas_catalog	1	low	0	False		yes			ok	
+rs79014396	rs79014396	5	33936616	33936721	C	A,G,T	C	A,G,T	RXFP3	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs79064946	rs79064946	5	33883328	33883433	TTTTTTTTTTTTTT	TT,TTTTTTT,TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTATCTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTT	TT,TTTTTTT,TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTATCTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs79097182	rs79097182	15	28266851	28511997	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs79316200	rs79316200	17	82935712	80893588	C	T	C	T	TBCD	gwas_catalog	1	low	1	False					ok	
+rs79353338	rs79353338	19	48009350	48512607	G	T	G	T	ELSPBP1	gwas_catalog	1	low	0	False					ok	
+rs79380392	rs79380392	15	28164073	28409219	C	T	C	T	HERC2	curated:Abbatangelo2026;discordance	2	moderate							ok	
+rs79386120	rs79386120	2	195124829	195989553	C	A,T	C	A,T	LINC01790 - RNU6-169P	gwas_catalog	1	low	0	False		yes			ok	
+rs79553038	rs79553038	2	149274161	150130675	C	G	C	G	LYPD6B - FAM8A3P	gwas_catalog	1	low	0	False	yes				ok	
+rs79705207	rs79705207	3	153251502	152969291	A	G	A	G	RN7SL300P - LINC03109	gwas_catalog	1	low	0	False					ok	
+rs79731025	rs79731025	11	88422110	88155278	G	A,C	G	A,C	GAPDHP70 - GRM5-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs79743671	rs79743671	15	28074502	28319648	G	A,T	G	A,T	OCA2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs79912986	rs79912986	16	88865967	88932375	G	A	G	A	PABPN1L	gwas_catalog	1	low	0	False					ok	
+rs79966207	rs79966207	22	50283979	50722408	T	C	T	C	PLXNB2	gwas_catalog	1	high	2	True					ok	
+rs80030016	rs80030016	16	88702805	88769213	A	G	A	G	RNF166	gwas_catalog	1	low	0	False					ok	
+rs80308281	rs80308281	7	100859956	100457578	T	C	T	C	SLC12A9	gwas_catalog	1	high	2	True					ok	
+rs80343610	rs80343610	9	79269045	81883960	G	A	G	A	KRT18P24 - CHCHD2P9	gwas_catalog	1	low	0	False				yes	ok	
+rs111258505	rs111258505	11	89012759	88745927	C	G	C	G	GRM5	gwas_catalog	1	high	6	True	yes				ok	
+rs111372186	rs111372186	5	33952363	33952468	TTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT	TTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT	SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs111391498	rs111391498	4	1347765	1341553	A	G	A	G	UVSSA	gwas_catalog	1	low	0	False					ok	
+rs111433258	rs111433258	15	28174015	28419161	A	G,T	A	G,T	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs111446662	rs111446662	15	28143605	28388751	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs111458470	rs111458470	15	28289408	28534554	-	CAG,G	-	CAG,G	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs111593432	rs111593432	15	28102882	28348028	A	G	A	G	OCA2 - HERC2	gwas_catalog	1	high	58	True					ok	
+rs112043138	rs112043138	20	35763696	34351618	T	A	T	A	RPF2P1 - U6	gwas_catalog	1	low	0	False	yes				ok	
+rs112115136	rs112115136	1	10977377	11037434	G	A	G	A	CIROZ	gwas_catalog	1	low	0	False					ok	
+rs112142489	rs112142489	3	194594844	194315573	A	C,T	A	C,T	TMEM44	gwas_catalog	1	low	0	False		yes			ok	
+rs112244493	rs112244493	15	27987591	28232737	G	C,T	G	C,T	OCA2	gwas_catalog	1	high	58	True	yes	yes			ok	
+rs112332856	rs112332856	19	3565601	3565599	T	C	T	C	MFSD12	gwas_catalog	1	high	5	True				yes	ok	
+rs112483884	rs112483884	15	28174184	28419330	T	C	T	C	HERC2	gwas_catalog	1	high	40	True					ok	
+rs112535818	rs112535818	1	26795661	27122152	C	G	C	G	PIGV	gwas_catalog	1	low	1	False	yes				ok	
+rs112628998	rs112628998	6	32558998	32526775	G	A	G	A	HLA-DRB6, HLA-DRB6	gwas_catalog	1	low	0	False				yes	ok	
+rs112997627	rs112997627	17	45617897	43695263	T	G	T	G	RPS26P8 - LINC02210	gwas_catalog	1	low	0	False					ok	
+rs113052989	rs113052989	7	41183370	41222968	C	G,T	C	G,T	LINC01449 - INHBA	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs113060680	rs113060680	8	42130366	41987884	C	T	C	T	RPL17P30 - AP3M2	gwas_catalog	1	low	1	False					ok	
+rs113236485	rs113236485	1	114017586	114560208	A	G	A	G	SYT6 (near/downstream/intronic)	curated:Ang2023	1	moderate							ok	
+rs113419088	rs113419088	2	63626289	63853423	A	G	A	G	WDPCP	gwas_catalog	1	low	0	False					ok	
+rs113548871	rs113548871	16	89746174	89812582	C	A,T	C	A,T	FANCA	gwas_catalog	1	high	4	True		yes			ok	
+rs113633047	rs113633047	5	134067204	133402895	G	T	G	T	VDAC1 - TCF7	gwas_catalog	1	low	0	False					ok	
+rs113773649	rs113773649	6	242312	242312	A	C	A	C	LINC03066 - DUSP22	gwas_catalog	1	low	0	False					ok	
+rs113849132	rs113849132	16	89504511	89570919	G	A	G	A	SPG7	gwas_catalog	1	low	0	False					ok	
+rs114137292	rs114137292	6	23918570	23918798	A	G	A	G	SPTLC1P2 - ISG20L2P1	gwas_catalog	1	low	0	False					ok	
+rs114143322	rs114143322	1	197483784	197452914	G	A	G	A	CRB1 - DENND1B	gwas_catalog	1	low	0	False					ok	
+rs114383698	rs114383698	12	15177959	15330893	G	T	G	T	RERG	gwas_catalog	1	low	1	False					ok	
+rs114803348	rs114803348	5	33859299	33859404	C	A	C	A	ADAMTS12	gwas_catalog	1	low	1	False				yes	ok	
+rs115000158	rs115000158	15	28105536	28350682	G	A,C	G	A,C	OCA2 - HERC2	gwas_catalog	1	high	58	True		yes			ok	
+rs115023893	rs115023893	6	1023608	1023843	G	C,T	G	C,T	LINC01622	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs115726381	rs115726381	2	217244450	218109173	T	A	T	A	TESHL	gwas_catalog	1	low	0	False	yes				ok	
+rs115841388	rs115841388	16	89963252	90029660	C	T	C	T	DEF8	gwas_catalog	1	high	4	True					ok	
+rs115950244	rs115950244	3	115156451	114875298	C	T	C	T	ZBTB20 - EIF4E2P2	gwas_catalog	1	low	0	False					ok	
+rs115981455	rs115981455	12	61386757	61780538	C	G,T	C	G,T	Y_RNA - DUX4L52	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs116061711	rs116061711	4	105192854	106114011	T	C	T	C	TET2-AS1, TET2	gwas_catalog	1	low	1	False					ok	
+rs116074720	rs116074720	5	33844457	33844562	C	A	C	A	ADAMTS12	gwas_catalog	1	low	1	False				yes	ok	
+rs116192418	rs116192418	1	229781444	229917191	G	A,C	G	A,C	HMGB1P26 - LINC01682	gwas_catalog	1	low	0	False		yes			ok	
+rs116546495	rs116546495	3	1120489	1162173	C	G	C	G	CNTN6	gwas_catalog	1	low	1	False	yes				ok	
+rs116711774	rs116711774	4	108099646	109020802	G	A	G	A	LEF1	gwas_catalog	1	high	2	True					ok	
+rs116879078	rs116879078	15	28118342	28363488	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs116887602	rs116887602	5	33963745	33963850	G	A,C,T	G	A,C,T	SLC45A2	gwas_catalog	1	high	23	True		yes			ok	
+rs116895175	rs116895175	16	88909490	88975898	G	A	G	A	CBFA2T3	gwas_catalog	1	low	1	False					ok	
+rs116927526	rs116927526	16	89677219	89743627	C	T	C	T	SPATA33 - CDK10	gwas_catalog	1	high	3	True					ok	
+rs116978932	rs116978932	15	28079766	28324912	G	A	G	A	OCA2	gwas_catalog	1	high	58	True					ok	
+rs117076724	rs117076724	13	72438916	73013054	C	A,T	C	A,T	RPS10P21 - RPL18AP17	gwas_catalog	1	low	0	False		yes			ok	
+rs117132860	rs117132860	7	17095084	17134708	G	A,C,T	G	A,C,T	AHR	gwas_catalog	1	low	0	False		yes			ok	
+rs117156175	rs117156175	16	89168993	89235401	C	T	C	T	LINC02138	gwas_catalog	1	low	0	False					ok	
+rs117183145	rs117183145	2	213187916	214052640	G	A	G	A	LINC01953 - SPAG16-DT	gwas_catalog	1	low	0	False					ok	
+rs117186940	rs117186940	20	33172744	31760550	C	T	C	T	BPIFA2	gwas_catalog	1	low	0	False					ok	
+rs117201485	rs117201485	15	28268158	28513304	G	A	G	A	HERC2	gwas_catalog	1	high	40	True				yes	ok	
+rs117204628	rs117204628	16	89966047	90032455	C	T	C	T	DEF8	gwas_catalog	1	high	4	True				yes	ok	
+rs117219845	rs117219845	15	28137613	28382759	C	A,T	C	A,T	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs117239777	rs117239777	17	2018703	1921997	A	T	A	T	RTN4RL1	gwas_catalog	1	low	0	False	yes				ok	
+rs117243052	rs117243052	16	89890298	89956706	C	T	C	T	TCF25	gwas_catalog	1	high	9	True					ok	
+rs117254231	rs117254231	7	86453572	86082888	A	G	A	G	SOCS5P1 - GRM3	gwas_catalog	1	low	0	False					ok	
+rs117322171	rs117322171	16	52850617	52884529	C	T	C	T	CASC16 - PHB1P21	gwas_catalog	1	low	0	False					ok	
+rs117325217	rs117325217	15	28289631	28534777	C	T	C	T	HERC2	gwas_catalog	1	high	40	True				yes	ok	
+rs117417690	rs117417690	16	90091597	90158005	C	T	C	T	PRDM7	gwas_catalog	1	low	0	False					ok	
+rs117480223	rs117480223	15	47577519	47869716	A	G	A	G	SEMA6D	gwas_catalog	1	low	0	False					ok	
+rs117489126	rs117489126	1	1625671	1561051	C	T	C	T	MIB2	gwas_catalog	1	high	2	True					ok	
+rs117612447	rs117612447	17	41394847	39551099	C	G,T	C	G,T	KRT31	gwas_catalog	1	low	1	False	yes	yes			ok	
+rs117644533	rs117644533	16	88995404	89061812	G	A,C	G	A,C	CBFA2T3 - ACSF3	gwas_catalog	1	low	1	False		yes			ok	
+rs117801799	rs117801799	15	28013940	28259086	G	A,T	G	A,T	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs117886461	rs117886461	15	27985232	28230378	G	A,C	G	A,C	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs117929211	rs117929211	2	8641701	8781831	G	A	G	A	SNRPEP5 - ID2-AS1	gwas_catalog	1	low	0	False					ok	
+rs117954051	rs117954051	8	108055385	109067613	T	C	T	C	RSPO2	gwas_catalog	1	high	2	True					ok	
+rs117978872	rs117978872	8	75016712	75928947	C	A	C	A	CRISPLD1	gwas_catalog	1	low	0	False					ok	
+rs117990130	rs117990130	16	89720932	89787340	C	A,T	C	A,T	VPS9D1, ZNF276	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs118010021	rs118010021	16	88998978	89065386	C	A,T	C	A,T	CBFA2T3 - ACSF3	gwas_catalog	1	low	1	False		yes			ok	
+rs118011793	rs118011793	17	65957237	63953355	G	A,C,T	G	A,C,T	CEP112	gwas_catalog	1	low	1	False		yes			ok	
+rs118141530	rs118141530	15	28289636	28534782	A	C,G	A	C,G	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs118174802	rs118174802	16	90077159	90143567	C	T	C	T	PRDM7	gwas_catalog	1	low	0	False					ok	
+rs121918166	rs121918166	15	27985101	28230247	C	T	C	T	OCA2	curated:Salvo2023;discordance;gwas_catalog	3	high	58	True				yes	ok	
+rs121918167	rs121918167	15	27871170	28116316	G	A	G	A	OCA2	gwas_catalog	1	high	58	True					ok	
+rs121918170	rs121918170	15	27983383	28228529	T	A,C	T	A,C	OCA2	gwas_catalog	1	high	58	True	yes	yes			ok	
+rs138716730	rs138716730	21	28334243	29706562	T	TT	T	TT	LINC03138	gwas_catalog	1	low	0	False					ok	
+rs138804614	rs138804614	16	89806765	89873173	A	G	A	G	FANCA	gwas_catalog	1	high	4	True					ok	
+rs139029488	rs139029488	15	27701080	27946226	T	C	T	C	GABRG3 - OCA2	gwas_catalog	1	high	58	True					ok	
+rs139343937	rs139343937	16	80222544	80256441	G	A	G	A	DYNLRB2-AS1	gwas_catalog	1	low	0	False				yes	ok	
+rs139426027	rs139426027	3	159520652	159238441	TTTGT	T	TTTGT	T	SCHIP1, IQCJ-SCHIP1	gwas_catalog	1	low	1	False					ok	
+rs139727704	rs139727704	12	52254374	52648158	A	G	A	G	KRT87P, KRT87P, KRT86	gwas_catalog	1	low	1	False					ok	
+rs140159633	rs140159633	15	28892326	29137472	C	T	C	T	APBA2	gwas_catalog	1	high	2	True					ok	
+rs140193700	rs140193700	2	169432257	170288767	G	A,C,T	G	A,C,T	LRP2 - BBS5	gwas_catalog	1	low	1	False		yes			ok	
+rs140309399	rs140309399	1	221444418	221617760	C	T	C	T	LINC02817 - DUSP10	gwas_catalog	1	low	0	False					ok	
+rs140340602	rs140340602	20	20853569	20834212	C	T	C	T	RN7SL607P - MRPS11P1	gwas_catalog	1	low	0	False					ok	
+rs140756008	rs140756008	2	41451646	41678786	T	A,C	T	A,C	HNRNPA1P57 - LDHAP3	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs140814701	rs140814701	17	41335727	39491979	G	A	G	A	TBC1D3P7 - KRT33A	gwas_catalog	1	low	1	False					ok	
+rs140839696	rs140839696	6	100456684	100904560	T	-	T	-	SIM1	gwas_catalog	1	low	1	False					ok	
+rs141010291	rs141010291	3	105208874	104927718	AAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA	AAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA	EZRP1 - ALCAM	gwas_catalog	1	low	0	False		yes			ok	
+rs141034411	rs141034411	8	3241118	3098640	C	A,T	C	A,T	CSMD1	gwas_catalog	1	low	1	False		yes			ok	
+rs141103485	rs141103485	16	87949505	87983111	G	A	G	A	BANP	gwas_catalog	1	low	0	False					ok	
+rs141283719	rs141283719	2	173685544	174550272	T	A,C	T	A,C	PPIAP66 - RPL5P7	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs141768436	rs141768436	18	47241746	44768117	A	G	A	G	SKOR2	gwas_catalog	1	low	1	False					ok	
+rs142046335	rs142046335	15	28175206	28420352	GA	-	GA	-	HERC2	gwas_catalog	1	high	40	True				yes	ok	
+rs142469774	rs142469774	16	13261212	13355069	A	G	A	G	SHISA9 - TMF1P1	gwas_catalog	1	low	0	False					ok	
+rs142893386	rs142893386	11	89452293	89185461	G	A,C	G	A,C	NOX4	gwas_catalog	1	low	0	False		yes			ok	
+rs142980341	rs142980341	5	61597684	60893511	TT	T	TT	T	LINC03122	gwas_catalog	1	low	0	False					ok	
+rs143065297	rs143065297	22	42293783	42689789	C	T	C	T	TCF20	gwas_catalog	1	low	0	False					ok	
+rs143512305	rs143512305	16	89915672	89982080	CC	C,CCC	CC	C,CCC	MC1R	gwas_catalog	1	high	48	True		yes			ok	
+rs143615986	rs143615986	6	433066	433066	G	A	G	A	IRF4 - EXOC2	gwas_catalog	1	high	36	True					ok	
+rs144080386	rs144080386	1	17270928	17597423	C	T	C	T	PADI3	gwas_catalog	1	high	2	True					ok	
+rs144104266	rs144104266	16	89278719	89345127	G	A	G	A	ANKRD11	gwas_catalog	1	low	0	False					ok	
+rs144133613	rs144133613	7	114900774	114540829	ACTAACTA	ACTA,ACTAACTAACTA	ACTAACTA	ACTA,ACTAACTAACTA	FOXP2 - MDFIC	gwas_catalog	1	low	0	False		yes			ok	
+rs144244730	rs144244730	15	28033944	28279090	G	T	G	T	OCA2	gwas_catalog	1	high	58	True					ok	
+rs144249062	rs144249062	9	12667800	12667800	TTTTTTTTT	TTTTTTT,TTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT	TTTTTTTTT	TTTTTTT,TTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT	LURAP1L-AS1	gwas_catalog	1	low	0	False		yes			ok	
+rs144864205	rs144864205	15	28231486	28476632	G	A	G	A	HERC2	gwas_catalog	1	high	40	True					ok	
+rs144953267	rs144953267	17	12747980	12651297	C	T	C	T	MYOCD	gwas_catalog	1	low	0	False					ok	
+rs145048184	rs145048184	8	96058113	97070341	C	T	C	T	SRSF3P2 - GAPDHP30	gwas_catalog	1	low	0	False					ok	
+rs145155710	rs145155710	19	14609046	14719858	C	T	C	T	CLEC17A, ADGRE3	gwas_catalog	1	low	1	False					ok	
+rs145326083	rs145326083	5	33839928	33840033	G	A,C	G	A,C	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs146210682	rs146210682	1	203732372	203701500	A	G	A	G	ATP2B4	gwas_catalog	1	low	0	False					ok	
+rs146271698	rs146271698	9	125411976	128174255	C	T	C	T	GAPVD1 - Metazoa_SRP	gwas_catalog	1	low	0	False					ok	
+rs146410588	rs146410588	5	33835954	33836059	TGTGTGTGTGTGTGTGT	TGT,TGTGT,TGTGTGT,TGTGTGTGT,TGTGTGTGTGT,TGTGTGTGTGTGT,TGTGTGTGTGTGTGT,TGTGTGTGTGTGTGTGTGT,TGTGTGTGTGTGTGTGTGTGT	TGTGTGTGTGTGTGTGT	TGT,TGTGT,TGTGTGT,TGTGTGTGT,TGTGTGTGTGT,TGTGTGTGTGTGT,TGTGTGTGTGTGTGT,TGTGTGTGTGTGTGTGTGT,TGTGTGTGTGTGTGTGTGTGT	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs146550637	rs146550637	15	28155836	28400982	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs146752463	rs146752463	3	60374918	60360651	T	A	T	A	FHIT	gwas_catalog	1	low	1	False	yes				ok	
+rs146789517	rs146789517	5	12995852	12995964	A	G	A	G	LINC02220	gwas_catalog	1	low	0	False					ok	
+rs146972365	rs146972365	16	89956285	90022693	T	C	T	C	DEF8	gwas_catalog	1	high	4	True					ok	
+rs147237492	rs147237492	15	32687900	32980101	C	T	C	T	ARHGAP11A-SCG5, SCG5	gwas_catalog	1	low	0	False				yes	ok	
+rs147385695	rs147385695	19	40708529	41214434	CC	CCC	CC	CCC	COQ8B	gwas_catalog	1	low	0	False					ok	
+rs147458259	rs147458259	1	8183042	8243102	C	T	C	T	ERRFI1-DT, LINC01714	gwas_catalog	1	low	0	False					ok	
+rs147723444	rs147723444	3	19958037	19999529	A	G,T	A	G,T	RAB5A	gwas_catalog	1	low	1	False		yes			ok	
+rs147936809	rs147936809	15	28241588	28486734	G	A	G	A	HERC2	gwas_catalog	1	high	40	True				yes	ok	
+rs148065054	rs148065054	11	88819465	88552633	C	A,T	C	A,T	GRM5	gwas_catalog	1	high	6	True		yes			ok	
+rs148885596	rs148885596	15	28876826	29121972	C	G	C	G	GOLGA6L7 - APBA2	gwas_catalog	1	high	2	True	yes				ok	
+rs148906333	rs148906333	5	53802376	53098206	C	A,T	C	A,T	LINC02105	gwas_catalog	1	low	1	False		yes			ok	
+rs150231163	rs150231163	15	28239853	28484999	A	C,T	A	C,T	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs150287021	rs150287021	15	28139388	28384534	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs150527451	rs150527451	11	69050429	68817897	G	A	G	A	TPCN2	gwas_catalog	1	high	8	True					ok	
+rs150568801	rs150568801	15	28265480	28510626	A	T	A	T	HERC2	gwas_catalog	1	high	40	True	yes				ok	
+rs150763518	rs150763518	15	28106230	28351376	GTGTGTGTGTG	GTGTGTG,GTGTGTGTG,GTGTGTGTGTGTG,GTGTGTGTGTGTGGGGTGTGTGTGTGTG,GTGTGTGTGTGTGTG,GTGTGTGTGTGTGTGTG	GTGTGTGTGTG	GTGTGTG,GTGTGTGTG,GTGTGTGTGTGTG,GTGTGTGTGTGTGGGGTGTGTGTGTGTG,GTGTGTGTGTGTGTG,GTGTGTGTGTGTGTGTG	OCA2 - HERC2	gwas_catalog	1	high	58	True		yes		yes	ok	
+rs150909008	rs150909008	16	89938285	90004693	G	A	G	A	TUBB3	gwas_catalog	1	high	2	True				yes	ok	
+rs150924516	rs150924516	16	89750407	89816815	C	T	C	T	FANCA	gwas_catalog	1	high	4	True					ok	
+rs182498200	rs182498200	15	27844150	28089296	G	A	G	A	OCA2	gwas_catalog	1	high	58	True					ok	
+rs182948919	rs182948919	16	89871836	89938244	C	A,G,T	C	A,G,T	SPIRE2 - TCF25	gwas_catalog	1	high	9	True		yes			ok	
+rs183827287	rs183827287	1	114078318	114620940	C	T	C	T	OLFML3 - SYT6	gwas_catalog	1	low	0	False				yes	ok	
+rs186582231	rs186582231	7	67432818	66897805	C	T	C	T	STAG3L4 - MTATP6P21	gwas_catalog	1	low	0	False					ok	
+rs187096292	rs187096292	7	56655753	56723446	A	G	A	G	TRIM60P16 - CICP28	gwas_catalog	1	low	0	False				yes	ok	
+rs188092667	rs188092667	11	88721001	88454169	G	A	G	A	GRM5	gwas_catalog	1	high	6	True					ok	
+rs190295257	rs190295257	16	89840471	89906879	G	A,C,T	G	A,C,T	SPIRE2	gwas_catalog	1	high	2	True		yes		yes	ok	
+rs190581995	rs190581995	11	89154050	88887218	T	A	T	A	GRM5 - TYR	gwas_catalog	1	high	17	True	yes				ok	
+rs190948281	rs190948281	3	70012226	70061377	G	C,T	G	C,T	SAMMSON	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs190989442	rs190989442	15	24101305	24346452	T	C,G	T	C,G	PWRN4 - PWRN1	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs191109490	rs191109490	15	28120403	28365549	A	C	A	C	HERC2;OCA2/HERC2 intronic	curated:Abbatangelo2026;curated:Salvo2023;discordance	3	moderate							ok	
+rs191959849	rs191959849	11	40678692	40700242	G	A	G	A	LRRC4C	gwas_catalog	1	low	1	False					ok	
+rs192035988	rs192035988	11	113529872	113400594	C	A,T	C	A,T	DRD2 - TMPRSS5	gwas_catalog	1	low	0	False		yes			ok	
+rs192494731	rs192494731	15	28150436	28395582	C	A,T	C	A,T	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs200000734	rs200000734	16	89919895	89986303	C	G,T	C	G,T	MC1R	gwas_catalog	1	high	48	True	yes	yes			ok	
+rs200875668	rs200875668	2	182005195	182869922	TCTT	-	TCTT	-	PPP1R1C	gwas_catalog	1	low	0	False					ok	
+rs200980383	rs200980383	15	28224181	28469327	ACAGACAGACAGACAGACAGA	ACAGACAGACAGA,ACAGACAGACAGACAGA,ACAGACAGACAGACAGACAGACAGA	ACAGACAGACAGACAGACAGA	ACAGACAGACAGA,ACAGACAGACAGACAGA,ACAGACAGACAGACAGACAGACAGA	HERC2	gwas_catalog	1	high	40	True		yes			ok	
+rs200998494	rs200998494	16	89957640	90024048	C	T	C	T	DEF8	gwas_catalog	1	high	4	True					ok	
+rs201259497	rs201259497	5	33963986	33964091	C	A,T	C	A,T	SLC45A2	gwas_catalog	1	high	23	True		yes			ok	
+rs201326893	rs201326893	16	89919714	89986122	C	A	C	A	MC1R	gwas_catalog	1	high	48	True					ok	
+rs201338907	rs201338907	1	121629918	121371716	A	C,G	A	C,G	EMBP1 - RNA5SP533	gwas_catalog	1	low	0	False		yes			ok	
+rs201475383	rs201475383	20	26293355	26273991	G	A	G	A	MIR663AHG - FRG1CP	gwas_catalog	1	low	0	False					ok	
+rs201479143	rs201479143	16	89649405	89715813	C	T	C	T	CHMP1A	gwas_catalog	1	low	1	False					ok	
+rs201911192	rs201911192	15	27988503	28233649	AAA	AA,AAAA	AAA	AA,AAAA	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs201918952	rs201918952	5	33849592	33849697	ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA	ATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA	ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA	ATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA,ATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATATGTATTGCATAGCAATATATA	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs202195884	rs202195884	15	28217781	28462927	A	-	A	-	HERC2	gwas_catalog	1	high	40	True					ok	
+rs367752652	rs367752652	5	33966428	33966533	TTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTT,TTTTTTTTTT,TTTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT	SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs368507952	rs368507952	16	89920175	89986583	G	A	G	A	MC1R	gwas_catalog	1	high	48	True					ok	
+rs369896246	rs369896246	11	89322393	89055561	AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA	AAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA	AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA	AAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA,AAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAATAAA	TYR - NOX4	gwas_catalog	1	high	17	True		yes		yes	ok	
+rs370083525	rs370083525	7	47522928	47562526	AAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA	TNS3	gwas_catalog	1	low	1	False		yes			ok	
+rs373425948	rs373425948	15	28298006	28543152	TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	TGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	TGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG,TGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTG	HERC2	gwas_catalog	1	high	40	True		yes		yes	ok	
+rs373468882	rs373468882	15	28321239	28566385	C	T	C	T	HERC2	gwas_catalog	1	high	40	True				yes	ok	
+rs373561014	rs373561014	15	28210653	28455799	T	A,C	T	A,C	HERC2	gwas_catalog	1	high	40	True	yes	yes			ok	
+rs374951721	rs374951721	8	104147253	105159481	A	G	A	G	RIMS2	gwas_catalog	1	low	0	False				yes	ok	
+rs375080348	rs375080348	7	144780854	144477947	T	-	T	-	TPK1	gwas_catalog	1	low	1	False					ok	
+rs375313288	rs375313288	7	94117145	93746457	C	T	C	T	BET1-AS1 - COL1A2	gwas_catalog	1	low	0	False					ok	
+rs376610691	rs376610691	18	61224836	58892069	G	A,C	G	A,C	HMGN1P31 - CDH20	gwas_catalog	1	low	0	False		yes		yes	ok	
+rs387907171	rs387907171	9	12694273	12694273	C	T	C	T	TYRP1	curated:Norton2016;discordance	2	moderate							ok	
+rs528519891	rs528519891	3	2328412	2370096	T	A,C	T	A,C	CNTN4	gwas_catalog	1	low	0	False	yes	yes			ok	
+rs528795462	rs528795462	5	33849438	33849543	ATATATATAT	ATATATAT,ATATATATATAT,ATATATATATATAT	ATATATATAT	ATATATAT,ATATATATATAT,ATATATATATATAT	ADAMTS12	gwas_catalog	1	low	1	False		yes		yes	ok	
+rs529312329	rs529312329	15	28238040	28483186	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	
+rs532745854	rs532745854	6	167659946	168060626	TT	-	TT	-	TCP10L3 - LINC02538	gwas_catalog	1	low	0	False					ok	
+rs533475206	rs533475206	14	47517162	47986365	TTTTTT	TTTTTTT	TTTTTT	TTTTTTT	MDGA2	gwas_catalog	1	low	0	False					ok	
+rs533833761	rs533833761	4	173360857	174282008	T	C,G	T	C,G	SAP30-DT	gwas_catalog	1	low	0	False		yes			ok	
+rs533931579	rs533931579	1	232724717	232860463	C	T	C	T	LINC01745	gwas_catalog	1	low	0	False					ok	
+rs533994436	rs533994436	15	28311713	28556859	G	C	G	C	HERC2	gwas_catalog	1	high	40	True	yes				ok	
+rs534245958	rs534245958	9	92578859	95341141	A	T	A	T	CENPP	gwas_catalog	1	low	0	False	yes				ok	
+rs539325600	rs539325600	7	55603936	55671629	G	A	G	A	VOPP1-DT - CDC42P2	gwas_catalog	1	low	0	False					ok	
+rs545600541	rs545600541	16	89702397	89768805	G	A	G	A	SPATA2L - VPS9D1	gwas_catalog	1	low	1	False					ok	
+rs547859046	rs547859046	16	88894685	88961093	C	G	C	G	CBFA2T3	gwas_catalog	1	low	1	False	yes				ok	
+rs548590936	rs548590936	15	28371242	28616388	G	-	G	-	MPHOSPH10P7 - GOLGA8F	gwas_catalog	1	low	0	False					ok	
+rs551217952	rs551217952	15	28139387	28384533	A	C,G	A	C,G	OCA2/HERC2 intronic	curated:Salvo2023;discordance	2	moderate				yes			ok	
+rs553005340	rs553005340	21	16221066	17593386	A	G	A	G	MIR99AHG	gwas_catalog	1	low	0	False					ok	
+rs554663181	rs554663181	12	4935882	5045048	T	C	T	C	KCNA1 - KCNA5	gwas_catalog	1	low	0	False					ok	
+rs555179612	rs555179612	16	89919795	89986203	C	CC	C	CC	MC1R	gwas_catalog	1	high	48	True					ok	
+rs556360317	rs556360317	15	28297991	28543137	A	T	A	T	HERC2	gwas_catalog	1	high	40	True	yes				ok	
+rs560973795	rs560973795	5	33954283	33954388	AGCCCA	-	AGCCCA	-	SLC45A2	gwas_catalog	1	high	23	True				yes	ok	
+rs563894686	rs563894686	6	27038151	27005930	TATTATATATAACATATTATATATAATACATATTATAT	TATTATAT,TATTATATATAACATATTATATATAATACATATTATATATAACATATTATATATAATACATATTATAT,TATTATATATAACATATTATATATAATACATATTATATATAACATATTATATATAATACATATTATATATAACATATTATATATAATACATATTATAT	TATTATATATAACATATTATATATAATACATATTATAT	TATTATAT,TATTATATATAACATATTATATATAATACATATTATATATAACATATTATATATAATACATATTATAT,TATTATATATAACATATTATATATAATACATATTATATATAACATATTATATATAATACATATTATATATAACATATTATATATAATACATATTATAT	LARRPM, LINC00240	gwas_catalog	1	low	0	False		yes			ok	
+rs566561215	rs566561215	2	226266139	227130855	G	C	G	C	NYAP2 - MIR5702	gwas_catalog	1	low	0	False	yes				ok	
+rs567091563	rs567091563	16	55869460	55903372	C	T	C	T	CES5A	gwas_catalog	1	low	0	False					ok	
+rs568405296	rs568405296	16	70858347	70892250	T	A	T	A	HYDIN	gwas_catalog	1	low	0	False	yes			yes	ok	
+rs569438828	rs569438828	1	109511287	110053909	G	A	G	A	AMIGO1 - GPR61	gwas_catalog	1	low	0	False					ok	
+rs570477080	rs570477080	7	68005118	67470105	TTTTTTTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTT	TTTTTTTTTTTTTTTTT	TTTTTTTTTT,TTTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT,TTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTT,TTTTTTTTTTTTTTTTTTTTTTTT	MTCO3P41 - MTCO1P57	gwas_catalog	1	low	0	False		yes			ok	
+rs570521611	rs570521611	2	7775516	7915647	TTTTTTTTTTTT	TTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT	TTTTTTTTTTTT	TTTTTTTTTTT,TTTTTTTTTTTTT,TTTTTTTTTTTTTT	LINC01871 - LINC00299	gwas_catalog	1	low	0	False		yes			ok	
+rs570913543	rs570913543	8	84617435	85529670	C	A,T	C	A,T	RALYL	gwas_catalog	1	low	0	False		yes			ok	
+rs573407928	rs573407928	4	101246775	102167932	T	G	T	G	PPP3CA	gwas_catalog	1	low	0	False					ok	
+rs575299612	rs575299612	15	28076854	28322000	AAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAAAAAAAAAAAAAA	AAAAAAAAAA,AAAAAAAAAAA,AAAAAAAAAAAAA,AAAAAAAAAAAAAA,AAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs575866787	rs575866787	16	89986579	90052987	G	A	G	A	AFG3L1P, AFG3L1P	gwas_catalog	1	high	2	True					ok	
+rs745333093	rs745333093	15	28328680	28573826	C	A	C	A	HERC2 - HERC2P1	gwas_catalog	1	high	40	True				yes	ok	
+rs748125345	rs748125345	15	28279615	28524761	C	CACACACAC	C	CACACACAC	HERC2	gwas_catalog	1	high	40	True					ok	
+rs797044784	rs797044784	15	28016172	28261318	CCAG	GACC	CCAG	GACC	OCA2	curated:Ang2023;discordance	2	moderate							ok	
+rs869097159	rs869097159	5	33944490	33944595	AGAGAGAGAGAGAGAGAGAG	AGAGAGAGAGAG,AGAGAGAGAGAGAG,AGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAGAGAGAGAG	AGAGAGAGAGAGAGAGAGAG	AGAGAGAGAGAG,AGAGAGAGAGAGAG,AGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAGAGAGAG,AGAGAGAGAGAGAGAGAGAGAGAGAG	RXFP3 - SLC45A2	gwas_catalog	1	high	23	True		yes			ok	
+rs1157572508	rs1157572508	15	27829280	28074426	-	A,AGATA,AGATAGATA,AGATAGATAGATA,AGATAGATAGATAGATA	-	A,AGATA,AGATAGATA,AGATAGATAGATA,AGATAGATAGATAGATA	OCA2	gwas_catalog	1	high	58	True		yes			ok	
+rs1214023646	rs1214023646	5	33944490	33944595	-	G,GAG,GG,GGGGGCG	-	G,GAG,GG,GGGGGCG	RXFP3 - SLC45A2	gwas_catalog	1	high	23	True		yes		yes	ok	
+rs1335589229	rs1335589229	5	33835944	33836049	TCTCTCTCTCTGTGTGTGTGTGT	T	TCTCTCTCTCTGTGTGTGTGTGT	T	ADAMTS12	gwas_catalog	1	low	1	False				yes	ok	
+rs1449123735	rs1449123735	15	28288722	28533868	C	T	C	T	HERC2	gwas_catalog	1	high	40	True					ok	

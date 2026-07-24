@@ -17,6 +17,7 @@ project:
     - about.qmd
     - license.qmd
     - sgdp_reference_pca.qmd
+    - snp_panel.qmd
 
 website:
   title: "SEPIA"
@@ -30,6 +31,8 @@ website:
         text: Home
       - href: sgdp_reference_pca.qmd
         text: "Reference PCA"
+      - href: snp_panel.qmd
+        text: "SNP set"
       - href: about.qmd
         text: About
       - href: license.qmd
