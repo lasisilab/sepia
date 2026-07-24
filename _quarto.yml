@@ -5,6 +5,18 @@ project:
   # analysis pages' `data/...` paths resolve the same way workflowr's did
   # (workflowr used knit_root_dir: ".").
   execute-dir: project
+  # RENDER LIST — only the pages that build in CI (no R, or frozen). The thesis
+  # analysis pages (introduction/depth/pca/cleaning) execute R against derived
+  # CSVs that are not committed and need GDAL/GEOS/PROJ (maps) — per MIGRATION.md
+  # they require a one-time local render on a machine with the data to populate
+  # _freeze/. Until that happens they are excluded so the site can deploy; they
+  # will be restored (here + in the navbar) once _freeze/ is committed, and SEPIA
+  # is regenerating those analyses anyway. sgdp_reference_pca.qmd is frozen.
+  render:
+    - index.qmd
+    - about.qmd
+    - license.qmd
+    - sgdp_reference_pca.qmd
 
 website:
   title: "SEPIA"
@@ -16,18 +28,15 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: introduction.qmd
-        text: Background
-      - href: depth.qmd
-        text: Depth
-      - href: pca.qmd
-        text: PCA
       - href: sgdp_reference_pca.qmd
         text: "Reference PCA"
       - href: about.qmd
         text: About
       - href: license.qmd
         text: License
+      # Background / Depth / PCA (introduction.qmd, depth.qmd, pca.qmd) are
+      # temporarily out of the navbar + render list — they need a local render
+      # with data to populate _freeze/ (see project.render note above).
     right:
       - icon: github
         href: https://github.com/lasisilab/sepia
