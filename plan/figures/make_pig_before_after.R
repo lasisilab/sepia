@@ -16,6 +16,7 @@
 # =====================================================================================
 suppressPackageStartupMessages({ library(ggplot2) })
 setwd(if (dir.exists("data")) "." else stop("run from repo root"))
+source("plan/figures/_pca_style.R")
 
 AFTER_EV <- "output/pca_pig/pig_panel_pca.eigenvec"
 if (!file.exists(AFTER_EV)) stop("B2a output not present yet: ", AFTER_EV)
@@ -49,19 +50,17 @@ after$panel <- sprintf("AFTER — correct hg19 coords (PC1 %.0f%%, PC2 %.0f%%)",
 all <- rbind(before, after)
 all$region[is.na(all$region)] <- "unknown"
 all$panel <- factor(all$panel, levels = c(before$panel[1], after$panel[1]))
-regs <- c("Africa","WestEurasia","SouthAsia","CentralAsiaSiberia","EastAsia","Oceania","America","unknown","Archaic")
-all$region <- factor(all$region, levels = regs[regs %in% all$region])
-pal <- c(Africa="#E4572E", WestEurasia="#4C6EF5", SouthAsia="#9C36B5", CentralAsiaSiberia="#0CA678",
-         EastAsia="#F08C00", Oceania="#1098AD", America="#E64980", unknown="#adb5bd", Archaic="#212529")
+all$panel <- factor(all$panel, levels = c(before$panel[1], after$panel[1]))
 
 mod <- subset(all, type == "modern"); arc <- subset(all, type == "archaic")
+mod$region <- region_factor(ifelse(is.na(mod$region), "unknown", mod$region))
 p <- ggplot(mapping = aes(PC1, PC2)) +
-  geom_point(data = mod, aes(fill = region), shape = 21, size = 2.5, stroke = .2, colour = "white", alpha = .95) +
-  geom_point(data = arc, shape = 23, size = 3.3, fill = "#212529", colour = "white", stroke = .3) +
+  geom_point(data = mod, aes(colour = region, shape = region), size = 2.5, stroke = .9, alpha = .95) +
+  geom_point(data = arc, shape = 25, size = 3.3, fill = "#212529", colour = "white", stroke = .4) +
   geom_text(data = subset(arc, grepl("AFTER", panel)), aes(label = label),
             size = 2.4, vjust = -0.9, hjust = 0.5, colour = "#212529") +
   facet_wrap(~panel, scales = "free", nrow = 1) +
-  scale_fill_manual(values = pal, name = "SGDP region", drop = TRUE) +
+  region_scales("SGDP region") +
   labs(title = "Pigmentation-panel PCA — the build-mismatch bug (A2), before and after",
        subtitle = "Left: the panel read at hg38 positions on hg19 data — 221/222 SNPs monomorphic, everyone collapses (archaics ◆ on one point). Right: the same panel at the correct hg19 positions.") +
   theme_minimal(base_size = 12) +

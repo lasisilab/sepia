@@ -18,6 +18,7 @@ suppressPackageStartupMessages({ library(ggplot2) })
 repo <- normalizePath(file.path(dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE))), "..", ".."))
 if (!dir.exists(file.path(repo, "data"))) repo <- getwd()          # fallback: run from repo root
 setwd(repo)
+source("plan/figures/_pca_style.R")
 
 read_eig <- function(path, iid_col) {
   d <- read.table(path, header = FALSE, skip = 1, stringsAsFactors = FALSE)
@@ -46,19 +47,14 @@ after$panel  <- sprintf("AFTER — SEPIA rebuild (%d SGDP samples)", nrow(after)
 all <- rbind(before, after)
 all$panel <- factor(all$panel, levels = c(before$panel[1], after$panel[1]))
 
-region_levels <- c("Africa","WestEurasia","SouthAsia","CentralAsiaSiberia",
-                   "EastAsia","Oceania","America","unknown")
-all$region <- factor(all$region, levels = region_levels[region_levels %in% all$region])
-pal <- c(Africa="#E4572E", WestEurasia="#4C6EF5", SouthAsia="#9C36B5",
-         CentralAsiaSiberia="#0CA678", EastAsia="#F08C00", Oceania="#1098AD",
-         America="#E64980", unknown="#adb5bd")
+all$region <- region_factor(all$region)
 
-p <- ggplot(all, aes(PC1, PC2, fill = region)) +
-  geom_point(shape = 21, size = 2.6, stroke = 0.25, colour = "white", alpha = 0.95) +
+p <- ggplot(all, aes(PC1, PC2, colour = region, shape = region)) +
+  geom_point(size = 2.6, stroke = 0.9, alpha = 0.95) +
   facet_wrap(~panel, scales = "free", nrow = 1) +
-  scale_fill_manual(values = pal, name = "SGDP region", drop = TRUE) +
+  region_scales("SGDP region") +
   labs(title = "SGDP whole-genome PCA — the reference behind the pigmentation analysis",
-       subtitle = "Same analysis, more samples: 15 scattered genomes → 159 recover the textbook continental structure (PC1 ≈ African vs non-African)") +
+       subtitle = "Same analysis, more samples: 15 scattered genomes → 159 recover the textbook continental structure (regions coded by colour AND shape)") +
   theme_minimal(base_size = 12) +
   theme(panel.grid.minor = element_blank(),
         panel.border = element_rect(colour = "#dee2e6", fill = NA),
