@@ -55,14 +55,14 @@ echo "  pruned gene-region variants: $(wc -l < gr_prune.prune.in)"
 
 # ---- 3. archaic gene-region variants; combine; project -------------------------------
 echo "===== 3. archaic extraction + combine + project ====="
-awk 'BEGIN{OFS="\t"}{print $1,$2,$3}' gene_regions.bed > gr.regions      # bcftools -R BED (0-based)
 bcftools query -l "$AWG" | awk 'BEGIN{
     m["den11"]="Denisova11";m["den5"]="Denisova5";m["goyet"]="Goyet";m["hst"]="Hohlenstein_Stadel";
     m["lesCottes"]="Les_Cottes";m["mez2"]="Mezmaiskaya2";m["Sid1253"]="El_Sidron";m["spy"]="Spy";m["vindija87"]="Vindija87"}
   {old=$0;n=$0;sub(/.*\//,"",n);sub(/_sorted\.bam$/,"",n);if(n in m)n=m[n];print old"\t"n}' > arc_rename.txt
 CHRPREFIX=$(bcftools view -h "$AWG" | grep -qE '^##contig=<ID=chr' && echo yes || echo no)
 if [ "$CHRPREFIX" = yes ]; then for c in $(seq 1 22) X Y; do echo "chr$c $c"; done > chr2bare.txt; fi
-( bcftools reheader -s arc_rename.txt "$AWG" | bcftools view -R gr.regions -Ou \
+# -T (streaming targets, no index) not -R (needs an indexed file; fails on the reheader pipe)
+( bcftools reheader -s arc_rename.txt "$AWG" | bcftools view -T gene_regions.bed -Ou \
     | { [ "$CHRPREFIX" = yes ] && bcftools annotate --rename-chrs chr2bare.txt -Ou || cat; } \
     | bcftools norm -d none -Oz -o gr_arc.vcf.gz ) 2>gr_arc.err && bcftools index -f -t gr_arc.vcf.gz
 bcftools merge gr_mod.vcf.gz gr_arc.vcf.gz -Oz -o gr_comb.vcf.gz 2>gr_merge.err || { echo "!! merge failed"; tail -3 gr_merge.err; exit 4; }
