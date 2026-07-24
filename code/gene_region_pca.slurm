@@ -64,9 +64,10 @@ if [ "$CHRPREFIX" = yes ]; then for c in $(seq 1 22) X Y; do echo "chr$c $c"; do
 # -T (streaming targets, no index) not -R (needs an indexed file; fails on the reheader pipe)
 ( bcftools reheader -s arc_rename.txt "$AWG" | bcftools view -T gene_regions.bed -Ou \
     | { [ "$CHRPREFIX" = yes ] && bcftools annotate --rename-chrs chr2bare.txt -Ou || cat; } \
-    | bcftools norm -d none -Oz -o gr_arc.vcf.gz ) 2>gr_arc.err && bcftools index -f -t gr_arc.vcf.gz
+    | bcftools norm -d exact -Oz -o gr_arc.vcf.gz ) 2>gr_arc.err && bcftools index -f -t gr_arc.vcf.gz
 bcftools merge gr_mod.vcf.gz gr_arc.vcf.gz -Oz -o gr_comb.vcf.gz 2>gr_merge.err || { echo "!! merge failed"; tail -3 gr_merge.err; exit 4; }
-"$P2" --vcf gr_comb.vcf.gz "${IDARGS[@]}" --make-bed --out gr_all
+# --rm-dup: drop any duplicate-ID variants (archaic ALT='.' records collapse to chr:pos:ref:. dups)
+"$P2" --vcf gr_comb.vcf.gz "${IDARGS[@]}" --rm-dup force-first --make-bed --out gr_all
 
 ARC="Chagyrskaya8 Denisova3 Denisova11 Denisova25 Denisova5 Goyet Hohlenstein_Stadel Les_Cottes L4741 Mezmaiskaya2 SP4903 El_Sidron Spy Vi33.19 Vindija87"
 awk -v L="$ARC" 'BEGIN{n=split(L,a," ");for(i=1;i<=n;i++)A[a[i]]=1} ($2 in A){print $1"\t"$2 > "gr_arc.keep"} !($2 in A){print $1"\t"$2 > "gr_mod.keep"}' gr_all.fam
