@@ -1,4 +1,4 @@
 # B2a pigmentation-panel PCA — extracted at CORRECT hg19 coords from the panel map
-Fri Jul 24 11:30:01 EDT 2026
+Fri Jul 24 12:32:41 EDT 2026
 samples=164  panel_sites_merged=161  biallelic_snps_in_pca=160
 archaics: 5 high-cov  |  moderns: 159 SGDP
