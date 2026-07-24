@@ -1,4 +1,3 @@
-# archaic projection (pig + WG) onto the modern PCA
-Fri Jul 24 15:11:23 EDT 2026
-pig: 6 archaic rows; WG: 16 archaic rows
-WG thinned SNPs: 48299
+# archaic projection (plink2 recipe), pig + WG
+Fri Jul 24 16:08:11 EDT 2026
+pig SNPs=-1; WG pruned SNPs=482999
