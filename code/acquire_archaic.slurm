@@ -44,7 +44,13 @@ fetch(){  # $1=url  $2=dest  — resume-safe download + manifest row (skip if al
   curl -C - -fSL --retry 3 --retry-delay 5 -s "$1" -o "$2" || { echo "  MISS $1"; return 1; }
   printf "%s\t%s\t%s\thg19\t%s\n" "$2" "$1" "$(md5sum "$2" 2>/dev/null | cut -d' ' -f1)" "$(date +%F)" >> "$MAN"
 }
-vcf_ok(){ bcftools index -f "$1" >/dev/null 2>&1; }   # rebuild index; fails on a truncated file
+vcf_ok(){  # ensure an index exists, but ONLY build it if missing. The old `-f` rebuilt the
+           # index on EVERY re-run => re-read all ~257 GB of VCFs off NFS each time (hours),
+           # never reaching the BAMs. An index already present == the file was validated on a
+           # prior run, so skip it. New/truncated downloads have no index yet and get built once.
+  { [ -f "$1.tbi" ] || [ -f "$1.csi" ]; } && return 0
+  bcftools index "$1" >/dev/null 2>&1
+}
 
 # ---- 0. reference (hs37d5, hg19) ----------------------------------------------------
 if [ ! -s "$GENOMES/reference/hs37d5.fa" ]; then
