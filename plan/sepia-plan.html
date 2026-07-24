@@ -242,6 +242,11 @@
   <section id="status">
     <div class="sec-head"><span class="sec-num">03</span><h2>Where things stand</h2></div>
     <p class="lede">Three places hold the work, all now reviewed. The big shift for the next phase: the pigmentation datasets we want already exist (on hg38) in one public repo, so the work moves from <em>assembling</em> data to <em>fixing</em> a few pipeline bugs, <em>verifying</em> the foundation, and <em>integrating</em> that data.</p>
+    <div class="callout">
+      <h4>✓ Key results so far — live step-by-step workbooks</h4>
+      <p><strong>The pigmentation build-mismatch bug (A2) is fixed</strong> — reading the panel at correct hg19 coordinates restores real structure (<a href="#figures">Fig 2</a>); the SGDP reference is rebuilt 15→159 (<a href="#figures">Fig 0</a>); the SNP surface is extended to <strong>1,155 pigmentation SNPs</strong> (<a href="../snp_panel.html">SNP set →</a>).</p>
+      <p><strong>Archaic projection &amp; the gene-vs-SNP result:</strong> building the PCA on the 159 moderns and projecting the archaics, across three spaces — whole genome, pigmentation SNPs, pigmentation genes. The whole-genome and pigmentation-<em>gene-region</em> results are near-identical (archaics sit as a divergent outgroup); only the <em>ascertained pigmentation-SNP</em> panel places archaics with Africans. So <strong>genes = ancestry, ascertained SNPs = selection</strong> — the "archaics with Africans" is a selection/ascertainment footprint, not gene ancestry. Full logic: <a href="../archaic_projection.html">Projection workbook →</a>.</p>
+    </div>
     <div class="sources">
       <div class="src"><span class="tag">Reviewed</span><h3>Repo</h3><p><code>lasisilab/sepia</code> — the analysis website (built with the R tool <em>workflowr</em>), small data files, and scripts.</p></div>
       <div class="src"><span class="tag">Reviewed</span><h3>Thesis</h3><p>Lily's 41-page honors thesis (20 Apr 2026) — the completed first version of the work.</p></div>

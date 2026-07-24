@@ -96,10 +96,37 @@ The contrast is the result: **pigmentation does not recapitulate genome-wide anc
 - A PCA is a coarse summary; the actual phenotype question needs the functional-marker models
   (HIrisPlex-S, item B4), not a projection.
 
-## Limitation → why we extend to the gene network
+## The decisive check — whole gene regions vs the SNP panel
 
-This whole analysis is **reliant on a specific ascertained SNP panel**, which is biased and certainly
-incomplete. The natural next step is to stop leaning on hand-picked SNPs and instead use the
-**pigmentation gene network** — take the pigmentation *genes* and use the variation across their whole
-regions. That is less sensitive to which SNPs happened to be discovered, and it is where SEPIA is
-headed next (gene-region analysis; items B6/B7).
+The analysis above leans on a specific **ascertained SNP panel**. To test whether "archaics with
+Africans" is real or a panel artifact, we ran the *same* recipe on **all variation across the 1,004
+pigmentation-gene regions** (gene body ±10 kb; ~17,500 LD-pruned, unascertained variants — the gene
+network, not hand-picked SNPs; [`code/gene_region_pca.slurm`](https://github.com/lasisilab/sepia/blob/main/code/gene_region_pca.slurm),
+built from [`data/pigment_gene_map.tsv`](https://github.com/lasisilab/sepia/blob/main/data/pigment_gene_map.tsv)).
+
+![Where the archaics fall in three spaces: whole genome, ascertained pigmentation SNPs, and whole pigmentation-gene regions. Modern PCA (159 SGDP) + the 5 high-coverage archaics (▼) projected; deep-lineage African outliers labelled.](plan/figures/three_way_projection.png)
+
+**Result.** The whole-genome and pigmentation-**gene-region** panels are **near-identical** — archaics
+project as a divergent **outgroup** at the non-African edge (high-coverage PC1 ≈ 0.15, matching to two
+decimals). Only the pigmentation-**SNP** panel places archaics with Africans.
+
+**Interpretation — genes = ancestry, ascertained SNPs = selection.** Pigmentation *genes* carry ordinary
+genome-wide ancestry: any decent unascertained genomic sample recovers the same population structure, so
+the gene-region PCA ≈ the whole genome. What makes the SNP panel different is that it is **enriched for
+the selected, derived (out-of-Africa light-skin) alleles** — there archaics (ancestral) line up with the
+Africans who also retain the ancestral state. So the pigmentation-SNP "archaics with Africans" is the
+**footprint of selection at hand-picked loci**, not a pigmentation-gene ancestry signal. Real and
+phenotype-relevant, but read as *shared ancestral alleles at light-skin loci*, not as ancestry.
+
+**The African outliers** (labelled) are the deep-lineage hunter-gatherers — **Ju/'hoan** and **Khomani
+San** (KhoeSan) and **Mbuti**, **Biaka** (Central African rainforest) — the earliest-splitting human
+lineages, so they anchor the deep end genome-wide; in the SNP panel they cluster with the archaics
+because they retain the most ancestral pigmentation alleles. North Africans (Mozabite, Saharawi) sit
+nearest the non-Africans (Eurasian admixture). *(One sample, `LP6005441-DNA_A09`, shows as "unknown" —
+its library ID is missing from `data/sgdp_metadata.tsv`; a metadata gap to fill, not a data problem.)*
+
+## Next
+- **HIrisPlex-S phenotype prediction (B4)** — the functional markers + published weights for the actual
+  "what did they look like" question (a PCA projection speaks to genetic relationships, not phenotype).
+- Optionally quantify the genome-wide archaic position with **f/D-statistics** if the Neanderthal-admixture
+  lean is of interest (PCA is too coarse for it).
