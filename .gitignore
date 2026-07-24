@@ -90,3 +90,4 @@ plan/papers/pdf/
 *.fa
 *.fai
 .DS_Store
+tools/
