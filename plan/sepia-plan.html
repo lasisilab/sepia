@@ -268,18 +268,29 @@
 
   <!-- FOR LILY -->
   <section id="ask">
-    <div class="sec-head"><span class="sec-num">04</span><h2>For Lily — please confirm</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>For Lily — what we've ascertained</h2></div>
+    <p class="lede">Lily, this part is for you. Here are the three things the re-analysis pinned down about the pipeline, in plain terms, and what each one means going forward. None of it diminishes the thesis — the headline verdict (archaic pigmentation prediction is <em>not yet well-supported</em>) was the right, honest call, and the coverage/missingness work stands. These are fixable data-plumbing issues that an automated build-and-provenance check — which nobody had in place — would have caught early. Writing them down here is how the next person avoids repeating them.</p>
+
     <div class="callout ask">
-      <h4>① The genome-build mismatch (the big one — see bug A2)</h4>
-      <p>The 222 pigmentation SNP positions ("the panel") are written in <strong>hg38</strong> coordinates, but all the sequence data (the archaic samples <em>and</em> the SGDP genomes) is aligned to the <strong>hg19</strong> reference — and the same SNP has different coordinates in the two builds. <strong>Decided (2026-07-23): report and integrate on hg38</strong> — the field standard and where the gene-network lives. We bridge to the hg19 data with a verified rsID↔hg19↔hg38 map (extract genotypes at the hg19 coordinate, express on hg38 — lossless relabeling, not re-alignment); the genome-wide sanity PCA stays hg19 as a control.</p>
+      <h4>① The genome-build mismatch — confirmed, and it's the big one (bug A2)</h4>
+      <p><b>What we found:</b> the 222-SNP panel is written in <strong>hg38</strong> coordinates, but every genome (archaic <em>and</em> SGDP) is aligned to <strong>hg19</strong>. Looking up an hg38 position in hg19 data lands ~hundreds of kb off the intended SNP, so <strong>221 of 222 panel sites came back monomorphic</strong>. With nothing to separate samples on, the pigmentation PCA collapsed to a single axis and every archaic projected onto one identical point (Fig 8). So "PC1 differentiates Bantu and Yoruba" and "archaics fall near Africans" were artifacts of one accidental SNP — not pigmentation biology.</p>
+      <p><b>The lesson &amp; the fix:</b> a genotype doesn't care about the build — the same SNP just has a different coordinate <em>number</em> in hg19 vs hg38. So the cheapest correct fix is to read the panel at its <strong>correct hg19</strong> coordinates straight out of the hg19 data — no re-alignment, no liftOver. We built a verified rsID↔hg19↔hg38 map for all 222 SNPs (which also caught a separate <strong>+1 off-by-one</strong> in the panel's hg38 coordinates), and are re-running your pigmentation PCA at the right positions. The corrected figure drops in beside the broken one <a href="#figures">below</a>.</p>
     </div>
+
     <div class="callout ask">
-      <h4>② Denisova 3 (see bug A1)</h4>
-      <p>Denisova 3's alignment file labels chromosomes <code>chr1, chr2…</code> while everything else uses <code>1, 2…</code>, so its data doesn't get found and it looks empty even though it's a high-coverage genome. Was that difference accidental? If so we just rename and re-run it.</p>
+      <h4>② Denisova 3 looked empty because of chromosome names (bug A1)</h4>
+      <p><b>What we found:</b> Denisova 3's alignment labels chromosomes <code>chr1, chr2…</code> while the reference, the panel, and every other sample use <code>1, 2…</code>. Its reads never matched the panel positions, so a ~30× high-coverage genome showed up at <strong>0.5× / 69-of-222 SNPs</strong> — down among the low-coverage samples in Fig 5, contradicting its own high-coverage classification in Table 3.</p>
+      <p><b>The lesson &amp; the fix:</b> contig naming (<code>chr1</code> vs <code>1</code>) has to be harmonized before anything is matched by position — that's now an automated lint (Q2). The fix itself is a one-line <code>samtools reheader</code> then re-run; the coverage should jump up next to Vindija 33.19.</p>
     </div>
+
     <div class="callout ask">
-      <h4>③ Haploid calling (see bug A3)</h4>
-      <p>The whole-genome genotype calling used <code>--ploidy 1</code> (haploid — one allele per position) across all chromosomes, which means heterozygotes on the non-sex chromosomes can't be recorded. Was that intentional?</p>
+      <h4>③ Whole-genome calling was haploid (bug A3)</h4>
+      <p><b>What we found:</b> the whole-genome calling used <code>--ploidy 1</code> across all chromosomes, so heterozygotes on the autosomes couldn't be recorded — and those haploid archaics were then scored against a <em>diploid</em> modern PCA basis. <b>The good news:</b> the whole-genome PCA conclusion still holds (archaics sit clearly on the non-African side of PC1), so this didn't overturn a result — but it's a real inconsistency, fixed by calling diploid on the autosomes.</p>
+    </div>
+
+    <div class="callout">
+      <h4>And one upgrade — not a bug: the SGDP reference went from 15 → 159</h4>
+      <p>Your whole-genome PCA (Fig 7) was fine — it just rested on <strong>15</strong> SGDP genomes, which can only sketch global structure. SEPIA finished the merge you'd started (166 → <strong>159</strong> usable) and the PCA now recovers the full textbook continental layout. The before/after is the first figure in <a href="#figures">the figures</a> — and it's the reference the corrected pigmentation analysis is built on.</p>
     </div>
   </section>
 
@@ -325,7 +336,15 @@
   <!-- BEFORE / AFTER FIGURES -->
   <section id="figures">
     <div class="sec-head"><span class="sec-num">06</span><h2>Before / after — the errors in pictures</h2></div>
-    <p class="lede">These are rendered straight from the <strong>committed, pre-fix outputs</strong> by <code>plan/figures/make_consequence_figures.R</code> — so they are an honest snapshot of the current (buggy) state, not a mock-up. Re-running that same script on the corrected outputs after the build fix (<a href="#phase1">B2</a>) drops the "after" panel in beside each one, giving a like-for-like integrity check. This before/after record is the point: it lets us <em>show</em> that fixing the build changed the result, rather than asserting it. The full per-bug trace behind every panel is in the evidence log, <a href="verify/BUG_EVIDENCE.html">plan/verify/BUG_EVIDENCE.md</a>. Colours: teal = declared high-coverage, red = Denisovan, gold = the Denisova 11 hybrid.</p>
+    <p class="lede"><strong>Fig 0</strong> already shows a real before/after — the SGDP reference rebuild is <em>done</em>, so both panels are live. <strong>Figs 1–3</strong> are rendered straight from the <strong>committed, pre-fix outputs</strong> by <code>plan/figures/make_consequence_figures.R</code> — an honest snapshot of the current (buggy) state, not a mock-up; re-running that same script on the corrected outputs after the fixes (<a href="#phase1">B2a</a> + A1) drops the "after" panel in beside each one. This before/after record is the point: it lets us <em>show</em> that fixing the build changed the result, rather than asserting it. The full per-bug trace behind every panel is in the evidence log, <a href="verify/BUG_EVIDENCE.html">plan/verify/BUG_EVIDENCE.md</a>. Colours: teal = declared high-coverage, red = Denisovan, gold = the Denisova 11 hybrid.</p>
+
+    <div class="item">
+      <div class="ihead"><span class="idt">Fig 0</span><h3>SGDP reference PCA — Lily's 15 genomes vs the SEPIA 159-genome rebuild (Sanity 1)</h3></div>
+      <div class="body">
+        <p><b class="lab what">What it shows:</b> the whole-genome SGDP PCA the entire pigmentation comparison is built on. <strong>This one is not a bug</strong> — both PCAs are healthy (the whole-genome panel was never hit by the build mismatch). The point is the <em>reference</em>: 15 scattered genomes (left, the thesis) can only hint at global structure; the 159-genome SEPIA rebuild (right) recovers the textbook continental layout — PC1 separating African from non-African, the non-African clines resolved. This is the positive control (<a href="#phase2">Q3 / Sanity&nbsp;1</a>): if the known result comes back, the machinery is trustworthy for the novel one.</p>
+        <figure style="margin:12px 0 0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px"><img src="figures/sgdp_pca_before_after.png" alt="SGDP whole-genome PCA before/after: 15 sparse samples versus 159 recovering continental structure, coloured by region" style="width:100%;height:auto;display:block"><figcaption style="font-size:.72rem;color:#555;text-align:center;margin-top:6px;font-family:var(--mono)">BEFORE (15 samples) &nbsp;·&nbsp; AFTER (159 samples) — both real, coloured by SGDP region</figcaption></figure>
+      </div>
+    </div>
 
     <div class="item">
       <div class="ihead"><span class="idt">Fig 1</span><h3>Panel coverage — the Denisova 3 fingerprint (A1)</h3></div>
@@ -425,7 +444,14 @@ Chagyrskaya8 ... 0.0335547,-4.0e-11,...   <span class="cmt"># every archaic samp
 Denisova25   ... 0.0335547,-4.0e-11,...   <span class="cmt"># the IDENTICAL coordinates</span>
 $ grep '^15' data/vindija33_depth.txt | grep 48134288
 15  48134288  19    <span class="cmt"># depth measured at the hg38 coord, ~292kb off the real SNP</span></pre>
-          <p class="verdict"><b class="bad">CONFIRMED.</b> Panel hg38, data hg19 → wrong coordinates wherever pigmentation SNPs are used. Fixed by B2.</p>
+          <div style="margin-top:12px">
+            <p style="font-size:.78rem;color:var(--ink-3);font-family:var(--mono);margin:0 0 6px">The consequence, in pictures — the corrected panel drops in when <a href="b2a_runbook.html">B2a</a> lands (full gallery: <a href="#figures">Figs 1–3</a>):</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" class="ba-grid">
+              <figure style="margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px"><img src="figures/before_projection.png" alt="Before-fix: pigmentation-panel projection collapses to a single point; whole-genome panel is spread" style="width:100%;height:auto;display:block"><figcaption style="font-size:.68rem;color:#555;text-align:center;font-family:var(--mono)">BEFORE · all 15 archaics on one point</figcaption></figure>
+              <div style="display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:8px;color:var(--ink-3);font-size:.76rem;text-align:center;padding:10px">AFTER (B2a) — per-sample spread once the panel is read at the correct hg19 coordinates</div>
+            </div>
+          </div>
+          <p class="verdict" style="margin-top:10px"><b class="bad">CONFIRMED.</b> Panel hg38, data hg19 → wrong coordinates wherever pigmentation SNPs are used. Fixed by B2a (extract at correct hg19 coords).</p>
         </details>
       </div>
 
@@ -455,7 +481,14 @@ $ grep '^15' data/vindija33_depth.txt | grep 48134288
 $ samtools view -H filtered_vindija33.bam | grep '^@SQ' | head -2
 @SQ  SN:1 ...      @SQ  SN:2 ...       <span class="cmt"># bare (matches reference &amp; panel)</span>
 # panel-wide mean depth:  Denisova3 = 0.5x (69/222)   Vindija33 = 30.7x (222/222)</pre>
-          <p class="verdict"><b class="bad">CONFIRMED.</b> A contig-name mismatch on one sample. Independent of A2.</p>
+          <div style="margin-top:12px">
+            <p style="font-size:.78rem;color:var(--ink-3);font-family:var(--mono);margin:0 0 6px">The consequence, in pictures — the corrected panel drops in after the reheader + re-run:</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" class="ba-grid">
+              <figure style="margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px"><img src="figures/before_coverage.png" alt="Before-fix: Denisova 3 sits at 0.5x among low-coverage samples despite being a 30x genome" style="width:100%;height:auto;display:block"><figcaption style="font-size:.68rem;color:#555;text-align:center;font-family:var(--mono)">BEFORE · Denisova 3 stranded at 0.5×</figcaption></figure>
+              <div style="display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:8px;color:var(--ink-3);font-size:.76rem;text-align:center;padding:10px">AFTER (reheader + re-run) — Denisova 3 jumps up beside Vindija 33.19 / Chagyrskaya 8</div>
+            </div>
+          </div>
+          <p class="verdict" style="margin-top:10px"><b class="bad">CONFIRMED.</b> A contig-name mismatch on one sample. Independent of A2.</p>
         </details>
       </div>
 
