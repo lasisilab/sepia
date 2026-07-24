@@ -195,5 +195,22 @@ cp -f pos2rsid.tsv "$OUT/panel_pos2rsid.tsv" 2>/dev/null || true
   echo "samples=$NSAMP  panel_sites_merged=$NSITE  biallelic_snps_in_pca=$(wc -l < pig_panel.bim)";
   echo "archaics: $(cat arc.merge.list | wc -l) high-cov  |  moderns: $(cat sgdp.merge.list | wc -l) SGDP"; } > "$OUT/B2a_run.txt"
 echo "  -> $OUT (eigenvec/eigenval/freq + provenance)"
+
+# ---- 7. auto-sync results to GitHub so they survive an SSH-tunnel drop ---------------
+# The SLURM job runs independently of the interactive SSH ControlMaster; this pushes the
+# small result files straight to GitHub (BatchMode key, no agent) so they land in the repo
+# even if Tina's tunnel is gone -- the figure + redeploy then happen laptop-side, no cluster.
+echo "===== 7. auto-commit + push results to GitHub ====="
+cd "$REPO" || exit 0
+export GIT_SSH_COMMAND="ssh -o BatchMode=yes"
+git pull --ff-only origin main >/dev/null 2>&1 || echo "  (pull skipped)"
+if [ -n "$(git status --porcelain output/pca_pig 2>/dev/null)" ]; then
+  git add output/pca_pig
+  git -c user.name="SEPIA cluster" -c user.email="tlasisi@umich.edu" \
+      commit -q -m "results(B2a): pigmentation-panel PCA output (auto-push from job ${SLURM_JOB_ID:-NA})"
+  git push origin main 2>&1 | tail -2 && echo "  pushed to GitHub." || echo "  PUSH FAILED -- pull from cluster when reconnected."
+else
+  echo "  no output changes to push."
+fi
 echo "===== B2a done ====="; date
-echo "NEXT: pull output/pca_pig to the laptop; regenerate the pigmentation before/after figure."
+echo "NEXT (laptop, no cluster needed): git pull; Rscript plan/figures/make_pig_before_after.R; redeploy."
