@@ -1,0 +1,4 @@
+# B3 wider pigmentation PCA @ correct hg19 coords
+Fri Jul 24 14:01:29 EDT 2026
+target_snps=1152  high_conf=452  biallelic_in_pca=923
+samples=164  archaics=5
