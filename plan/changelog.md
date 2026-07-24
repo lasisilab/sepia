@@ -6,6 +6,13 @@ Legend: **DONE** = action taken · **FOUND** = finding/evidence · **DECIDED** =
 
 ---
 
+## 2026-07-24 — B2a COMPLETE: the pigmentation-panel bug is fixed; corrected PCA recovers real structure; site live
+
+- **DONE (B2a result)** — pigmentation-panel PCA at *correct hg19 coords* (job 54641658): **159 SGDP + 5 high-cov archaics** (Chagyrskaya pending its VCF re-fetch), **160 informative SNPs**. Joint-PCA eigenvalues **31, 15, 8.4, 6.6, 5.7 …** (PC1 ≈ 35%) — multi-component, **not** the rank-1 collapse of the buggy run (`0.063` then ~`3e-18`). Moderns spread by region; the 5 archaics cluster together near the **African end** of the pigmentation axis. Directly reverses A2. Output committed from the cluster (`8a1d5e2`) → `output/pca_pig/`.
+- **DONE (figure)** — [`plan/figures/pig_pca_before_after.png`](figures/pig_pca_before_after.png) (`make_pig_before_after.R`): Lily's degenerate rank-1 (all archaics on one point) vs the corrected real structure. Wired into the plan page as **Fig 2 (realized)** + the A2 evidence toggle; the "For Lily" A2 note is now past-tense ("it works").
+- **FIX (B2a job)** — the first run streamed 4 GB all-sites per-chr archaic VCFs with `-T` (hours); switched the archaic extraction to `-R` **indexed seek** (222 positions = instant). Cancelled `54637442`, resubmitted `54641658`.
+- **DONE (site is live + current)** — the Quarto deploy was stuck (CI has no R; the thesis analysis pages need a data-bearing local render for `_freeze/`). Restricted `project.render` to CI-buildable pages (index/about/license + the now-frozen `sgdp_reference_pca`), dropped the three R pages from the navbar until `_freeze/` exists, and deployed. Live: **https://lasisilab.github.io/sepia/** (roadmap at `/plan/sepia-plan.html`). Cluster repo synced; cluster→GitHub push re-verified.
+
 ## 2026-07-24 — B2a submitted; SGDP before/after figure; the plan page now teaches the findings to Lily
 
 - **DONE (figure)** — [`plan/figures/sgdp_pca_before_after.png`](figures/sgdp_pca_before_after.png) (+ `make_sgdp_before_after.R`): the SGDP whole-genome PCA — **Lily's 15-sample thesis reference vs the SEPIA 159-sample rebuild**, coloured by SGDP region (158/159 + 15/15 samples joined via the metadata's LP library IDs). Both PCAs are healthy (the WG panel was never hit by the build bug); the point is the *reference* — 15 scattered genomes → 159 recover the textbook continental layout (PC1 ≈ African vs non-African). Added as **Fig 0** in the plan page's figures section.

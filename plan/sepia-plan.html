@@ -274,7 +274,7 @@
     <div class="callout ask">
       <h4>① The genome-build mismatch — confirmed, and it's the big one (bug A2)</h4>
       <p><b>What we found:</b> the 222-SNP panel is written in <strong>hg38</strong> coordinates, but every genome (archaic <em>and</em> SGDP) is aligned to <strong>hg19</strong>. Looking up an hg38 position in hg19 data lands ~hundreds of kb off the intended SNP, so <strong>221 of 222 panel sites came back monomorphic</strong>. With nothing to separate samples on, the pigmentation PCA collapsed to a single axis and every archaic projected onto one identical point (Fig 8). So "PC1 differentiates Bantu and Yoruba" and "archaics fall near Africans" were artifacts of one accidental SNP — not pigmentation biology.</p>
-      <p><b>The lesson &amp; the fix:</b> a genotype doesn't care about the build — the same SNP just has a different coordinate <em>number</em> in hg19 vs hg38. So the cheapest correct fix is to read the panel at its <strong>correct hg19</strong> coordinates straight out of the hg19 data — no re-alignment, no liftOver. We built a verified rsID↔hg19↔hg38 map for all 222 SNPs (which also caught a separate <strong>+1 off-by-one</strong> in the panel's hg38 coordinates), and are re-running your pigmentation PCA at the right positions. The corrected figure drops in beside the broken one <a href="#figures">below</a>.</p>
+      <p><b>The lesson &amp; the fix:</b> a genotype doesn't care about the build — the same SNP just has a different coordinate <em>number</em> in hg19 vs hg38. So the cheapest correct fix is to read the panel at its <strong>correct hg19</strong> coordinates straight out of the hg19 data — no re-alignment, no liftOver. We built a verified rsID↔hg19↔hg38 map for all 222 SNPs (which also caught a separate <strong>+1 off-by-one</strong> in the panel's hg38 coordinates), and re-ran your pigmentation PCA at the right positions. It works: the same panel recovers real structure, and the archaics fall together near the African end — see the before/after (<a href="#figures">Fig 2</a>).</p>
     </div>
 
     <div class="callout ask">
@@ -336,7 +336,7 @@
   <!-- BEFORE / AFTER FIGURES -->
   <section id="figures">
     <div class="sec-head"><span class="sec-num">06</span><h2>Before / after — the errors in pictures</h2></div>
-    <p class="lede"><strong>Fig 0</strong> already shows a real before/after — the SGDP reference rebuild is <em>done</em>, so both panels are live. <strong>Figs 1–3</strong> are rendered straight from the <strong>committed, pre-fix outputs</strong> by <code>plan/figures/make_consequence_figures.R</code> — an honest snapshot of the current (buggy) state, not a mock-up; re-running that same script on the corrected outputs after the fixes (<a href="#phase1">B2a</a> + A1) drops the "after" panel in beside each one. This before/after record is the point: it lets us <em>show</em> that fixing the build changed the result, rather than asserting it. The full per-bug trace behind every panel is in the evidence log, <a href="verify/BUG_EVIDENCE.html">plan/verify/BUG_EVIDENCE.md</a>. Colours: teal = declared high-coverage, red = Denisovan, gold = the Denisova 11 hybrid.</p>
+    <p class="lede"><strong>Fig 0</strong> (SGDP reference rebuild) and <strong>Fig 2</strong> (the pigmentation-panel bug fixed) both show <em>real</em> before/after pairs — those runs are done. <strong>Fig 1</strong> (Denisova 3 coverage) and <strong>Fig 3</strong> (scree) are rendered from the <strong>committed, pre-fix outputs</strong> by <code>plan/figures/make_consequence_figures.R</code> — an honest snapshot of the buggy state, not a mock-up; their "after" fills in once A1 (the Denisova 3 reheader) is re-run. This before/after record is the point: it lets us <em>show</em> that fixing the build changed the result, rather than asserting it. The full per-bug trace behind every panel is in the evidence log, <a href="verify/BUG_EVIDENCE.html">plan/verify/BUG_EVIDENCE.md</a>. Colours: teal = declared high-coverage, red = Denisovan, gold = the Denisova 11 hybrid.</p>
 
     <div class="item">
       <div class="ihead"><span class="idt">Fig 0</span><h3>SGDP reference PCA — Lily's 15 genomes vs the SEPIA 159-genome rebuild (Sanity 1)</h3></div>
@@ -358,13 +358,10 @@
     </div>
 
     <div class="item">
-      <div class="ihead"><span class="idt">Fig 2</span><h3>Archaic PCA projection — the collapse (A2 + projection bug)</h3></div>
+      <div class="ihead"><span class="idt">Fig 2</span><h3>Pigmentation-panel PCA — the bug, fixed (A2) &nbsp;<span class="chip ok">realized</span></h3></div>
       <div class="body">
-        <p><b class="lab what">What it shows:</b> each archaic individual projected onto the modern PCA. <strong>Left (pigmentation panel): all 15 samples land on a single point</strong> — the panel is monomorphic at the wrong (hg38) coordinates and the <code>--score</code> step mean-imputes, so there is zero per-sample resolution. <strong>Right (whole-genome): they spread out</strong> — and note the two Denisovan (red) points are far apart, with Denisova 3 stranded near the origin instead of beside Denisova 25 (the A1 effect again). After the fix the left panel should spread like the right.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px" class="ba-grid">
-          <figure style="margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px"><img src="figures/before_projection.png" alt="Before-fix archaic projections: pigmentation panel collapses to one point, whole-genome panel is spread" style="width:100%;height:auto;display:block"><figcaption style="font-size:.72rem;color:#555;text-align:center;margin-top:6px;font-family:var(--mono)">BEFORE · committed / buggy</figcaption></figure>
-          <div style="display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:8px;color:var(--ink-3);font-size:.82rem;text-align:center;padding:12px">AFTER FIX — the pigmentation panel should show spread, per-sample archaic points</div>
-        </div>
+        <p><b class="lab what">What it shows:</b> the same 222-SNP pigmentation panel, read at the <strong>wrong (hg38)</strong> vs the <strong>correct (hg19)</strong> coordinates. <strong>Left (before):</strong> 221/222 SNPs are monomorphic, so the PCA is rank-1 — every modern collapses onto ~one line and all archaics (◆) pile onto a single point (Lily's Fig 8). <strong>Right (after):</strong> the identical panel at the right coordinates recovers real structure — moderns spread by region (PC1 ≈ 35%, PC2 ≈ 17%), and the five high-coverage archaics (◆) fall together near the <em>African</em> end of the pigmentation axis. This is <a href="#phase1">B2a</a> (159 SGDP + 5 high-cov archaics; Chagyrskaya pending its VCF re-fetch); the archaic <em>projection</em> in Lily's exact style follows once a newer plink2 lands.</p>
+        <figure style="margin:12px 0 0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px"><img src="figures/pig_pca_before_after.png" alt="Pigmentation-panel PCA before and after the coordinate fix: left collapses to one point, right shows real continental structure with archaics near the African end" style="width:100%;height:auto;display:block"><figcaption style="font-size:.72rem;color:#555;text-align:center;margin-top:6px;font-family:var(--mono)">BEFORE (hg38 coords, rank-1) &nbsp;·&nbsp; AFTER (correct hg19 coords) — both real</figcaption></figure>
       </div>
     </div>
 
@@ -374,7 +371,7 @@
         <p><b class="lab what">What it shows:</b> the eigenvalues (scree) of each PCA. <strong>The pigmentation panel is rank-1</strong> — only PC1 &gt; 0, PC2–10 ≈ 3×10⁻¹⁸ (one lonely bar) — because 221 of 222 SNPs are monomorphic at the mismatched coordinates and carry no loadings. The whole-genome spectrum declines healthily across all 10 PCs. After the fix the pigmentation panel should show several real components.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px" class="ba-grid">
           <figure style="margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px"><img src="figures/before_scree.png" alt="Before-fix scree plots: pigmentation panel has one nonzero eigenvalue, whole-genome declines across all ten" style="width:100%;height:auto;display:block"><figcaption style="font-size:.72rem;color:#555;text-align:center;margin-top:6px;font-family:var(--mono)">BEFORE · committed / buggy</figcaption></figure>
-          <div style="display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:8px;color:var(--ink-3);font-size:.82rem;text-align:center;padding:12px">AFTER FIX — the pigmentation panel should carry multiple real components</div>
+          <div style="display:flex;align-items:center;justify-content:center;border:1px solid var(--ok);border-radius:8px;color:var(--ink-2);font-size:.82rem;text-align:center;padding:12px"><span><b style="color:var(--ok)">AFTER (realized):</b> the B2a panel PCA is multi-component — eigenvalues <span class="mono">31, 15, 8.4, 6.6, 5.7, …</span> (PC1 ≈ 35%), not one bar. Rank-1 degeneracy gone.</span></div>
         </div>
       </div>
     </div>
@@ -445,13 +442,10 @@ Denisova25   ... 0.0335547,-4.0e-11,...   <span class="cmt"># the IDENTICAL coor
 $ grep '^15' data/vindija33_depth.txt | grep 48134288
 15  48134288  19    <span class="cmt"># depth measured at the hg38 coord, ~292kb off the real SNP</span></pre>
           <div style="margin-top:12px">
-            <p style="font-size:.78rem;color:var(--ink-3);font-family:var(--mono);margin:0 0 6px">The consequence, in pictures — the corrected panel drops in when <a href="b2a_runbook.html">B2a</a> lands (full gallery: <a href="#figures">Figs 1–3</a>):</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px" class="ba-grid">
-              <figure style="margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px"><img src="figures/before_projection.png" alt="Before-fix: pigmentation-panel projection collapses to a single point; whole-genome panel is spread" style="width:100%;height:auto;display:block"><figcaption style="font-size:.68rem;color:#555;text-align:center;font-family:var(--mono)">BEFORE · all 15 archaics on one point</figcaption></figure>
-              <div style="display:flex;align-items:center;justify-content:center;border:1px dashed var(--line);border-radius:8px;color:var(--ink-3);font-size:.76rem;text-align:center;padding:10px">AFTER (B2a) — per-sample spread once the panel is read at the correct hg19 coordinates</div>
-            </div>
+            <p style="font-size:.78rem;color:var(--ink-3);font-family:var(--mono);margin:0 0 6px">The consequence, in pictures — <b style="color:var(--ok)">now fixed</b> by <a href="b2a_runbook.html">B2a</a> (same 222 SNPs, wrong vs correct coordinates):</p>
+            <figure style="margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px"><img src="figures/pig_pca_before_after.png" alt="Pigmentation-panel PCA before/after the coordinate fix: left collapses to one point, right shows real structure with archaics near the African end" style="width:100%;height:auto;display:block"><figcaption style="font-size:.68rem;color:#555;text-align:center;font-family:var(--mono)">BEFORE (hg38 coords, rank-1) · AFTER (correct hg19 coords) — 159 SGDP + 5 archaics</figcaption></figure>
           </div>
-          <p class="verdict" style="margin-top:10px"><b class="bad">CONFIRMED.</b> Panel hg38, data hg19 → wrong coordinates wherever pigmentation SNPs are used. Fixed by B2a (extract at correct hg19 coords).</p>
+          <p class="verdict" style="margin-top:10px"><b class="bad">CONFIRMED</b> → <b class="ok">fixed.</b> Panel hg38, data hg19 → wrong coordinates. Re-reading the panel at correct hg19 coords (B2a) restores real structure (eigenvalues 31/15/8… vs the old 0.06 then ~0).</p>
         </details>
       </div>
 

@@ -21,6 +21,8 @@ AFTER_EV <- "output/pca_pig/pig_panel_pca.eigenvec"
 if (!file.exists(AFTER_EV)) stop("B2a output not present yet: ", AFTER_EV)
 
 ARCHAICS <- c("Altai","Vindija33.19","Denisova3","Denisova25","Chagyrskaya8","Mez1")
+SHORT <- c(Altai="Altai", Vindija33.19="Vindija", Denisova3="Den3",
+           Denisova25="Den25", Chagyrskaya8="Chag", Mez1="Mez1")
 meta <- read.table("data/sgdp_metadata.tsv", header = TRUE, sep = "\t", quote = "", stringsAsFactors = FALSE)
 reg  <- setNames(meta$region, meta$IID)
 
@@ -32,16 +34,16 @@ ba <- read.csv("data/ancient.projected.pig.sscore", check.names = FALSE, strings
 before_arc <- data.frame(IID = ba$IID, PC1 = ba$PC1_AVG, PC2 = ba$PC2_AVG,
                          region = "Archaic", type = "archaic", label = ba$IID, stringsAsFactors = FALSE)
 before <- rbind(before_mod, before_arc)
-before$panel <- "BEFORE — panel read at hg38 coords (rank-1: PC2-10 ≈ 0)"
+before$panel <- "BEFORE — hg38 coords on hg19 data (rank-1)"
 
 # ---- AFTER: B2a joint PCA (moderns by region + archaics highlighted) -----------------
 am <- read.table(AFTER_EV, header = FALSE, skip = 1, stringsAsFactors = FALSE)
 after <- data.frame(IID = am[[2]], PC1 = am[[3]], PC2 = am[[4]], stringsAsFactors = FALSE)
 after$type   <- ifelse(after$IID %in% ARCHAICS, "archaic", "modern")
 after$region <- ifelse(after$type == "archaic", "Archaic", reg[after$IID])
-after$label  <- ifelse(after$type == "archaic", after$IID, NA)
+after$label  <- ifelse(after$type == "archaic", SHORT[after$IID], NA)
 ev <- scan("output/pca_pig/pig_panel_pca.eigenval", quiet = TRUE)
-after$panel <- sprintf("AFTER — same 222 SNPs at correct hg19 coords (PC1 %.0f%%, PC2 %.0f%%)",
+after$panel <- sprintf("AFTER — correct hg19 coords (PC1 %.0f%%, PC2 %.0f%%)",
                        100*ev[1]/sum(ev), 100*ev[2]/sum(ev))
 
 all <- rbind(before, after)
@@ -56,7 +58,8 @@ mod <- subset(all, type == "modern"); arc <- subset(all, type == "archaic")
 p <- ggplot(mapping = aes(PC1, PC2)) +
   geom_point(data = mod, aes(fill = region), shape = 21, size = 2.5, stroke = .2, colour = "white", alpha = .95) +
   geom_point(data = arc, shape = 23, size = 3.3, fill = "#212529", colour = "white", stroke = .3) +
-  geom_text(data = arc, aes(label = label), size = 2.5, vjust = -1, colour = "#212529") +
+  geom_text(data = subset(arc, grepl("AFTER", panel)), aes(label = label),
+            size = 2.4, vjust = -0.9, hjust = 0.5, colour = "#212529") +
   facet_wrap(~panel, scales = "free", nrow = 1) +
   scale_fill_manual(values = pal, name = "SGDP region", drop = TRUE) +
   labs(title = "Pigmentation-panel PCA — the build-mismatch bug (A2), before and after",
