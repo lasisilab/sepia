@@ -118,12 +118,15 @@ Africans who also retain the ancestral state. So the pigmentation-SNP "archaics 
 **footprint of selection at hand-picked loci**, not a pigmentation-gene ancestry signal. Real and
 phenotype-relevant, but read as *shared ancestral alleles at light-skin loci*, not as ancestry.
 
-**The African outliers** (labelled) are the deep-lineage hunter-gatherers — **Ju/'hoan** and **Khomani
-San** (KhoeSan) and **Mbuti**, **Biaka** (Central African rainforest) — the earliest-splitting human
-lineages, so they anchor the deep end genome-wide; in the SNP panel they cluster with the archaics
-because they retain the most ancestral pigmentation alleles. North Africans (Mozabite, Saharawi) sit
-nearest the non-Africans (Eurasian admixture). *(One sample, `LP6005441-DNA_A09`, shows as "unknown" —
-its library ID is missing from `data/sgdp_metadata.tsv`; a metadata gap to fill, not a data problem.)*
+**The African samples fan out in two tiers** (the expected human-diversity hierarchy): the **KhoeSan** —
+**Ju/'hoan** (×3) and **Khomani San** (×2) — are the earliest-splitting human lineage, so they occupy
+their **own axis** (they sit alone in a cleanly separated cluster, well off on PC2). The Central African
+rainforest hunter-gatherers **Mbuti** and **Biaka** are divergent along **PC1** (the African end of the
+African–non-African axis) but cluster with the other Africans on PC2 — *not* down with the KhoeSan.
+North Africans (Mozabite, Saharawi) sit nearest the non-Africans (Eurasian admixture). In the
+pigmentation-SNP panel these deep-African groups pull toward the archaics because they retain the most
+ancestral pigmentation alleles. *(One sample, `LP6005441-DNA_A09`, shows as "unknown" — its library ID
+is missing from `data/sgdp_metadata.tsv`; a metadata gap to fill, not a data problem.)*
 
 ## Next
 - **HIrisPlex-S phenotype prediction (B4)** — the functional markers + published weights for the actual
