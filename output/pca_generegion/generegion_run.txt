@@ -1,0 +1,3 @@
+# gene-region PCA (1004-gene union, +/-10kb)
+Fri Jul 24 18:03:57 EDT 2026
+merged intervals=930; gene-region variants=46036; pruned=17587
