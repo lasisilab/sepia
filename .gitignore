@@ -89,3 +89,4 @@ plan/papers/pdf/
 *.csi
 *.fa
 *.fai
+.DS_Store
