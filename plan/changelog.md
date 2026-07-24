@@ -6,6 +6,14 @@ Legend: **DONE** = action taken · **FOUND** = finding/evidence · **DECIDED** =
 
 ---
 
+## 2026-07-24 — Gene-network integration (B1): extended 1,155-SNP map + documented SNP-set page; wider PCA (B3) running
+
+- **DECIDED (TL):** fold in **everything SNP-level** (GWAS Catalog + HIrisPlex-S + Martin2017 + Kim2024 + discordance); **defer the gene-level tables** (Bajpai/Baxter/Raghunath/D'Arcy → B6/B7); do the **wider PCA first**; and **tag high vs low confidence** (the GWAS pull mixes replicated + unreplicated hits).
+- **DONE (B1)** — [`data/pigment_snp_map.tsv`](../data/pigment_snp_map.tsv) (built by [`code/build_pigment_snp_map.py`](../code/build_pigment_snp_map.py), reproducible): **1,155 unique rsIDs** unioned from all the above, each **re-resolved to verified hg38 + hg19 + ref/alt via Ensembl** (both tracers exact — SLC24A5 `48134287`/`48426484`, HERC2 `28120472`/`28365618`). **Strict superset of the 222 panel** (222 in-panel + 933 new). **Confidence: 453 high / 60 moderate / 642 low** (single unreplicated GWAS). Flags: 213 palindromic, 587 multiallelic, 5 merged. Notable: **100 of the original 222 panel SNPs are themselves low-confidence.**
+- **DONE (docs, LIVE)** — [`snp_panel.qmd`](../snp_panel.qmd) → `https://lasisilab.github.io/sepia/snp_panel.html`: works through every source, the dual-build resolution, the confidence rule + live counts, 222-panel-vs-new. + `pigment_snp_map.SOURCE.md`.
+- **IN FLIGHT (B3)** — [`code/wider_pca.slurm`](../code/wider_pca.slurm) (**job 54657946**): the wider PCA on the extended set — **all ~1,153 SNPs** and **high-confidence-only (~453)**, joint (159 SGDP + high-cov archaics), to show how much the unreplicated tail moves the structure.
+- **NOTE** — Lily Heald pushed derived data CSVs directly (`neo_uvi`, `simons_metadata`, `simons_whole`) — some of the R-page inputs; reconciled cleanly. **Chagyrskaya still extracts 0 records** in the archaic step (known `.noRB`-file bug — to fix).
+
 ## 2026-07-24 — B2a COMPLETE: the pigmentation-panel bug is fixed; corrected PCA recovers real structure; site live
 
 - **DONE (B2a result)** — pigmentation-panel PCA at *correct hg19 coords* (job 54641658): **159 SGDP + 5 high-cov archaics** (Chagyrskaya pending its VCF re-fetch), **160 informative SNPs**. Joint-PCA eigenvalues **31, 15, 8.4, 6.6, 5.7 …** (PC1 ≈ 35%) — multi-component, **not** the rank-1 collapse of the buggy run (`0.063` then ~`3e-18`). Moderns spread by region; the 5 archaics cluster together near the **African end** of the pigmentation axis. Directly reverses A2. Output committed from the cluster (`8a1d5e2`) → `output/pca_pig/`.
