@@ -12,6 +12,9 @@ setwd(if (dir.exists("data")) "." else stop("run from repo root"))
 source("plan/figures/_pca_style.R")
 meta <- read.delim("data/sgdp_metadata.tsv", stringsAsFactors = FALSE)
 reg  <- setNames(meta$region, meta$IID)
+pop  <- setNames(meta$population, meta$IID)
+# deep-lineage African populations to label as the outliers (KhoeSan + rainforest hunter-gatherers)
+OUTPRETTY <- c(Ju_hoan_North="Ju/'hoan", Khomani_San="Khomani San", Mbuti="Mbuti", Biaka="Biaka")
 HICOV <- c("Chagyrskaya8","Denisova3","Denisova25","Denisova5","Vi33.19","Vindija33.19","Altai","Mez1")
 SHORT <- c(Chagyrskaya8="Chag", Denisova3="Den3", Denisova25="Den25", Denisova5="Den5/Altai",
            Vi33.19="Vindija", Vindija33.19="Vindija", Altai="Altai", Mez1="Mez1",
@@ -25,6 +28,7 @@ panel <- function(mdir, mfile, afile, lab) {
   d$region <- ifelse(d$type=="archaic", NA, reg[d$IID]); d$region[is.na(d$region) & d$type=="modern"] <- "unknown"
   d$label  <- ifelse(d$type=="archaic", ifelse(d$IID %in% names(SHORT), SHORT[d$IID], d$IID), NA)
   d$hicov  <- d$type=="archaic" & d$IID %in% HICOV
+  d$poplabel <- ifelse(d$type=="modern" & (pop[d$IID] %in% names(OUTPRETTY)), OUTPRETTY[pop[d$IID]], NA)
   afr <- d$region=="Africa" & !is.na(d$region); if (sum(afr) && mean(d$PC1[afr])<0) d$PC1 <- -d$PC1
   d$panel <- lab; d
 }
@@ -37,6 +41,7 @@ rows <- rbind(
   panel("output/pca_generegion", "generegion_after_modern.tsv", "generegion_after_archaic.tsv", "PIGMENTATION GENES (whole regions)"))
 rows$panel <- factor(rows$panel, levels=c("WHOLE GENOME (~480k SNPs)","PIGMENTATION SNPs (ascertained panel)","PIGMENTATION GENES (whole regions)"))
 mod <- subset(rows, type=="modern"); mod$region <- region_factor(mod$region)
+mod$poplabel[duplicated(paste(mod$panel, mod$poplabel)) & !is.na(mod$poplabel)] <- NA   # one label per pop per panel
 arc <- subset(rows, type=="archaic" & hicov)   # high-cov only (low-cov/excluded scatter as artifacts, e.g. El Sidron)
 
 p <- ggplot(mapping=aes(PC1,PC2)) +
@@ -45,6 +50,8 @@ p <- ggplot(mapping=aes(PC1,PC2)) +
   geom_point(data=subset(arc, hicov), shape=25, size=3.0, fill="#212529", colour="white", stroke=0.4) +
   geom_text_repel(data=arc, aes(label=label), size=2.1, colour="#343a40",
                   max.overlaps=Inf, min.segment.length=0, segment.size=0.2, box.padding=0.35, seed=7) +
+  geom_text_repel(data=subset(mod, !is.na(poplabel)), aes(label=poplabel), size=2.1, colour="#6a040f",
+                  fontface="italic", max.overlaps=Inf, min.segment.length=0, segment.size=0.2, box.padding=0.5, seed=3) +
   facet_wrap(~panel, scales="free", nrow=1) + region_scales() +
   labs(title="Where do the archaics fall — genome-wide vs pigmentation SNPs vs pigmentation genes?",
        subtitle="Modern PCA (159 SGDP) + the 5 high-coverage archaics projected (▼). Africa oriented right. (Low-cov/excluded archaics omitted.)") +
