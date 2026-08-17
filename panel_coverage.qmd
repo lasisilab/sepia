@@ -9,7 +9,9 @@ Before any pigmentation result can be trusted, the panel has to be *covered*: at
 
 ## Reading the panel at the right coordinates
 
-The panel is defined by rsIDs, but the SGDP and archaic data are physically on **hg19/hs37d5**. Each panel SNP therefore has to be read at its **hg19** position — a panel SNP's hg38 position lands on the wrong base in hg19 data (for the tracer SLC24A5 that is `15:48426484` on hg19, not the hg38 `15:48134288`). The matrices below read all 222 panel SNPs at their verified hg19 coordinates, across **159 SGDP moderns + 5 high-coverage archaics** (161 of the 222 loci are variable and shown). Substrate + code: [`output/panel_matrix/`](https://github.com/lasisilab/sepia/tree/main/output/panel_matrix), [`code/export_panel_matrix.sh`](https://github.com/lasisilab/sepia/blob/main/code/export_panel_matrix.sh), [`plan/figures/make_panel_heatmaps.R`](https://github.com/lasisilab/sepia/blob/main/plan/figures/make_panel_heatmaps.R).
+The panel is defined by rsIDs, but the SGDP and archaic data are physically on **hg19/hs37d5**. Each panel SNP therefore has to be read at its **hg19** position — a panel SNP's hg38 position lands on the wrong base in hg19 data (for the tracer SLC24A5 that is `15:48426484` on hg19, not the hg38 `15:48134288`). The matrices below read all 222 panel SNPs at their verified hg19 coordinates, across **159 SGDP moderns + the 6 high-coverage archaics** (161 of the 222 loci are variable and shown). Substrate + code: [`output/panel_matrix/`](https://github.com/lasisilab/sepia/tree/main/output/panel_matrix), [`code/export_panel_matrix.sh`](https://github.com/lasisilab/sepia/blob/main/code/export_panel_matrix.sh), [`plan/figures/make_panel_heatmaps.R`](https://github.com/lasisilab/sepia/blob/main/plan/figures/make_panel_heatmaps.R).
+
+SEPIA analyzes **9 archaic genomes** in total — the 6 high-coverage shown here, plus 3 low-coverage (Les Cottés, Denisova 11, Goyet, ~2×) carried in a separate depth table. This is a deliberate subset of the archaics in the earlier work: genomes that are exome-capture only, redundant with a higher-coverage library of the same individual, or too shallow to genotype the panel reliably are excluded by [documented inclusion criteria](plan/papers/SAMPLE_INCLUSION.html), because at ≤2× coverage they add samples but essentially no trustworthy panel genotypes.
 
 ## Genotype variability
 
@@ -19,13 +21,13 @@ Each cell is a sample's genotype at a panel SNP: homozygotes coloured by base (A
 
 ## Read depth, by chromosome
 
-Per-sample read depth at each panel SNP, log-scaled. The 159 moderns are uniformly high-coverage (light); the 5 high-coverage archaics form the darker, more variable band at the bottom, with genuine missing positions in black. Chromosome labels carry the panel-SNP count — chr5 (SLC45A2) and chr15 (HERC2/OCA2/SLC24A5) hold more than half the panel, so their spans are wide by SNP count, not chromosome length.
+Per-sample read depth at each panel SNP, log-scaled. The 159 moderns are uniformly high-coverage (light); the 6 high-coverage archaics form the darker, more variable band at the bottom, with genuine missing positions in black. Chromosome labels carry the panel-SNP count — chr5 (SLC45A2) and chr15 (HERC2/OCA2/SLC24A5) hold more than half the panel, so their spans are wide by SNP count, not chromosome length.
 
 ![Read depth (log10 DP+1) at 161 panel loci, per sample, ordered by chromosome. Missing = black.](plan/figures/panel_depth_heatmap.png)
 
 ## Reading it
 
 - The modern reference is essentially fully covered at the panel; the coverage question is really about the archaics, where depth is lower and patchier — which is why a per-call genotype-confidence layer (depth-aware) is needed before the archaic calls are used downstream.
-- **Chagyrskaya 8** is absent here (5 high-coverage archaics, not 6): its `.noRB` VCF extracts zero records — a known extraction bug still to fix.
-- The 3 **low-coverage archaics** (Denisova 11, Goyet, Les Cottés) are BAM-only; their panel depth is computed separately from the read data and extends the archaic rows.
+- The heatmaps show all **6 high-coverage archaics**, including Chagyrskaya 8 (its `.noRB` VCFs were stored as plain gzip rather than BGZF, so they couldn't be random-accessed until recompressed — a fixed extraction bug, not missing data).
+- The 3 **low-coverage archaics** (Les Cottés, Denisova 11, Goyet) are BAM-only and ~2×; their panel depth is recovered separately (streamed from the read archives) rather than shown in these VCF-derived heatmaps.
 - A genome-wide depth background — to compare panel depth against the rest of the genome — is the natural next layer.

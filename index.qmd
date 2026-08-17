@@ -3,65 +3,47 @@ title: "SEPIA"
 subtitle: "Systematic Evaluation of Pigmentation In Archaic hominins"
 ---
 
-**SEPIA** — *Systematic Evaluation of Pigmentation In Archaic hominins* — asks what the
-genetics of pigmentation (skin, hair, and eye colour) can, and cannot, tell us about
-Neanderthals and Denisovans, and how they compare to present-day human variation. The
-recurring public question is *"what did archaic humans look like?"* SEPIA asks how much
-their ancient DNA can actually answer — and stays explicit about where the data runs out.
+**SEPIA** — *Systematic Evaluation of Pigmentation In Archaic hominins* — asks what the genetics of pigmentation (skin, hair, and eye colour) can, and cannot, tell us about Neanderthals and Denisovans, and how they compare to present-day human variation. The recurring public question is *"what did archaic humans look like?"* SEPIA asks how much their ancient DNA can actually answer — and stays explicit about where the data runs out.
+
+## The headline result
+
+Where the archaic hominins fall relative to modern humans depends entirely on *which* pigmentation variants you look at. We build a PCA on modern human genomes and project the archaics onto it in three ways — the whole genome, whole pigmentation-*gene* regions, and a hand-picked panel of pigmentation-associated SNPs. The whole genome and the pigmentation genes give the **same** answer: the archaics sit as a divergent outgroup, exactly as their deep ancestry predicts. Only the **ascertained SNP panel** places them "with Africans" — and that is a footprint of **selection and ascertainment**, not ancestry: the panel is enriched for the derived, out-of-Africa light-skin alleles that archaics (like the earliest-splitting African lineages) simply never carried.
+
+So the one-line takeaway is **genes track ancestry; hand-picked SNPs track selection** — a caution for anyone reading a pigmentation-SNP panel as if it described who is related to whom. The full logic, figures, and method are in the [projection workbook](archaic_projection.qmd).
+
+## Explore the analysis
+
+- [**Modern reference PCA (SGDP)**](sgdp_reference_pca.qmd) — the control that the 159-genome modern reference recovers global human structure before any archaic comparison.
+- [**The SNP set**](snp_panel.qmd) — how the pigmentation-variant surface was assembled (1,155 SNPs from GWAS, forensic, and gene-network sources) and tagged high- vs low-confidence.
+- [**Panel coverage & variability**](panel_coverage.qmd) — how deeply each genome is sequenced at the panel, read at the correct coordinates, with the genotype and depth heatmaps.
+- [**Archaic projection**](archaic_projection.qmd) — the three-way comparison behind the headline result, worked through step by step.
 
 ## The approach
 
-SEPIA is a **QC-first re-analysis**. It continues the honors thesis **PAINT** (Lily Heald,
-2026) but rebuilds the analysis from clearly-traced inputs, because archaic DNA is patchy
-and shallow and pigmentation genes don't behave like ancestry markers. Every figure is
-regenerated from a documented pipeline so its provenance is auditable, and known analysis
-pitfalls — genome-build mismatches, degenerate PCAs, imputation artefacts — are checked
-rather than assumed away.
+SEPIA is a **QC-first re-analysis**. It continues the honors thesis **PAINT** (Lily Heald, 2026) but rebuilds the analysis from clearly-traced inputs, because archaic DNA is patchy and shallow and pigmentation genes don't behave like ancestry markers. Every figure is regenerated from a documented pipeline so its provenance is auditable, and known pitfalls — genome-build mismatches, degenerate PCAs, imputation artefacts — are checked rather than assumed away. The work runs as a phased plan: trace inputs → one verified genome build → positive controls → sample QC → the pigmentation analyses → reproducible infrastructure → writing.
 
-The work runs as a phased plan: trace inputs → one verified genome build → positive
-controls → sample QC → the pigmentation analyses → reproducible infrastructure → writing.
+The archaic set is chosen for reliability, not count. SEPIA genotypes the **9 genomes** — 5 high-coverage (Altai/Denisova 5, Vindija 33.19, Denisova 3, Chagyrskaya 8, Denisova 25) plus 4 low-coverage (Les Cottés, Denisova 11, Goyet, Mezmaiskaya 1) — that can contribute trustworthy calls at the panel, and deliberately excludes exome-only, redundant, and ultra-low-coverage genomes by [documented inclusion criteria](plan/papers/SAMPLE_INCLUSION.html).
 
-- **[Project plan &amp; roadmap](plan/sepia-plan.html)** — the single phased plan (bug fixes, analysis redesign, QC checks Q1–Q10, infrastructure, writing).
-- **[Changelog &amp; decision log](plan/changelog.html)** — dated record of what's been done, found, and decided.
-- **[All project documents](plan/docs.html)** — data &amp; pipeline record, per-genome provenance &amp; QC, bug-evidence log, rebuild plan.
+- [Project plan & roadmap](plan/sepia-plan.html) — the phased plan, bug fixes, and the Q1–Q10 QC checks.
+- [Changelog & decision log](plan/changelog.html) — dated record of what's been done, found, and decided.
 
 ## Status
 
-- **v1 — honors thesis (PAINT, 2026, Lily Heald).** Framed the feasibility question: how
-  complete and deep is archaic sequencing at pigmentation loci, and where do archaic
-  samples fall relative to modern humans?
-- **In progress — SEPIA.** Rebuilding on clearly-traced data: a completed modern reference
-  panel, a harmonised genome build, genotype-likelihood handling for low-coverage genomes,
-  a directionality-based pigmentation score, and redone principal-component analyses — plus
-  a *Trends in Genetics* review.
-
-## Analyses
-
-*These pages are being rebuilt from the SEPIA pipeline (see the plan); expect them to change.*
-
-- [Modern reference panel PCA (SGDP)](sgdp_reference_pca.qmd) — quality-control check that the modern reference recovers global human structure, before any archaic comparison.
-- [Background](introduction.qmd) — archaic-genome availability, the modern reference (SGDP), and the pigmentation-SNP set.
-- [Sequencing depth &amp; missingness](depth.qmd) — how complete and reliable the archaic sequencing is.
-- [Principal component analysis](pca.qmd) — where archaic samples fall relative to modern populations.
+- **v1 — honors thesis (PAINT, 2026, Lily Heald).** Framed the feasibility question: how complete and deep is archaic sequencing at pigmentation loci, and where do archaic samples fall relative to modern humans?
+- **In progress — SEPIA.** Rebuilding on clearly-traced data: a completed 159-genome modern reference, a harmonised genome build, genotype-likelihood handling for low-coverage genomes, the extended SNP surface, and the redone principal-component projections — plus a *Trends in Genetics* review.
 
 ## What the work finds (so far)
 
-Archaic sequencing is uneven and often shallow; missing data is non-random (older samples
-have more of it); and pigmentation-associated SNPs on their own don't separate populations
-the way the whole genome does. Confident, species-wide claims about archaic pigmentation
-aren't well supported — the contribution is an honest map of what the genetics does and
-doesn't show.
+Archaic sequencing is uneven and often shallow, and missing data is non-random (older samples have more of it). On their own, ascertained pigmentation SNPs don't separate populations the way the whole genome does — and where they *do* deviate reflects selection history, not ancestry. Confident, species-wide claims about archaic pigmentation are not well supported; the contribution is an honest map of what the genetics does and doesn't show.
 
-## Data &amp; provenance
+## Data & provenance
 
 - **Simons Genome Diversity Project (SGDP)** — modern human reference genomes.
-- **Max Planck Institute for Evolutionary Anthropology (MPI-EVA)** — archaic Neanderthal/Denisovan genomes.
-- **NHGRI-EBI GWAS Catalog** — pigmentation-associated variants (the 222-SNP panel).
+- **Max Planck Institute for Evolutionary Anthropology (MPI-EVA)** — archaic Neanderthal and Denisovan genomes.
+- **NHGRI-EBI GWAS Catalog**, plus forensic (HIrisPlex-S) and gene-network sources — pigmentation-associated variants.
 - **NASA Earth Observations** — UV-index climatology.
 
-Per-file provenance — and where the large / cluster-only data live — is documented in
-[`data/README.md`](https://github.com/lasisilab/sepia/blob/main/data/README.md); per-genome
-sources are in the [provenance tables](plan/papers/REFERENCES.html).
+Per-file provenance — and where the large, cluster-only data live — is documented in [`data/README.md`](https://github.com/lasisilab/sepia/blob/main/data/README.md); per-genome sources are in the [provenance tables](plan/papers/REFERENCES.html).
 
 ## Team
 
