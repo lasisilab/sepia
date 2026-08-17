@@ -16,11 +16,7 @@ Render locally with:  quarto render notebooks/confidence_models.qmd
 Runs on any laptop — pure R, small committed inputs, no cluster needed.
 -->
 
-The confidence models from the thesis draw *theoretical* confidence-vs-depth curves but are never
-applied to the actual archaic depth. This notebook closes that gap: it loads the panel depth at the
-**corrected hg19 coordinates** and gives you the plumbing to turn your models into a **per-archaic,
-per-locus call-confidence** layer. The thinking — which error profile fits each sample, where the
-calls are unreliable, and the interpretation — is yours (marked **>>> YOUR TURN**).
+The confidence models from the thesis draw *theoretical* confidence-vs-depth curves but are never applied to the actual archaic depth. This notebook closes that gap: it loads the panel depth at the **corrected hg19 coordinates** and gives you the plumbing to turn your models into a **per-archaic, per-locus call-confidence** layer. The thinking — which error profile fits each sample, where the calls are unreliable, and the interpretation — is yours (marked **>>> YOUR TURN**).
 
 ```{r setup, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -151,15 +147,9 @@ scored |>
 
 ::: {.callout-note}
 ## >>> YOUR TURN (the science)
-1. **Error profiles.** The constant model above assumes one error rate per sample from `treatment`.
-   Swap in the **position-dependent Monte-Carlo** model (`simulate_confidence_positional`) for the
-   untreated low-coverage samples, where damage toward read ends matters — and justify each sample's
-   profile from its library prep.
-2. **Threshold + interpretation.** Pick a confidence cutoff (e.g. 0.95) and report, per archaic,
-   which panel loci / pigmentation genes are *unreliable* and should be flagged before any downstream
-   use. This is the deliverable that makes the coverage figures actionable.
-3. **Compare** the constant vs position-dependent confidence — how much does modelling damage change
-   which calls you'd trust?
+1. **Error profiles.** The constant model above assumes one error rate per sample from `treatment`. Swap in the **position-dependent Monte-Carlo** model (`simulate_confidence_positional`) for the untreated low-coverage samples, where damage toward read ends matters — and justify each sample's profile from its library prep.
+2. **Threshold + interpretation.** Pick a confidence cutoff (e.g. 0.95) and report, per archaic, which panel loci / pigmentation genes are *unreliable* and should be flagged before any downstream use. This is the deliverable that makes the coverage figures actionable.
+3. **Compare** the constant vs position-dependent confidence — how much does modelling damage change which calls you'd trust?
 :::
 
 ## 6. Missingness model (needs one fix)

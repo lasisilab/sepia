@@ -5,18 +5,9 @@ subtitle: "What SNPs SEPIA analyzes, where each came from, and how confident we 
 
 ## Why this page exists
 
-Lily's thesis (PAINT) analyzed a fixed **222-SNP pigmentation panel** pulled from the GWAS
-Catalog. SEPIA's bigger question needs more than that: the
-[`pigmentation-gene-network`](https://github.com/tinalasisi/pigmentation-gene-network) project
-assembles the pigmentation literature into a much larger, multi-source SNP set. This page is the
-**auditable record** of exactly which SNPs we carry, where each one came from, how we put them on
-a single coordinate system, and — importantly — **how confident we are in each**, because a raw
-GWAS-Catalog pull mixes strongly-replicated loci with single-study, unreplicated hits.
+Lily's thesis (PAINT) analyzed a fixed **222-SNP pigmentation panel** pulled from the GWAS Catalog. SEPIA's bigger question needs more than that: the [`pigmentation-gene-network`](https://github.com/tinalasisi/pigmentation-gene-network) project assembles the pigmentation literature into a much larger, multi-source SNP set. This page is the **auditable record** of exactly which SNPs we carry, where each one came from, how we put them on a single coordinate system, and — importantly — **how confident we are in each**, because a raw GWAS-Catalog pull mixes strongly-replicated loci with single-study, unreplicated hits.
 
-Everything here is generated from [`data/pigment_snp_map.tsv`](https://github.com/lasisilab/sepia/blob/main/data/pigment_snp_map.tsv),
-which is built by [`code/build_pigment_snp_map.py`](https://github.com/lasisilab/sepia/blob/main/code/build_pigment_snp_map.py)
-(re-resolving every rsID to both genome builds via Ensembl). The 222-panel subset is preserved and
-flagged, so this strictly *extends* Lily's work rather than replacing it.
+Everything here is generated from [`data/pigment_snp_map.tsv`](https://github.com/lasisilab/sepia/blob/main/data/pigment_snp_map.tsv), which is built by [`code/build_pigment_snp_map.py`](https://github.com/lasisilab/sepia/blob/main/code/build_pigment_snp_map.py) (re-resolving every rsID to both genome builds via Ensembl). The 222-panel subset is preserved and flagged, so this strictly *extends* Lily's work rather than replacing it.
 
 ```{r setup, message=FALSE, warning=FALSE}
 library(ggplot2)
@@ -39,13 +30,7 @@ n_ok     <- sum(m$status == "ok", na.rm = TRUE)
 
 ## How we got them
 
-Each SNP is drawn from one or more **rsID-bearing** pigmentation sources, then re-resolved to
-verified coordinates. Coordinates in the source files are *mixed-build and inconsistent* (GWAS
-Catalog rows are hg38; the case-study extractions are hg19; HIrisPlex-S has no coordinates at all),
-so we do not trust any of them — we re-pull each rsID's **GRCh38 *and* GRCh37** position + alleles
-from Ensembl, keyed by rsID. (This is the same approach that caught the +1 off-by-one in the
-original panel's hg38 coordinates.) We flag **palindromic** SNPs (A/T, C/G — strand-ambiguous),
-**multiallelic** sites, and **merged** rsIDs.
+Each SNP is drawn from one or more **rsID-bearing** pigmentation sources, then re-resolved to verified coordinates. Coordinates in the source files are *mixed-build and inconsistent* (GWAS Catalog rows are hg38; the case-study extractions are hg19; HIrisPlex-S has no coordinates at all), so we do not trust any of them — we re-pull each rsID's **GRCh38 *and* GRCh37** position + alleles from Ensembl, keyed by rsID. (This is the same approach that caught the +1 off-by-one in the original panel's hg38 coordinates.) We flag **palindromic** SNPs (A/T, C/G — strand-ambiguous), **multiallelic** sites, and **merged** rsIDs.
 
 ```{r sources, eval=have_map}
 # one SNP can have several sources; count membership per source tag family
@@ -69,8 +54,7 @@ knitr::kable(data.frame(source = names(src_tab), n_SNPs = as.integer(src_tab)),
 
 ## How confident we are in each
 
-The user-facing distinction the raw catalog can't make on its own: **replicated vs not.** We assign
-each SNP a confidence tier as the *best* evidence across its sources:
+The user-facing distinction the raw catalog can't make on its own: **replicated vs not.** We assign each SNP a confidence tier as the *best* evidence across its sources:
 
 - **high** — a GWAS hit replicated across ≥2 associations (`gwas_replicated`/`gwas_n_assoc ≥ 2`), **or** a HIrisPlex-S validated marker, **or** a genome-wide-significant Martin/Kim lead SNP.
 - **moderate** — curated literature / case-study support, or a genome-wide-significant single association.
@@ -109,7 +93,4 @@ knitr::kable(data.frame(
 
 ## Deliberately excluded (for now)
 
-The gene-network's **gene-level** tables — Bajpai (CRISPR hits), Baxter (curated genes), Raghunath
-(melanogenesis network), D'Arcy (disease genes / PPI) — are **gene-symbol-only, no SNP coordinates**.
-Using them requires a separate gene→coordinate join (items B6/B7) and they never enter the SNP-level
-PCA or scores. They are deferred by decision, not oversight.
+The gene-network's **gene-level** tables — Bajpai (CRISPR hits), Baxter (curated genes), Raghunath (melanogenesis network), D'Arcy (disease genes / PPI) — are **gene-symbol-only, no SNP coordinates**. Using them requires a separate gene→coordinate join (items B6/B7) and they never enter the SNP-level PCA or scores. They are deferred by decision, not oversight.

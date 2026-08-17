@@ -5,49 +5,27 @@ subtitle: "The 222-SNP pigmentation panel read at its hg19 positions, across the
 
 ## The question
 
-Before any pigmentation result can be trusted, the panel has to be *covered*: at each panel
-SNP, how deep is the sequencing, where are the gaps, and what genotypes do the samples carry?
-This page is the coverage/depth QC for the panel.
+Before any pigmentation result can be trusted, the panel has to be *covered*: at each panel SNP, how deep is the sequencing, where are the gaps, and what genotypes do the samples carry? This page is the coverage/depth QC for the panel.
 
 ## Reading the panel at the right coordinates
 
-The panel is defined by rsIDs, but the SGDP and archaic data are physically on **hg19/hs37d5**.
-Each panel SNP therefore has to be read at its **hg19** position — a panel SNP's hg38 position
-lands on the wrong base in hg19 data (for the tracer SLC24A5 that is `15:48426484` on hg19, not
-the hg38 `15:48134288`). The matrices below read all 222 panel SNPs at their verified hg19
-coordinates, across **159 SGDP moderns + 5 high-coverage archaics** (161 of the 222 loci are
-variable and shown). Substrate + code:
-[`output/panel_matrix/`](https://github.com/lasisilab/sepia/tree/main/output/panel_matrix),
-[`code/export_panel_matrix.sh`](https://github.com/lasisilab/sepia/blob/main/code/export_panel_matrix.sh),
-[`plan/figures/make_panel_heatmaps.R`](https://github.com/lasisilab/sepia/blob/main/plan/figures/make_panel_heatmaps.R).
+The panel is defined by rsIDs, but the SGDP and archaic data are physically on **hg19/hs37d5**. Each panel SNP therefore has to be read at its **hg19** position — a panel SNP's hg38 position lands on the wrong base in hg19 data (for the tracer SLC24A5 that is `15:48426484` on hg19, not the hg38 `15:48134288`). The matrices below read all 222 panel SNPs at their verified hg19 coordinates, across **159 SGDP moderns + 5 high-coverage archaics** (161 of the 222 loci are variable and shown). Substrate + code: [`output/panel_matrix/`](https://github.com/lasisilab/sepia/tree/main/output/panel_matrix), [`code/export_panel_matrix.sh`](https://github.com/lasisilab/sepia/blob/main/code/export_panel_matrix.sh), [`plan/figures/make_panel_heatmaps.R`](https://github.com/lasisilab/sepia/blob/main/plan/figures/make_panel_heatmaps.R).
 
 ## Genotype variability
 
-Each cell is a sample's genotype at a panel SNP: homozygotes coloured by base (A/C/G/T),
-heterozygotes purple, and **missing calls black**. Solid columns are monomorphic loci; mixed
-columns are the variable, informative ones. Rows are individual genomes grouped by region, with
-the archaics as the bottom block — where the missing calls concentrate.
+Each cell is a sample's genotype at a panel SNP: homozygotes coloured by base (A/C/G/T), heterozygotes purple, and **missing calls black**. Solid columns are monomorphic loci; mixed columns are the variable, informative ones. Rows are individual genomes grouped by region, with the archaics as the bottom block — where the missing calls concentrate.
 
 ![Genotype at 161 panel loci, correct hg19 coordinates. Rows = individual genomes grouped by region; homozygotes by base, het=purple, missing=black.](plan/figures/panel_atgc_heatmap.png)
 
 ## Read depth, by chromosome
 
-Per-sample read depth at each panel SNP, log-scaled. The 159 moderns are uniformly
-high-coverage (light); the 5 high-coverage archaics form the darker, more variable band at the
-bottom, with genuine missing positions in black. Chromosome labels carry the panel-SNP count —
-chr5 (SLC45A2) and chr15 (HERC2/OCA2/SLC24A5) hold more than half the panel, so their spans are
-wide by SNP count, not chromosome length.
+Per-sample read depth at each panel SNP, log-scaled. The 159 moderns are uniformly high-coverage (light); the 5 high-coverage archaics form the darker, more variable band at the bottom, with genuine missing positions in black. Chromosome labels carry the panel-SNP count — chr5 (SLC45A2) and chr15 (HERC2/OCA2/SLC24A5) hold more than half the panel, so their spans are wide by SNP count, not chromosome length.
 
 ![Read depth (log10 DP+1) at 161 panel loci, per sample, ordered by chromosome. Missing = black.](plan/figures/panel_depth_heatmap.png)
 
 ## Reading it
 
-- The modern reference is essentially fully covered at the panel; the coverage question is
-  really about the archaics, where depth is lower and patchier — which is why a per-call
-  genotype-confidence layer (depth-aware) is needed before the archaic calls are used downstream.
-- **Chagyrskaya 8** is absent here (5 high-coverage archaics, not 6): its `.noRB` VCF extracts
-  zero records — a known extraction bug still to fix.
-- The 3 **low-coverage archaics** (Denisova 11, Goyet, Les Cottés) are BAM-only; their panel
-  depth is computed separately from the read data and extends the archaic rows.
-- A genome-wide depth background — to compare panel depth against the rest of the genome — is
-  the natural next layer.
+- The modern reference is essentially fully covered at the panel; the coverage question is really about the archaics, where depth is lower and patchier — which is why a per-call genotype-confidence layer (depth-aware) is needed before the archaic calls are used downstream.
+- **Chagyrskaya 8** is absent here (5 high-coverage archaics, not 6): its `.noRB` VCF extracts zero records — a known extraction bug still to fix.
+- The 3 **low-coverage archaics** (Denisova 11, Goyet, Les Cottés) are BAM-only; their panel depth is computed separately from the read data and extends the archaic rows.
+- A genome-wide depth background — to compare panel depth against the rest of the genome — is the natural next layer.
