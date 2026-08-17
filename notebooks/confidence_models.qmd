@@ -28,7 +28,7 @@ library(tidyverse)
 knitr::opts_knit$set(root.dir = normalizePath(if (dir.exists("output/panel_matrix")) "." else ".."))
 DEPTH_HI  <- "output/panel_matrix/panel_hg19_depth.tsv"        # 159 SGDP + 5 high-cov archaics
 DEPTH_LOW <- "output/panel_matrix/lowcov_panel_depth.tsv"      # Denisova11 / Goyet / LesCottes (may not exist yet)
-ARCH_HI   <- c("Altai","Vindija33.19","Denisova3","Mez1","Denisova25")
+ARCH_HI   <- c("Altai","Vindija33.19","Denisova3","Mez1","Denisova25","Chagyrskaya8")
 ```
 
 ## 1. The models (from the thesis — unchanged)
@@ -91,6 +91,7 @@ arch_meta <- tribble(
   "Vindija33.19",       50,        30,      "udg",
   "Denisova3",          72,        30,      "udg",
   "Mez1",               70,        44,      "udg",        # Mezmaiskaya 1 — verify
+  "Chagyrskaya8",       80,        27,      "udg",        # Mafessoni 2020 — verify
   "Denisova25",         NA,        NA,      "udg",        # preprint — verify
   "Denisova11",         90,         3,      "untreated",  # "Denny", low-cov — verify
   "Goyet",              45,         2,      "untreated",

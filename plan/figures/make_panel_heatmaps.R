@@ -16,7 +16,7 @@
 suppressPackageStartupMessages({ library(ggplot2); library(data.table) })
 setwd(if (dir.exists("data")) "." else stop("run from repo root"))
 DIR  <- "output/panel_matrix"
-ARCH <- c("Vindija33.19","Mez1","Denisova3","Altai","Denisova25")
+ARCH <- c("Vindija33.19","Mez1","Denisova3","Altai","Denisova25","Chagyrskaya8")
 
 meta <- fread("data/sgdp_metadata.tsv"); reg <- setNames(meta$region, meta$IID)
 region_of <- function(s) ifelse(s %in% ARCH, "ARCHAIC", ifelse(s %in% names(reg), reg[s], "unknown"))
