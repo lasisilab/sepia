@@ -11,6 +11,10 @@ and span **moderns + archaics**, not archaics alone.
 - `panel_hg19_depth.tsv` — read depth (`%DP`) per sample × locus (missing call = `.`).
 - `samples.txt` — sample order: 159 SGDP (all `FullyPublic`) then the 5 high-coverage
   archaics (`Vindija33.19`, `Mez1`, `Denisova3`, `Altai`, `Denisova25`).
+- `lowcov_panel_depth.tsv` — panel depth for the 3 low-coverage archaics (`Denisova11`,
+  `Goyet`, `LesCottes`), summed over each individual's run libraries, streamed from ENA's
+  complete files ([`code/lowcov_panel_depth.slurm`](../../code/lowcov_panel_depth.slurm)) since
+  the local BAMs are truncated. Mean panel depth ≈ 9.2 / low / 2.3 respectively.
 
 ## Provenance
 Exported by [`code/export_panel_matrix.sh`](../../code/export_panel_matrix.sh) from
@@ -22,8 +26,8 @@ Exported by [`code/export_panel_matrix.sh`](../../code/export_panel_matrix.sh) f
 ## Known gaps
 - **Chagyrskaya 8** is absent (5 high-cov archaics, not 6) — the `.noRB` VCF extracts 0
   records (known bug, to fix).
-- The **3 low-coverage archaics** (Denisova 11, Goyet, Les Cottés) are BAM-only and not in
-  this VCF; their depth/genotype at the loci needs the separate BAM route (`samtools depth`
-  / genotype likelihoods).
+- The **3 low-coverage archaics** (Denisova 11, Goyet, Les Cottés) are BAM-only, so their depth is
+  in the separate `lowcov_panel_depth.tsv` (remote ENA extraction); a per-sample *genotype* call
+  for them still needs genotype likelihoods (ANGSD), not covered here.
 - Loci that are monomorphic-reference across all samples are not emitted as variant records,
   so the matrices carry the **161 variable** panel loci (of 222).

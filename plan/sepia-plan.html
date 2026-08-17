@@ -273,7 +273,7 @@
 
   <!-- FOR LILY -->
   <section id="ask">
-    <div class="sec-head"><span class="sec-num">04</span><h2>For Lily — what we've ascertained</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>For Lily — what we've ascertained &amp; your next steps</h2></div>
     <p class="lede">Lily, this part is for you. Here are the three things the re-analysis pinned down about the pipeline, in plain terms, and what each one means going forward. None of it diminishes the thesis — the headline verdict (archaic pigmentation prediction is <em>not yet well-supported</em>) was the right, honest call, and the coverage/missingness work stands. These are fixable data-plumbing issues that an automated build-and-provenance check — which nobody had in place — would have caught early. Writing them down here is how the next person avoids repeating them.</p>
 
     <div class="callout ask">
@@ -296,6 +296,18 @@
     <div class="callout">
       <h4>And one upgrade — not a bug: the SGDP reference went from 15 → 159</h4>
       <p>Your whole-genome PCA (Fig 7) was fine — it just rested on <strong>15</strong> SGDP genomes, which can only sketch global structure. SEPIA finished the merge you'd started (166 → <strong>159</strong> usable) and the PCA now recovers the full textbook continental layout. The before/after is the first figure in <a href="#figures">the figures</a> — and it's the reference the corrected pigmentation analysis is built on.</p>
+    </div>
+
+    <div class="callout ask" style="border-left-color:var(--accent)">
+      <h4>Your worklist — what's ready now, and what to run next</h4>
+      <p><b>Ready for you</b> (small files, all local — no cluster): the panel read at the <strong>corrected hg19 coordinates</strong> as per-sample <em>genotype</em> + <em>depth</em> matrices for 159 SGDP + all 8 archaics (5 high-cov from the VCFs; the 3 low-cov streamed live from ENA) — <a href="https://github.com/lasisilab/sepia/tree/main/output/panel_matrix">output/panel_matrix/</a>. Plus a starter notebook that already wires your confidence models to that depth: <a href="https://github.com/lasisilab/sepia/blob/main/notebooks/confidence_models.qmd">notebooks/confidence_models.qmd</a> — open it in RStudio, run top-to-bottom, and extend the <strong>“YOUR TURN”</strong> sections. The extended PCAs + the genes-vs-SNPs result are in the <a href="../archaic_projection.html">projection workbook</a>.</p>
+      <ol style="margin:6px 0 0 18px;padding:0">
+        <li><b>Confidence models on the corrected depth.</b> The notebook loads your binomial + Monte-Carlo models and applies them to the real per-locus depth. Your part: pick the error profile per sample (constant vs the position-dependent model for the untreated low-cov ones), set a confidence cutoff, and report which loci / pigmentation genes are unreliable per archaic. <em>(First pass already runs — e.g. Goyet &amp; Les Cottés have ~130 loci below 0.95; the high-cov four sit at 1.0.)</em></li>
+        <li><b>Fix the missingness model.</b> The <code>glmer</code>’s <code>(1 | Coverage)</code> is degenerate (too few coverage groups, unidentifiable variance). Make Coverage a fixed effect or drop it, and reconcile the coefficients. Scaffolded in §6 of the notebook.</li>
+        <li><b>Own the coverage figures + interpretation.</b> From the matrices, build the final variability / depth figures your way and write which pigmentation genes are well vs poorly recovered in the archaics — the deliverable that makes the coverage work actionable.</li>
+        <li><b>The control PCA (your idea).</b> Assemble an immune / control gene list (ImmPort or GO “immune system process”, <em>plus</em> a random size-matched set) and the cluster runs the control-region PCA. Note: immune loci are themselves heavily selected (HLA, OAS, TLR), so it’s a second <em>contrast</em>, not a neutral null — the random set is the cleaner baseline.</li>
+      </ol>
+      <p style="font-size:.92rem;color:var(--ink-2);margin-top:8px"><b>The split:</b> the heavy extraction (big VCFs/BAMs your laptop can’t hold) runs on the cluster and is on Tina/Claude; the <strong>modelling, interpretation, and control-set are yours</strong> — that’s where the science gets decided, and you’re not blocked on any cluster step.</p>
     </div>
   </section>
 

@@ -1,0 +1,187 @@
+---
+title: "Genotype-confidence models — workspace"
+subtitle: "Apply the binomial + Monte-Carlo confidence models to the corrected panel depth"
+author: "Lily Heald"
+format:
+  html:
+    toc: true
+    code-fold: false
+    embed-resources: true
+---
+
+<!--
+INTERNAL WORKING NOTEBOOK — not part of the published site (not in _quarto.yml `render:`).
+Open it in RStudio/VS Code, run it top-to-bottom, and extend the sections marked >>> YOUR TURN.
+Render locally with:  quarto render notebooks/confidence_models.qmd
+Runs on any laptop — pure R, small committed inputs, no cluster needed.
+-->
+
+The confidence models from the thesis draw *theoretical* confidence-vs-depth curves but are never
+applied to the actual archaic depth. This notebook closes that gap: it loads the panel depth at the
+**corrected hg19 coordinates** and gives you the plumbing to turn your models into a **per-archaic,
+per-locus call-confidence** layer. The thinking — which error profile fits each sample, where the
+calls are unreliable, and the interpretation — is yours (marked **>>> YOUR TURN**).
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+DEPTH_HI  <- "output/panel_matrix/panel_hg19_depth.tsv"        # 159 SGDP + 5 high-cov archaics
+DEPTH_LOW <- "output/panel_matrix/lowcov_panel_depth.tsv"      # Denisova11 / Goyet / LesCottes (may not exist yet)
+ARCH_HI   <- c("Altai","Vindija33.19","Denisova3","Mez1","Denisova25")
+```
+
+## 1. The models (from the thesis — unchanged)
+
+```{r models}
+# Binomial consensus accuracy: P(majority of `depth` reads support the true base), constant error.
+simulate_confidence <- function(depth, error_rate) {
+  if (is.na(depth) || depth < 1) return(NA_real_)
+  k <- floor(depth / 2) + 1
+  1 - pbinom(k - 1, size = depth, prob = 1 - error_rate)
+}
+
+# Position-dependent Monte-Carlo: error rises toward fragment ends (aDNA damage).
+simulate_confidence_positional <- function(depth, read_length, p_interior, p_end,
+                                           lambda = 0.3, n_sim = 1000) {
+  if (is.na(depth) || depth < 1) return(NA_real_)
+  p_error_pos <- function(pos) {
+    d <- pmin(pos - 1, read_length - pos); p_interior + (p_end - p_interior) * exp(-lambda * d)
+  }
+  mean(replicate(n_sim, {
+    pos <- sample(1:read_length, depth, replace = TRUE)
+    sum(rbinom(depth, 1, 1 - p_error_pos(pos))) >= (floor(depth / 2) + 1)
+  }))
+}
+
+# error rate per profile (constant model)
+ERR <- c(illumina = 0.001, nanopore = 0.005, udg = 0.01, untreated = 0.10)
+```
+
+## 2. Load the corrected panel depth (archaics)
+
+```{r load-depth, message=FALSE}
+hi <- read_tsv(DEPTH_HI, show_col_types = FALSE)
+arch_hi <- hi |>
+  select(chrom, pos, any_of(ARCH_HI)) |>
+  pivot_longer(any_of(ARCH_HI), names_to = "sample", values_to = "depth") |>
+  mutate(depth = suppressWarnings(as.integer(depth)))   # "." / missing -> NA
+
+# low-cov archaics (remote-extracted) — fold in if the file is present
+if (file.exists(DEPTH_LOW)) {
+  low <- read_tsv(DEPTH_LOW, show_col_types = FALSE) |>
+    pivot_longer(c(Denisova11, Goyet, LesCottes), names_to = "sample", values_to = "depth") |>
+    mutate(depth = suppressWarnings(as.integer(depth)))
+  arch <- bind_rows(arch_hi, low |> select(chrom, pos, sample, depth))
+} else {
+  message("lowcov_panel_depth.tsv not present yet — high-cov archaics only for now")
+  arch <- arch_hi
+}
+arch |> count(sample, name = "loci") |> knitr::kable(caption = "archaic samples loaded")
+```
+
+## 3. Per-sample metadata (age / coverage / library treatment)
+
+```{r meta}
+# >>> YOUR TURN: verify these against the source papers (Prüfer 2014/2017, Mafessoni 2020,
+#     Hajdinjak 2018, Slon 2018). `treatment` picks the error profile used below.
+arch_meta <- tribble(
+  ~sample,          ~age_ka, ~wg_coverage, ~treatment,
+  "Altai",             122,        52,      "udg",        # Denisova 5
+  "Vindija33.19",       50,        30,      "udg",
+  "Denisova3",          72,        30,      "udg",
+  "Mez1",               70,        44,      "udg",        # Mezmaiskaya 1 — verify
+  "Denisova25",         NA,        NA,      "udg",        # preprint — verify
+  "Denisova11",         90,         3,      "untreated",  # "Denny", low-cov — verify
+  "Goyet",              45,         2,      "untreated",
+  "LesCottes",          45,         3,      "untreated"
+)
+knitr::kable(arch_meta)
+```
+
+## 4. Theoretical curves (sanity check — your models run)
+
+```{r curves, fig.width=8, fig.height=4}
+tibble(depth = rep(1:20, times = length(ERR)),
+       profile = rep(names(ERR), each = 20)) |>
+  mutate(confidence = map2_dbl(depth, ERR[profile], simulate_confidence)) |>
+  ggplot(aes(depth, confidence, colour = profile)) +
+  geom_line(linewidth = 1) + coord_cartesian(ylim = c(0.75, 1)) +
+  labs(x = "Depth", y = "P(consensus correct)", colour = "Error profile") +
+  theme_minimal(base_size = 13)
+```
+
+## 5. Apply the model to the real depth  →  per-call confidence
+
+```{r apply}
+scored <- arch |>
+  left_join(arch_meta |> select(sample, treatment), by = "sample") |>
+  mutate(
+    error_rate = ERR[treatment],
+    # constant binomial model at each observed depth (NA where no coverage)
+    confidence = map2_dbl(depth, error_rate, simulate_confidence)
+  )
+
+# quick per-sample summary
+scored |>
+  group_by(sample) |>
+  summarise(
+    covered_loci  = sum(!is.na(depth) & depth > 0),
+    median_depth  = median(depth[depth > 0], na.rm = TRUE),
+    median_conf   = round(median(confidence, na.rm = TRUE), 3),
+    loci_conf_lt95 = sum(confidence < 0.95, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(median_conf) |>
+  knitr::kable(caption = "Call confidence per archaic (constant binomial model)")
+```
+
+```{r conf-heatmap, fig.width=11, fig.height=4}
+scored |>
+  mutate(locus = paste0(chrom, ":", pos)) |>
+  ggplot(aes(reorder(locus, as.integer(chrom) * 1e9 + pos), sample, fill = confidence)) +
+  geom_tile() +
+  scale_fill_viridis_c(option = "viridis", na.value = "black", limits = c(0.75, 1),
+                       name = "P(correct)") +
+  labs(title = "Per-locus call confidence (missing = black)", x = "panel locus (chrom:pos)", y = NULL) +
+  theme_minimal(base_size = 10) +
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), panel.grid = element_blank())
+```
+
+::: {.callout-note}
+## >>> YOUR TURN (the science)
+1. **Error profiles.** The constant model above assumes one error rate per sample from `treatment`.
+   Swap in the **position-dependent Monte-Carlo** model (`simulate_confidence_positional`) for the
+   untreated low-coverage samples, where damage toward read ends matters — and justify each sample's
+   profile from its library prep.
+2. **Threshold + interpretation.** Pick a confidence cutoff (e.g. 0.95) and report, per archaic,
+   which panel loci / pigmentation genes are *unreliable* and should be flagged before any downstream
+   use. This is the deliverable that makes the coverage figures actionable.
+3. **Compare** the constant vs position-dependent confidence — how much does modelling damage change
+   which calls you'd trust?
+:::
+
+## 6. Missingness model (needs one fix)
+
+```{r missingness, eval=FALSE}
+# Reshape to the model's long form and fit the mixed-effects logistic (thesis form).
+mm <- arch |>
+  left_join(arch_meta, by = "sample") |>
+  mutate(Missing = as.integer(is.na(depth) | depth == 0),
+         age_scaled = as.numeric(scale(age_ka)),
+         Chromosome = factor(chrom), Sample = factor(sample),
+         Coverage = wg_coverage)
+
+# library(lme4)
+# NOTE: (1 | Coverage) is a random intercept over only a few distinct coverage values, so its
+# variance is statistically unidentifiable and swamps the Sample term. >>> YOUR TURN: make Coverage
+# a FIXED effect (or drop it), and reconcile the coefficients (the earlier prose numbers came from a
+# numeric-Chromosome model, not the factor() model fit here).
+# mod <- glmer(Missing ~ factor(Chromosome) + age_scaled + Coverage + (1 | Sample),
+#              data = mm, family = binomial)
+# summary(mod)
+```
+
+## What to hand back
+- The per-locus confidence table + heatmap (constant **and** position-dependent).
+- A short list, per archaic, of loci to flag as low-confidence.
+- The fixed missingness model + reconciled coefficients.
+- Your read on which pigmentation genes are well vs poorly recovered in the archaics.
