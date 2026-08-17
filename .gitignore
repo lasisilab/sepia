@@ -91,3 +91,5 @@ plan/papers/pdf/
 *.fai
 .DS_Store
 tools/
+notebooks/*.html
+notebooks/*_files/

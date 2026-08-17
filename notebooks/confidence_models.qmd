@@ -24,6 +24,8 @@ calls are unreliable, and the interpretation — is yours (marked **>>> YOUR TUR
 
 ```{r setup, message=FALSE, warning=FALSE}
 library(tidyverse)
+# resolve paths whether you render from the repo root or from notebooks/
+knitr::opts_knit$set(root.dir = normalizePath(if (dir.exists("output/panel_matrix")) "." else ".."))
 DEPTH_HI  <- "output/panel_matrix/panel_hg19_depth.tsv"        # 159 SGDP + 5 high-cov archaics
 DEPTH_LOW <- "output/panel_matrix/lowcov_panel_depth.tsv"      # Denisova11 / Goyet / LesCottes (may not exist yet)
 ARCH_HI   <- c("Altai","Vindija33.19","Denisova3","Mez1","Denisova25")
