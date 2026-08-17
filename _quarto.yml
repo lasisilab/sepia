@@ -18,6 +18,7 @@ project:
     - license.qmd
     - sgdp_reference_pca.qmd
     - snp_panel.qmd
+    - panel_coverage.qmd
     - archaic_projection.qmd
 
 website:
@@ -34,6 +35,8 @@ website:
         text: "Reference PCA"
       - href: snp_panel.qmd
         text: "SNP set"
+      - href: panel_coverage.qmd
+        text: "Coverage"
       - href: archaic_projection.qmd
         text: "Projection"
       - href: about.qmd
